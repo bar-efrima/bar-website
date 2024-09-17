@@ -1,20 +1,24 @@
+// src/App.js
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import HelloWorld from './components/HelloWorld';
-import AboutMe from './components/AboutMe';
-// import Projects from './components/Projects'; // You’ll add this in the next step
-// import Footer from './components/Footer'; // You’ll add this in the next step
+import Home from './components/Home';
+// import About from './components/About';
+import LogoContainer from './components/LogoContainer'; // Import the LogoContainer
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <HelloWorld />
-      <AboutMe />
-      {/* <Projects />
-      <Footer /> */}
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/about" element={<About />} /> */}
+        </Routes>
+        {}
+        <LogoContainer />
+      </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,23 @@
+/* src/components/LogoContainer.css */
+
+.logo-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  .logo-container img {
+    width: 30px;
+    height: 30px;
+    margin: 50px 20px;
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+  }
+  
+  .logo-container a:hover img {
+    transform: scale(1.1);
+    filter: brightness(0) saturate(100%) invert(58%) sepia(44%) saturate(5402%) hue-rotate(294deg) brightness(96%) contrast(87%);
+  }
+  

@@ -1,0 +1,68 @@
+.about-me {
+  width: 100%;
+  padding: 150px 0;
+  background-image: url('../assets/images/trry.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.main-about-me {
+  width: 1130px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.about-me img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 25%;
+}
+
+.about-me-text {
+  width: 600px;
+  margin: 0 40px;
+  text-align: left;
+}
+
+.about-me-text h2 {
+  color: #c84a97;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.about-me-text p {
+  color: rgb(193, 193, 193);
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 28px;
+  margin-bottom: 45px;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 450px) {
+  .about-me {
+      padding: 50px 20px;
+  }
+
+  .main-about-me {
+      flex-direction: column;
+  }
+
+  .about-me img {
+      width: 120px;
+      margin-bottom: 5%;
+  }
+
+  .about-me-text {
+      text-align: center;
+  }
+
+  .about-me-text h2, .about-me-text p {
+      text-align: center;
+      font-size: 1rem;
+  }
+}

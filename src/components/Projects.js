@@ -1,31 +1,52 @@
 import React from 'react';
-// import './Header.css'; // Create a CSS file for this component if needed.
+// import './Projects.css';
 
-const Header = () => {
+const projects = [
+  {
+    title: 'Amazon Scraper',
+    image: './assets/projects/Amazon.jpg',
+    description: 'FastAPI web app that displays item prices from multiple Amazon websites...',
+    github: 'https://github.com/bar-efrima/Amazon-Product-Search',
+    youtube: 'https://youtu.be/kTHfsLwlMJY',
+  },
+  {
+    title: 'Unavigate',
+    image: './assets/projects/navigation.jpg',
+    description: 'Created a cross-platform app for Reichman University using Ionic React...',
+    github: 'https://github.com/bar-efrima/Unavigate',
+    youtube: 'https://youtu.be/-sBSDOqAaPk',
+  },
+  // Add more projects here
+];
+
+function Projects() {
   return (
-    <header>
-      <nav id="nav-bar">
-        <h2 className="myname">Bar Efrima</h2>
-        <ul id="menu">
-          <li><a href="#aboutmeTag">About Me</a></li>
-          <li className="dropdown">
-            <a href="javascript:void(0)" className="dropbtn" id="projectsTag">Projects &#x25BC;</a>
-            <div className="dropdown-content" id="projects-dropdown">
-              {/* Project Links will be dynamically populated */}
+    <section className="projects">
+      <a name="projectsTag"></a>
+      <h2 className="projects-header">PROJECTS</h2>
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <div className="project-item" key={index}>
+            <img src={project.image} alt={project.title} className="project-image" />
+            <div className="overlay">
+              <div className="text-projects">
+                <h2 className="title">{project.title}</h2>
+                <p className="description">{project.description}</p>
+                <div className="logo-overlay">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/logos/github.png" alt="GitHub" />
+                  </a>
+                  <a href={project.youtube} target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/logos/youtube.png" alt="YouTube" />
+                  </a>
+                </div>
+              </div>
             </div>
-          </li>
-        </ul>
-        <div className="nav-logos">
-          <a href="mailto:bar2798@gmail.com" target="_blank" rel="noopener noreferrer">
-            <img src="Logo/mail.png" id="mail-logo" alt="Email Logo" />
-          </a>
-          <a href="https://wa.me/972542653012" target="_blank" rel="noopener noreferrer">
-            <img src="Logo/whatsapp.png" id="whatsapp-logo" alt="WhatsApp Logo" />
-          </a>
-        </div>
-      </nav>
-    </header>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
 
-export default Header;
+export default Projects;

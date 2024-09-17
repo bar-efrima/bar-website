@@ -1,0 +1,79 @@
+/* src/components/Header.css */
+
+/* Existing styles... */
+
+nav {
+  z-index: 2;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: space-between;
+  padding: 7px 5%;
+  transition: background 0.3s;
+}
+
+nav.sticky {
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.myname {
+  color: white;
+  font-size: 33px;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 550;
+}
+
+#menue {
+  display: flex;
+  list-style: none;
+}
+
+#menue li {
+  margin: 0 10px;
+}
+
+#menue li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.5s, transform 0.5s;
+}
+
+#menue li a:hover {
+  color: #c84a97;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  /* Add more styles as needed */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.nav-logos {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logos img {
+  width: 23px;
+  height: 23px;
+  margin-right: 20px;
+  transition: transform 0.5s ease, filter 0.5s ease-in-out;
+}
+
+.nav-logos img:hover {
+  transform: scale(1.2);
+  filter: brightness(0) saturate(100%) invert(58%) sepia(44%) saturate(5402%) hue-rotate(294deg) brightness(96%) contrast(87%);
+}
