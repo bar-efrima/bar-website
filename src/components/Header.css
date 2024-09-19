@@ -1,6 +1,5 @@
 /* src/components/Header.css */
 
-/* Existing styles... */
 
 nav {
   z-index: 2;
@@ -11,7 +10,7 @@ nav {
   background: rgba(0, 0, 0, 0.9);
   justify-content: space-between;
   padding: 7px 5%;
-  transition: background 0.3s;
+
 }
 
 nav.sticky {
@@ -27,6 +26,7 @@ nav.sticky {
   letter-spacing: 1px;
   font-family: "Poppins", sans-serif;
   font-weight: 550;
+  padding-top: 26px;
 }
 
 #menue {
@@ -35,18 +35,43 @@ nav.sticky {
 }
 
 #menue li {
-  margin: 0 10px;
+  font-size: 19px;
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 15px;
+    padding-top: 40px;
+    padding-bottom: 10px;
 }
 
 #menue li a {
   color: white;
   text-decoration: none;
   font-weight: 500;
+  font-size: 20px;
   transition: color 0.5s, transform 0.5s;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+#menue li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -12px; 
+  transform: scaleX(0);
+  transition: .5s;
 }
 
 #menue li a:hover {
   color: #c84a97;
+}
+
+#menue li a:hover::after {
+  transform: scaleX(1);
+    background: #c84a97;
 }
 
 .dropdown-content {
@@ -54,7 +79,6 @@ nav.sticky {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  /* Add more styles as needed */
 }
 
 .dropdown:hover .dropdown-content {
@@ -64,12 +88,13 @@ nav.sticky {
 .nav-logos {
   display: flex;
   align-items: center;
+  margin-top: 30px;
 }
 
 .nav-logos img {
-  width: 23px;
-  height: 23px;
-  margin-right: 20px;
+  width: 25px;
+  height: 25px;
+  margin-right: 35px;
   transition: transform 0.5s ease, filter 0.5s ease-in-out;
 }
 
@@ -77,3 +102,5 @@ nav.sticky {
   transform: scale(1.2);
   filter: brightness(0) saturate(100%) invert(58%) sepia(44%) saturate(5402%) hue-rotate(294deg) brightness(96%) contrast(87%);
 }
+
+

@@ -1,12 +1,12 @@
 import React from 'react';
 import './AboutMe.css';
-
+import myPhoto from '../assets/images/my_photo.png';
 function AboutMe() {
   return (
     <section className="about-me">
       <a name="aboutmeTag"></a>
       <div className="main-about-me">
-        <img src="./assets/images/my_photo.png" alt="Bar Efrima" />
+        <img src={myPhoto} alt="Bar Efrima" />
         <div className="about-me-text">
           <h2>About Me</h2>
           <section className="fade-in-section">
