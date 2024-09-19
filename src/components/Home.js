@@ -1,12 +1,12 @@
 // src/components/Home.js
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import './Home.css'; 
 import starsVideo from '../assets/videos/stars.webm';
 
 function Home() {
-  const hiddenRef = useRef(null);
 
   useEffect(() => {
+    // Define the observer
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -17,10 +17,11 @@ function Home() {
       });
     });
 
+    // Select all elements with the class 'hidden'
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach(el => observer.observe(el));
 
-    // Cleanup
+    // Cleanup the observer on component unmount
     return () => {
       hiddenElements.forEach(el => observer.unobserve(el));
     };
