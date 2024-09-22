@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
 import './Projects.css';
-import gihublogo from '../assets/logos/github.png';
-import youtubelogo from '../assets/logos/youtube.png';
-import discordlogo from '../assets/logos/discordlogo.png';
-import twitterlogo from '../assets/logos/twitter logo.png';
-import royalcatslogo from '../assets/logos/royalcats.logo.png';
-import amazon from '../assets/projects/Amazon.jpg';
+import amazon from '../assets/projects/ama.png';
 import navigation from '../assets/projects/navigation.jpg';
 import kitchef from '../assets/projects/Kitchef.jpg';
 import musical from '../assets/projects/musical.jpg';
-import weatherbox from '../assets/projects/Weather-box.jpg';
+import weatherbox from '../assets/projects/wea.png';
 import gamehighlights from '../assets/projects/GameHighlights.jpg';
 import bubbletrouble from '../assets/projects/BubbleTrouble.jpg';
 import royalcats from '../assets/projects/Royal-cats.jpg';
@@ -96,14 +90,14 @@ function Projects() {
   return (
     <section className="projects">
       <a name="projectsTag">
-        <h2 className="projects-header">PROJECTS</h2>
       </a>
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div className="project-item" key={index}>
             <div className="project-content">
+             <div className="project-image-wrapper">
               <img src={project.image} alt={project.title} className="project-image" />
-              {/* Semi-transparent box with project title */}
+               </div>
               <div className="project-title-box">
               <h5 className="project-type">{project.type}</h5>
               <hr/>

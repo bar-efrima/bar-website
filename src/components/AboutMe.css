@@ -11,10 +11,10 @@
 .about-me img {
   width: 15%;
   z-index: 1;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 2%;
   border-radius: 50%; /* Ensure the container is circular */
-  transition: box-shadow 0.2s ease-in-out; /* Smooth transition for the glow */
+  transition: box-shadow 0.5s ease-in-out; /* Smooth transition for the glow */
 }
 
 /* Flexbox to manage layout */
