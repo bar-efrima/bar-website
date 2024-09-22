@@ -1,51 +1,72 @@
-.me {
-  height: 100vh;
-}
+/* src/components/About.css */
 
-#animated-text {
-  font-size: 20px; 
-}
-
-.about-me{
-  padding: 50px 20px; 
-  background-image:url('../assets/images/trry.png');
+/* About Me Section */
+.about-me {
+  padding: 50px 20px;
+  /* background-image: url('../assets/images/trry.png'); */
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center;
 }
 
-.about-me img{
+.about-me img {
   width: 120px;
-  margin-bottom: 5%; 
+  margin-bottom: 5%;
 }
 
-.about-me-text{
+/* Flexbox to manage layout */
+.main-about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text styles for the "About Me" section */
+.about-me-text {
   width: 100%;
-  margin: 0 10px; 
-  text-align: center; 
-}
-
-.main-about-me{
-  flex-direction: column; 
+  margin: 0 10px;
+  text-align: center;
 }
 
 .about-me-text h2, .letMe, .about-me-text p {
-  font-size: 2rem; 
-  text-align: center; 
+  font-size: 2rem;
+ 
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* Ensure the Poppins font is applied */
 }
 
-.letMe{
-  font-size: 1rem; 
-  text-align: center;
+.letMe {
+  z-index: 200;
+  color: white;
+  font-size: 1rem;
   padding-left: 15px;
   padding-top: 10px;
+  text-align: center;
 }
 
-.about-me-text p{
-  font-size: 14px; 
-  padding-top: 10px; 
-  margin-bottom: 20px; 
+.about-me-text p {
+  font-size: 14px;
+  z-index: 200;
+  color: white;
+  padding-top: 10px;
+  margin-bottom: 20px;
   padding-left: 15px;
-  padding-right: 15px; 
+  padding-right: 15px;
   text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .about-me img {
+    width: 80px;
+  }
+
+  .about-me-text h2, .letMe, .about-me-text p {
+    font-size: 1.5rem;
+  }
+
+  .about-me-text p {
+    font-size: 12px;
+  }
 }

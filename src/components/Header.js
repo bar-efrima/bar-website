@@ -1,9 +1,9 @@
 // src/components/Header.js
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import './Header.css'; 
 import mailLogo from '../assets/logos/mail.png';
 import whatsappLogo from '../assets/logos/whatsapp.png';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [isSticky, setIsSticky] = useState(false);
@@ -11,7 +11,6 @@ function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const menu = document.getElementById('menue');
-      const navbar = document.getElementById('nav-bar');
       if (window.pageYOffset >= menu.offsetTop) {
         setIsSticky(true);
       } else {
@@ -21,22 +20,34 @@ function Header() {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Clean the event listener on component unmount
+    // Clean up event listener on unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
+  // Smooth scroll function
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav id="nav-bar" className={isSticky ? 'sticky' : ''}>
       <h2 className="myname">Bar Efrima</h2>
       <ul id="menue">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About Me</Link></li>
+        <li>
+        <a href="#homeSection" onClick={() => scrollToSection('homeTag')}>Home</a>
+        </li>
+        <li>
+          <a href="#aboutmeTag">About Me</a>
+        </li>
         <li className="dropdown">
-          <Link to="/projects" className="dropbtn">Projects &#x25BC;</Link>
+           <Link to="/Projects" className="dropbtn">Projects &#x25BC;</Link>
           <div className="dropdown-content">
-            {/*  dynamically populateprojects */}
+            <a href="/projects#project1">Project 1</a>
           </div>
         </li>
       </ul>

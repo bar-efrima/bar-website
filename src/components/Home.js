@@ -28,7 +28,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="mysite-pannel">
+    <div className="mysite-pannel" id="homeTag">
       <video autoPlay muted loop id="myVideo">
         <source src={starsVideo} type="video/webm" />
       </video>
