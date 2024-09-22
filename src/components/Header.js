@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './Header.css'; 
 import mailLogo from '../assets/logos/mail.png';
 import whatsappLogo from '../assets/logos/whatsapp.png';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Header() {
   const [isSticky, setIsSticky] = useState(false);
@@ -34,15 +34,16 @@ function Header() {
     }
   };
 
+
   return (
     <nav id="nav-bar" className={isSticky ? 'sticky' : ''}>
       <h2 className="myname">Bar Efrima</h2>
       <ul id="menue">
         <li>
-        <a href="#homeSection" onClick={() => scrollToSection('homeTag')}>Home</a>
+        <a href="#home" onClick={() => scrollToSection('homeTag')}>Home</a>
         </li>
         <li>
-          <a href="#aboutmeTag">About Me</a>
+        <a href="#About-me" onClick={() => scrollToSection('aboutTag')}>About Me</a>
         </li>
         <li className="dropdown">
            <Link to="/Projects" className="dropbtn">Projects &#x25BC;</Link>

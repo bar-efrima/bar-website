@@ -1,6 +1,3 @@
-/* src/components/Header.css */
-
-
 nav {
   z-index: 2;
   position: sticky;
@@ -104,24 +101,3 @@ nav.sticky {
 }
 
 
-/* Style the buttons to look like links */
-.link-button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 10px 15px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.5s, transform 0.5s;
-  font-family: 'Poppins', sans-serif;
-}
-
-.link-button:hover {
-  color: #c84a97;
-}
-
-.link-button:focus {
-  outline: none;
-}

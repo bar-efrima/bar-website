@@ -2,6 +2,11 @@
 import React, { useEffect } from 'react';
 import './Home.css'; 
 import starsVideo from '../assets/videos/stars.webm';
+// import './LogoContainer.css'; // Add styles here
+
+// Import all logos
+import linkedinLogo from '../assets/logos/linkedin.png';
+import githubLogo from '../assets/logos/github.png';
 
 function Home() {
 
@@ -39,8 +44,18 @@ function Home() {
           <a href="#aboutmeTag">
             <p className="more stroke">more about me</p>
           </a>
-        </div>
+          </div>
+        <div className="logo-container">
+      <a href="https://www.linkedin.com/in/bar-efrima/" target="_blank" rel="noopener noreferrer">
+        <img src={linkedinLogo} alt="LinkedIn" />
+      </a>
+      <a href="https://github.com/bar-efrima/" target="_blank" rel="noopener noreferrer">
+        <img src={githubLogo} alt="GitHub" />
+      </a>
+      
+    </div>
       </section>
+      
     </div>
   );
 }
