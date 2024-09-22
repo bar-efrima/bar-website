@@ -1,7 +1,6 @@
 /* About Me Section */
 
 .about-me {
-  padding: 50px 20px;
   background-image: url('../assets/images/trry.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -10,8 +9,10 @@
 }
 
 .about-me img {
-  width: 300px;
-  margin-bottom: 5%;
+  width: 15%;
+  z-index: 1;
+  margin-top: 30px;
+  margin-bottom: 2%;
   border-radius: 50%; /* Ensure the container is circular */
   transition: box-shadow 0.2s ease-in-out; /* Smooth transition for the glow */
 }
@@ -22,9 +23,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 1130px;
-  max-width: 100%;
-  margin: 0 auto;
 }
 
 .about-me img:hover {
@@ -33,7 +31,7 @@
 }
 
 .about-me-text {
-  width: 80%;
+  width: 50%;
   margin: 0 40px;
 }
 

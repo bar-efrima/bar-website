@@ -1,80 +1,78 @@
-.projects {
-  padding: 90px 80px;
-  background-color: black;
-}
 
-.projects-header {
-  padding-bottom: 80px;
-  color: #c84a97;
-  font-size: 2rem;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
-  text-align: center;
-  transition: transform 0.4s ease-in-out;
-}
 
-.projects-header:hover {
-  transform: scale(1.2);
+/* projects */
+.projects{
+  background-color: #000000;
+  margin-left: 20%;
+  margin-right: 20%;
+  
 }
-
+/* Grid layout */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 40px;
-  padding-bottom: 80px;
+  grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+  padding-bottom: 100px;
+  gap:3%;
+  row-gap: 7%;
 }
 
 .project-item {
   position: relative;
 }
 
+.project-content {
+  position: relative;
+  
+}
+
 .project-image {
   width: 100%;
-  height: auto;
+  border-radius: 5%;
 }
 
-.overlay {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
+.project-image:hover {
+  width: 100%;
+  border-radius: 5%;
+}
+
+/* Box with 0.5 opacity at the bottom of the image */
+.project-title-box {
+  position: absolute; /* Position it relative to the project-item */
+  bottom: -25%; /* Align it to the bottom of the image */
   left: 0;
   right: 0;
-  background-color: rgba(32, 32, 32, 0.9);
-  width: 100%;
-  height: 0;
-  transition: 0.5s ease;
+  width: 100%; /* Match the width of the image */
+  padding: 10px;
+  z-index: 1; /* Ensure it's above the image */
+  box-sizing: border-box; /* Ensure padding does not affect the width */
+  /* background-color: #0B0B0C; */
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid #1A1A1A;
+  border-radius: 5%;
+  text-align: left;
 }
 
-.project-item:hover .overlay {
-  height: 100%;
+/* Title text inside the box */
+.project-title {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 
-.text-projects {
-  color: white;
-  font-size: 20px;
-  width: 100%;
-  text-align: center;
+hr {
+  border: 0;
+  border-top: 1px solid #1a1a1a; /* Adjust the color to match your design */
+  margin-left: 20px ; 
+  margin-right: 20px ;
+  
 }
 
-.logo-overlay a {
-  margin: 0 10px;
+.project-type{
+  text-align: left;
+  margin-bottom: 2%;
 }
-
-/* Responsive styles */
-@media only screen and (max-width: 450px) {
-  .projects {
-      padding: 30px 20px;
-  }
-
-  .projects-grid {
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 10px;
-  }
-
-  .text-projects {
-      font-size: 8px;
-  }
+.project-description {
+  text-align: left;
 }

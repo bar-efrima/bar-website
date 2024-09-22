@@ -5,6 +5,7 @@ import myPhoto from '../assets/images/my_photo.png';
 function AboutMe() {
   return (
     <section className="about-me" id = "aboutTag"> 
+    
       <a name="aboutmeTag"></a>
       <div className="main-about-me">
         <img src={myPhoto} alt="Bar Efrima" />
