@@ -1,24 +1,22 @@
 /* Panel containing video background and content */
-
 .mysite-pannel {
   position: relative;
   background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
   margin-top: 5%;
-  height: 70vh;
+  height: 70vh; /* Viewport-based height */
   z-index: 1;
   background-image: url('../assets/images/cave.jpg');
   background-size: cover;
   background-position: center;
 }
 
-
 #myVideo {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* Make the video fill the viewport height */
   z-index: -2;
   object-fit: cover;
   opacity: 70%;
@@ -35,45 +33,44 @@
 
 .hello {
   color: rgb(255, 255, 255);
-    font-family: "poppins", sans-serif;
-    font-size: 1.5rem;
-    line-height: 1.565;
-    margin-bottom: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-  
+  font-family: "poppins", sans-serif;
+  font-size: clamp(1rem, 2vw, 2rem); /* Dynamic font-size for responsiveness */
+  line-height: 1.565;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
 }
 
 .name {
-    color:white;
-    font-family: "poppins", sans-serif;
-    letter-spacing: 0.1px;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    font-variant-ligatures: common-ligatures;
-    font-size: 90px;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-.more{
+  color: white;
+  font-family: "poppins", sans-serif;
+  letter-spacing: 0.1px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  font-variant-ligatures: common-ligatures;
+  font-size: clamp(2rem, 5vw, 7rem); /* Dynamic font-size for large screens */
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  
+}.more {
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
   color: white;
   border-color: rgba(255, 255, 255, 0.99);
   line-height: 3rem;
   text-transform: uppercase;
-  margin-left: 25%;
-  margin-right: 25%;
-  font-size: large;
+  margin: 10px;
+  font-size: clamp(0.8rem, 1vw, 1.2rem); /* Responsive font-size */
   letter-spacing: 0.25rem;
+  /* padding: 10px 20px;  */
   transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
   margin-bottom: 20px;
+  display: inline-block; /* Make the button inline */
+  white-space: nowrap; /* Prevent text from breaking into multiple lines */
 }
 
-.more.stroke{
+.more.stroke {
   background: transparent !important;
   border: 4px solid #afafafa0;
-  line-height: 4rem;
   transition: border-color 0.5s;
   transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
 }
@@ -86,17 +83,19 @@
 .more::after {
   content: "";
   display: inline-block;
-  width: 12px; 
-  height: 11px; 
+  width: 12px;
+  height: 11px;
   background: url('../assets/logos/smallArrow.png') no-repeat;
   background-size: contain;
-  margin-left: 8px; 
+  margin-left: 8px;
   animation: arrow-bob 2s infinite;
 }
 
 /* Animation for arrow */
 @keyframes arrow-bob {
-  50% { transform: translateY(5px); }
+  50% {
+    transform: translateY(5px);
+  }
 }
 
 /* Hidden elements for slide-in animation */
@@ -107,7 +106,6 @@
   transition: all 1s;
 }
 
-/* When the element is visible , this class is added */
 .show {
   opacity: 1;
   filter: blur(0);
@@ -126,12 +124,18 @@
   transform: translateY(0);
 }
 
-/* fade-in animation keyframes  */
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* Logo container with responsive image sizes */
 .logo-container {
   bottom: 40px;
   width: 100%;
@@ -142,9 +146,8 @@
 }
 
 .logo-container img {
-  
-  width: 35px;
-  height: 35px;
+  width: clamp(25px, 3vw, 40px); /* Adjust logo size based on viewport width */
+  height: clamp(25px, 3vw, 40px);
   margin: 50px 20px;
   transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
 }

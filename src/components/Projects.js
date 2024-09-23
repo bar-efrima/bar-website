@@ -1,6 +1,6 @@
 import './Projects.css';
 import amazon from '../assets/projects/ama.png';
-import navigation from '../assets/projects/navigation.jpg';
+import navigation from '../assets/projects/navi.png';
 import kitchef from '../assets/projects/Kitchef.jpg';
 import musical from '../assets/projects/musical.jpg';
 import weatherbox from '../assets/projects/wea.png';
@@ -8,6 +8,7 @@ import gamehighlights from '../assets/projects/game.png';
 import bubbletrouble from '../assets/projects/BubbleTrouble.jpg';
 import royalcats from '../assets/projects/Royal-cats.jpg';
 import weatherwizard from '../assets/projects/WeatherWizard.jpg';
+import caimbridge from '../assets/projects/caimbrige.jpg';
 // import stars from '../assets/videos/stars.webm';
 import { Link } from 'react-router-dom';
 
@@ -22,7 +23,7 @@ const projects = [
     youtube: 'https://youtu.be/kTHfsLwlMJY',
   },
   {
-    title: 'Unavigate',
+    title: 'Navigation App',
     image: navigation,
     type: 'Ionic React App',
     description: 'Created a cross-platform app for Reichman University using Ionic React...',
@@ -38,6 +39,14 @@ const projects = [
     youtube: 'https://milabgroup42022.wixsite.com/kitchef',
   },
   {
+    title: 'Caimbridge Research UK',
+    image: caimbridge,
+    type: 'Blockchain Research',
+    description: 'FastAPI web app that displays item prices from multiple Amazon websites...',
+    github: 'https://github.com/bar-efrima/Amazon-Product-Search',
+    youtube: 'https://youtu.be/kTHfsLwlMJY',
+  },
+  {
     title: 'The Musical Spray',
     image: musical,
     type: 'Arduino C++ Project',
@@ -47,7 +56,7 @@ const projects = [
   },
   {
     title: 'WeatherWizard App',
-    image: weatherwizard,
+    image: weatherbox,
     type: 'Ionic React App',
     description: 'Cross-platform weather app using React Ionic...',
     github: 'https://github.com/bar-efrima/WeatherWizard-App',

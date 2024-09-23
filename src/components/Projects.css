@@ -13,7 +13,7 @@
   grid-template-columns: repeat(2, 1fr); /* Two columns layout */
   padding-bottom: 100px;
   gap:3%;
-  row-gap: 7%;
+  row-gap: 9%;
 }
 
 .project-item {
@@ -39,11 +39,13 @@
 }
 
 .project-image {
-  width: 80%;
+  width: 90%;
   border-radius: 5%; /* Rounded corners for the image */
   transition: filter 0.4s ease-in-out, transform 0.4s ease-in-out;
   filter: none; 
   margin-bottom: 8%;
+  filter: drop-shadow(0 0 40px rgba(46, 46, 46, 0.1)) /* Pinkish glow */
+          drop-shadow(0 0 50px rgba(255, 255, 255, 0.2)); /* Light blue glow */
 }
 
 
@@ -56,7 +58,7 @@
 
 .project-title-box {
   position: absolute; 
-  bottom: -25%; 
+  bottom: -35%; 
   left: 0;
   right: 0;
   width: 100%;
@@ -68,6 +70,7 @@
   border: 1px solid #1A1A1A;
   border-radius: 5%;
   text-align: left;
+  padding-left: 10px;
 }
 
 /* Title text inside the box */
@@ -78,22 +81,27 @@
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   margin-bottom: 2%;
+  padding-left: 0;
+  font-size: 1vw; /* Set font-size relative to viewport width */
 }
 
 hr {
   border: 0;
-  border-top: 1px solid #1a1a1a; /* Adjust the color to match your design */
-  margin-left: 20px ; 
-  margin-right: 20px ;
-  
+  border-top: 1px solid #1a1a1a;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-.project-type{
+.project-type {
   text-align: left;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
+  font-weight: 400;
+  font-size: 0.8vw; /* Font size relative to viewport width */
 }
+
 .project-description {
   text-align: left;
-  margin-bottom: 2%;
-
+  margin-bottom: 1%;
+  font-weight: 300;
+  font-size: 0.8vw; /* Font size relative to viewport width */
 }

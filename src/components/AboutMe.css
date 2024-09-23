@@ -3,6 +3,7 @@
 .about-me {
   background-image: url('../assets/images/trry.png');
   background-size: cover;
+  width: auto;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 80vh; /* Use min-height to ensure it takes full screen on large screens */
@@ -14,7 +15,7 @@
   margin-top: 20px;
   margin-bottom: 2%;
   border-radius: 50%; /* Ensure the container is circular */
-  transition: box-shadow 0.5s ease-in-out; /* Smooth transition for the glow */
+  transition: filter 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
 /* Flexbox to manage layout */
@@ -26,19 +27,19 @@
 }
 
 .about-me img:hover {
-  box-shadow: 0 0 40px 15px rgba(255, 105, 180, 0.4), /* Pinkish */
-              0 0 60px 25px rgba(255, 255, 255, 0.2);   /* Light blue */
+  filter: drop-shadow(0 0 60px rgba(0, 200, 255, 0.674)) /* Pinkish glow */
+          drop-shadow(0 0 80px rgba(255, 255, 255, 0.348)); /* Light blue glow */
 }
 
 .about-me-text {
-  width: 50%;
+  width: 60%;
   margin: 0 40px;
 }
 
 .about-me-text h2 {
   color: #c84a97;
   font-family: "Poppins", sans-serif; 
-  font-size: 2rem;
+  font-size: 2.5vw;
   line-height: 1.565;
   margin-bottom: 0;
   text-transform: uppercase;
@@ -48,7 +49,7 @@
 .letMe {
   color: white;
   font-family: "Poppins", sans-serif; 
-  font-size: 1.8rem;
+  font-size: 1.5vw;
   line-height: 1.565;
   margin-bottom: 0;
   text-transform: uppercase;
@@ -58,10 +59,10 @@
 .about-me-text p {
   color: rgb(193, 193, 193);
   letter-spacing: 1px;
-  line-height: 28px;
+  line-height: 1.6vw;
   font-family: "Poppins", sans-serif; /* Correct the font name */
   font-weight: 300;
-  font-size: 20px;
+  font-size: 1.1vw;
   padding-top: 20px;
   margin-bottom: 45px;
 }
@@ -77,7 +78,7 @@
   }
 
   .letMe {
-    font-size: 1.2rem; 
+    font-size: 1.2rem;  
   }
 
   .about-me-text p {
