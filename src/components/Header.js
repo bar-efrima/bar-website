@@ -1,4 +1,3 @@
-// src/components/Header.js
 import React, { useEffect, useState } from 'react';
 import './Header.css'; 
 import mailLogo from '../assets/logos/mail.png';
@@ -7,6 +6,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 function Header() {
   const [isSticky, setIsSticky] = useState(false);
+  const location = useLocation(); // Get the current location
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +26,12 @@ function Header() {
     };
   }, []);
 
-  // Smooth scroll function
+  // Scroll to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Smooth scroll function for specific sections
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -34,24 +39,35 @@ function Header() {
     }
   };
 
+  // Navigate to the home page and scroll to section if needed
+  const navigateAndScroll = (sectionId) => {
+    if (location.pathname !== '/') {
+      window.location.href = `/#${sectionId}`; // Navigate to home and scroll
+    } else {
+      scrollToSection(sectionId);
+    }
+  };
 
   return (
     <nav id="nav-bar" className={isSticky ? 'sticky' : ''}>
       <h2 className="myname">Bar Efrima</h2>
       <ul id="menue">
+        {/* Home Link: Scrolls to the top */}
         <li>
-        <a href="#home" onClick={() => scrollToSection('homeTag')}>Home</a>
+          <a href="#top" onClick={scrollToTop}>Home</a>
         </li>
+
+        {/* About Me Section Link */}
         <li>
-        <a href="#About-me" onClick={() => scrollToSection('aboutTag')}>About Me</a>
+          <a href="#aboutmeTag" onClick={() => navigateAndScroll('aboutmeTag')}>About Me</a>
         </li>
-        <li className="dropdown">
-           <Link to="/Projects" className="dropbtn">Projects &#x25BC;</Link>
-          <div className="dropdown-content">
-            <a href="/projects#project1">Project 1</a>
-          </div>
+
+        {/* Projects Section Link */}
+        <li>
+          <a href="#projectsTag" onClick={() => navigateAndScroll('projectsTag')}>Projects</a>
         </li>
       </ul>
+
       <div className="nav-logos">
         <a href="mailto:bar2798@gmail.com" target="_blank" rel="noopener noreferrer">
           <img src={mailLogo} id="mail-logo" alt="Mail" />

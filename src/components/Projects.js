@@ -4,10 +4,12 @@ import navigation from '../assets/projects/navigation.jpg';
 import kitchef from '../assets/projects/Kitchef.jpg';
 import musical from '../assets/projects/musical.jpg';
 import weatherbox from '../assets/projects/wea.png';
-import gamehighlights from '../assets/projects/GameHighlights.jpg';
+import gamehighlights from '../assets/projects/game.png';
 import bubbletrouble from '../assets/projects/BubbleTrouble.jpg';
 import royalcats from '../assets/projects/Royal-cats.jpg';
 import weatherwizard from '../assets/projects/WeatherWizard.jpg';
+// import stars from '../assets/videos/stars.webm';
+import { Link } from 'react-router-dom';
 
 // Projects data array
 const projects = [
@@ -89,19 +91,25 @@ const projects = [
 function Projects() {
   return (
     <section className="projects">
-      <a name="projectsTag">
-      </a>
+      <a name="projectsTag"></a>
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div className="project-item" key={index}>
             <div className="project-content">
-             <div className="project-image-wrapper">
-              <img src={project.image} alt={project.title} className="project-image" />
-               </div>
+              <div className="project-image-wrapper">
+                {/* Check if the project is Kitchef and apply the Link */}
+                {project.title === 'Kitchef' ? (
+                  <Link to="/Kitchef">
+                    <img src={project.image} alt={project.title} className="project-image" />
+                  </Link>
+                ) : (
+                  <img src={project.image} alt={project.title} className="project-image" />
+                )}
+              </div>
               <div className="project-title-box">
-              <h5 className="project-type">{project.type}</h5>
-              <hr/>
-              <h3 className="project-title">{project.title}</h3>
+                <h5 className="project-type">{project.type}</h5>
+                <hr />
+                <h3 className="project-title">{project.title}</h3>
                 <h6 className="project-description">{project.description}</h6>
               </div>
             </div>
