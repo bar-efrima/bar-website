@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Header.css'; 
 import mailLogo from '../assets/logos/mail.png';
 import whatsappLogo from '../assets/logos/whatsapp.png';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function Header() {
   const [isSticky, setIsSticky] = useState(false);
@@ -25,11 +25,6 @@ function Header() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  // Scroll to the top of the page
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   // Smooth scroll function for specific sections
   const scrollToSection = (sectionId) => {

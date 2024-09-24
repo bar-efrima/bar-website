@@ -94,11 +94,7 @@ button:focus {
 
 /* Adding a default background if needed across pages */
 .main-background {
-  background: url('./assets/images/cave.jpg') no-repeat center center fixed;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-  position: relative;
+  background-color: #000000;
 }
 
 /* Add responsiveness if necessary */

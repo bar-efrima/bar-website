@@ -6,7 +6,7 @@
   margin-top: 5%;
   height: 70vh; /* Viewport-based height */
   z-index: 1;
-  background-image: url('../assets/images/cave.jpg');
+  background-image: url('../assets/images/pink_blue_background.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -64,7 +64,7 @@
   /* padding: 10px 20px;  */
   transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
   margin-bottom: 20px;
-  display: inline-block; /* Make the button inline */
+  display: inline-block;
   white-space: nowrap; /* Prevent text from breaking into multiple lines */
 }
 

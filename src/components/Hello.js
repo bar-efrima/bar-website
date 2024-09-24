@@ -28,6 +28,13 @@ function Hello() {
     };
   }, []);
 
+  const scrollToAboutMe = () => {
+    const aboutMeSection = document.getElementById('aboutTag');
+    if (aboutMeSection) {
+      aboutMeSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     
     <div className="mysite-pannel" id="helloTag">
@@ -40,7 +47,7 @@ function Hello() {
           <p className="hello">Hello, World.</p>
           <p className="name">I'm Bar Efrima.</p>
           <a href="#aboutmeTag">
-            <p className="more stroke">more about me</p>
+            <p onClick={scrollToAboutMe} style={{ cursor: 'pointer' }} className="more stroke">more about me</p>
           </a>
           </div>
         <div className="logo-container">
