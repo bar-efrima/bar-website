@@ -54,7 +54,7 @@ function Header() {
       <ul id="menue">
         {/* Home Link: Scrolls to the top */}
         <li>
-          <a href="#top" onClick={scrollToTop}>Home</a>
+          <a href="#helloTag" onClick={() => navigateAndScroll('helloTag')}>Home</a>
         </li>
 
         {/* About Me Section Link */}

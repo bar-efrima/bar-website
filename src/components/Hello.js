@@ -2,16 +2,12 @@
 import React, { useEffect } from 'react';
 import './Hello.css'; 
 import starsVideo from '../assets/videos/stars.webm';
-// import './LogoContainer.css'; // Add styles here
-
-// Import all logos
 import linkedinLogo from '../assets/logos/linkedin.png';
 import githubLogo from '../assets/logos/github.png';
 
 function Hello() {
 
   useEffect(() => {
-    // Define the observer
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
