@@ -6,7 +6,8 @@ import { useLocation } from 'react-router-dom';
 
 function Header() {
   const [isSticky, setIsSticky] = useState(false);
-  const location = useLocation(); // Get the current location
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu open/close
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,13 +21,11 @@ function Header() {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up event listener on unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  // Smooth scroll function for specific sections
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -34,35 +33,43 @@ function Header() {
     }
   };
 
-  // Navigate to the home page and scroll to section if needed
   const navigateAndScroll = (sectionId) => {
     if (location.pathname !== '/') {
-      window.location.href = `/#${sectionId}`; // Navigate to home and scroll
+      window.location.href = `/#${sectionId}`;
     } else {
       scrollToSection(sectionId);
     }
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen); // Toggle the state
+  };
+
   return (
-    <nav id="nav-bar" className={isSticky ? 'sticky' : ''}>
+    <nav id="nav-bar" className={`${isSticky ? 'sticky' : ''} ${isMenuOpen ? 'open' : ''}`}>
       <h2 className="myname">Bar Efrima</h2>
+      
+      {/* Hamburger icon for smaller screens */}
+      <div className={`hamburger ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      {/* Navigation Menu */}
       <ul id="menue">
-        {/* Home Link: Scrolls to the top */}
         <li>
           <a href="#helloTag" onClick={() => navigateAndScroll('helloTag')}>Home</a>
         </li>
-
-        {/* About Me Section Link */}
         <li>
           <a href="#aboutmeTag" onClick={() => navigateAndScroll('aboutmeTag')}>About Me</a>
         </li>
-
-        {/* Projects Section Link */}
         <li>
           <a href="#projectsTag" onClick={() => navigateAndScroll('projectsTag')}>Projects</a>
         </li>
       </ul>
 
+      {/* Social Icons */}
       <div className="nav-logos">
         <a href="mailto:bar2798@gmail.com" target="_blank" rel="noopener noreferrer">
           <img src={mailLogo} id="mail-logo" alt="Mail" />

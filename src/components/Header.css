@@ -1,3 +1,4 @@
+/* General styles for nav */
 nav {
   z-index: 2;
   position: sticky;
@@ -7,14 +8,6 @@ nav {
   background: rgba(0, 0, 0, 0.9);
   justify-content: space-between;
   padding: 7px 5%;
-
-}
-
-nav.sticky {
-  position: fixed;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .myname {
@@ -33,11 +26,11 @@ nav.sticky {
 
 #menue li {
   font-size: 19px;
-    list-style-type: none;
-    display: inline-block;
-    padding: 10px 15px;
-    padding-top: 40px;
-    padding-bottom: 10px;
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 15px;
+  padding-top: 40px;
+  padding-bottom: 10px;
 }
 
 #menue li a {
@@ -50,36 +43,9 @@ nav.sticky {
   padding-right: 15px;
   position: relative;
 }
-#menue li a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: white;
-  left: 0;
-  bottom: -12px; 
-  transform: scaleX(0);
-  transition: .5s;
-}
 
 #menue li a:hover {
   color: #c84a97;
-}
-
-#menue li a:hover::after {
-  transform: scaleX(1);
-    background: #c84a97;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 
 .nav-logos {
@@ -95,9 +61,116 @@ nav.sticky {
   transition: transform 0.5s ease, filter 0.5s ease-in-out;
 }
 
-.nav-logos img:hover {
-  transform: scale(1.2);
-  filter: brightness(0) saturate(100%) invert(58%) sepia(44%) saturate(5402%) hue-rotate(294deg) brightness(96%) contrast(87%);
+/* Hamburger Menu styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 35px;
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  background-color: rgba(28, 28, 28, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
 
+/* Change hamburger to X when open */
+.hamburger.open div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .myname {
+    font-size: 28px;
+    padding-top: 15px;
+  }
+
+  #menue {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  #menue li {
+    display: block;
+    padding: 10px 15px;
+    text-align: left;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav.open #menue {
+    display: flex;
+  }
+
+  /* Place the logos inside the menu for small screens */
+  nav.open .nav-logos {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .nav-logos {
+    display: none;
+  }
+
+  nav.open .nav-logos {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .nav-logos img {
+    margin: 10px;
+  }
+}
+
+/* For smaller screens below 480px */
+@media (max-width: 480px) {
+  .myname {
+    font-size: 24px;
+  }
+
+  .nav-logos img {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+  }
+
+  #menue li {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 2px;
+  }
+}
