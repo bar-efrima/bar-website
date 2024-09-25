@@ -1,24 +1,25 @@
-
-
-/* projects */
-.projects{
-  margin: 10%;
+.projects {
+  margin: 5%;
   background-color: #000000;
   margin-left: 20%;
   margin-right: 20%;
 }
+
 /* Grid layout */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns layout */
-  padding-bottom: 100px;
-  gap:3%;
-  row-gap: 9%;
+  grid-template-columns: repeat(2, 1fr); /* Two columns layout for larger screens */
+  gap: 3%;
+  row-gap: 1%;
 }
 
 .project-item {
   position: relative;
-  background-color: transparent; /* Ensure the background is transparent */
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10%;
 }
 
 .project-content {
@@ -31,77 +32,258 @@
 }
 
 .project-image-wrapper {
-  width: 100%; 
-  height: auto; 
+  width: 100%;
+  height: 18vw;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
 }
 
 .project-image {
   width: 90%;
-  border-radius: 5%; /* Rounded corners for the image */
+  padding-top: 0;
+  border-radius: 1em;
   transition: filter 0.4s ease-in-out, transform 0.4s ease-in-out;
-  filter: none; 
-  margin-bottom: 8%;
+  filter: none;
   filter: drop-shadow(0 0 40px rgba(46, 46, 46, 0.1)) /* Pinkish glow */
-          drop-shadow(0 0 50px rgba(255, 255, 255, 0.2)); /* Light blue glow */
+    drop-shadow(0 0 50px rgba(255, 255, 255, 0.2)); /* Light blue glow */
 }
-
 
 /* Hover effect using drop-shadow for PNG transparency */
 .project-image:hover {
   filter: drop-shadow(0 0 80px rgba(214, 2, 108, 0.674)) /* Pinkish glow */
-          drop-shadow(0 0 100px rgba(255, 255, 255, 0.348)); /* Light blue glow */
-  
+    drop-shadow(0 0 100px rgba(255, 255, 255, 0.348)); /* Light blue glow */
 }
 
+/* Project title box */
 .project-title-box {
-  position: absolute; 
-  bottom: -35%; 
-  left: 0;
-  right: 0;
   width: 100%;
-  padding: 10px;
-  z-index: 1; /* Ensure it's above the image */
-  box-sizing: border-box; 
-  /* background-color: #0B0B0C; */
+  height: 10vw;
+  z-index: 1;
+  box-sizing: border-box;
   background-color: rgba(22, 22, 22, 0.6);
   border: 1px solid #1A1A1A;
-  border-radius: 5%;
+  border-radius: 1em;
   text-align: left;
-  padding-left: 10px;
 }
 
-/* Title text inside the box */
+.project-type {
+  text-align: left;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-size: 0.8vw;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #1a1a1a;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .project-title {
   font-family: "Poppins", sans-serif;
   color: #fff;
   text-align: left;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  margin-bottom: 2%;
-  padding-left: 0;
-  font-size: 1vw; /* Set font-size relative to viewport width */
-}
-
-hr {
-  border: 0;
-  border-top: 1px solid #1a1a1a;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.project-type {
-  text-align: left;
-  margin-bottom: 1%;
-  font-weight: 400;
-  font-size: 0.8vw; /* Font size relative to viewport width */
+  font-size: 1vw;
+  padding-left: 20px;
+  margin-top: 10px;
 }
 
 .project-description {
+  padding-left: 20px;
+  padding-bottom: 10px;
   text-align: left;
-  margin-bottom: 1%;
   font-weight: 300;
-  font-size: 0.8vw; /* Font size relative to viewport width */
+  font-size: 0.8vw;
+  padding-right: 20px;
 }
+
+/* Media queries for responsiveness */
+
+/* For screens smaller than 768px (tablets and small screens) */
+/* For screens smaller than 768px (tablets) */
+@media (max-width: 768px) {
+
+  /* Project container */
+  .projects {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Grid layout */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    gap: 3%;
+    width: 100%;
+    padding: 0;
+    justify-items: center; /* Center the grid items */
+  }
+
+  .project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%; /* Add margin below each project */
+    width: 90%; /* Ensure the project items take up most of the screen width */
+  }
+
+  /* Image wrapper */
+  .project-image-wrapper {
+    width: 100%; /* Full width for image wrapper */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Image */
+  .project-image {
+    width: 100%; /* Full-width images on tablets */
+    max-width: 100%; /* Prevent overflow */
+    border-radius: 1em;
+  }
+
+  /* Title box */
+  .project-title-box {
+    width: 100%; /* Full width for title box */
+    height: auto; /* Adjust height based on content */
+    background-color: rgba(22, 22, 22, 0.6);
+    border: 1px solid #1A1A1A;
+    border-radius: 1em;
+    text-align: left;
+    padding: 10px;
+    margin-top: 10px; /* Add some spacing between image and title box */
+  }
+
+  /* Title and description text */
+  .project-type,
+  .project-title,
+  .project-description {
+    font-size: 2vw; /* Adjust text size for tablets */
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Adjust hr for tablets */
+  hr {
+    border: 0;
+    border-top: 1px solid #1a1a1a;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .project-type {
+    margin-top: 5px;
+  }
+
+  .project-description {
+    padding-bottom: 10px;
+  }
+}
+
+/* For screens smaller than 480px (mobile devices) */
+@media (max-width: 480px) {
+
+  /* Project container */
+  .projects {
+    
+    margin: 0; 
+    padding: 0;
+    background-color: #000000;
+    display: flex;
+    justify-content: center; /* Center the grid container */
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    width: 100%; /* Ensure the container takes the full width */
+  }
+
+  /* Grid layout */
+  .projects-grid {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column; /* Make sure each project is on a new line */
+    gap: 10px; /* Small gap between the projects */
+    width: 100%; /* Full width */
+    align-items: center; 
+    justify-content: center; 
+    padding: 0; /* Remove extra padding */
+  }
+
+  .project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10%; /* Add margin below each project */
+    width: 90%; 
+  }
+
+  /* Image wrapper */
+  .project-image-wrapper {
+    width: 100%; /* Full width for image wrapper */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Image */
+  .project-image {
+    width: 100%; /* Full-width images on small mobile screens */
+    max-width: 100%; /* Prevent overflow */
+    border-radius: 1em;
+  }
+
+  /* Title box */
+  .project-title-box {
+    width: 100%; 
+    height: auto; 
+    background-color: rgba(22, 22, 22, 0.6);
+    border: 1px solid #1A1A1A;
+    border-radius: 1em;
+    text-align: left;
+    padding: 10px;
+    margin-top: 10px; /*  spacing between image and title box */
+  }
+
+  /* Title and description text */
+  .project-type,
+  .project-title,
+  .project-description {
+    font-size: 3vw; /* Smaller text size for mobile */
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Adjust hr for mobile */
+  hr {
+    border: 0;
+    border-top: 1px solid #1a1a1a;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .project-type {
+    margin-top: 5px;
+  }
+
+  .project-description {
+    padding-bottom: 10px;
+  }
+}
+

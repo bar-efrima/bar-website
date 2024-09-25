@@ -21,10 +21,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: left;
 }
 
 header img {
-    border-radius: 20%;
+    border-radius: 3em;
     width: 170px; 
     height: auto;
     margin-right: 30px;
@@ -34,6 +35,7 @@ header img {
     font-size: 3.8rem;
     line-height: 1; 
     margin: 0;
+    text-align: left;
     background: linear-gradient(to bottom, #c2c2c2, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -55,7 +57,7 @@ header img {
 .project-showcase img{
     width: 65%;
     height: auto;
-    border-radius: 5%;
+    border-radius: 2em;
 }
 
 .content-container {
@@ -107,28 +109,31 @@ hr {
 .tech-stack{
     background-color: #0B0B0C;
     border: 1px solid #1A1A1A;
-    border-radius: 10%;
+    border-radius: 1em;
     margin-bottom: 20px;
 }
 
 .tech-stack ul {
     list-style: none;
+    padding: 40px;
+    
 }
 
 .tech-stack ul li {
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
+
 
 .created {
     background-color: #0B0B0C;
     border: 1px solid #1A1A1A;
-    border-radius: 5%;
+    border-radius: 1em;
     margin-bottom: 20px;
 }
 .links {
     background-color: #1a0418;
     border: 1px solid #1A1A1A;
-    border-radius: 5%;
+    border-radius: 1em;
     margin-bottom: 20px;
 }
 
@@ -163,13 +168,13 @@ hr {
 .about{
     background-color: #0B0B0C;
     border: 1px solid #1A1A1A;
-    border-radius: 5%;
+    border-radius: 1em;
     margin-bottom: 20px;
 }
 .image1 img{
     width: 100%;
     height: auto;
-    border-radius: 5%;
+    border-radius: 1em;
 }
 
 .image3 {
@@ -181,14 +186,14 @@ hr {
 .image3 img{
     width: 65%;
     height: auto;
-    border-radius: 5%;
+    border-radius: 1em;
 }
 
 section {
     padding: 20px;
     margin: 0 auto;
     width:65%;
-    border-radius: 8px;
+    border-radius: 1em;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     letter-spacing:1px;
     
@@ -200,7 +205,7 @@ section p {
     font-size: 1.3rem;
     padding-left: 25px;
     padding-right: 25px;
-    font-weight: 530;
+    font-weight: 400;
 }
 
 section h3{
@@ -211,11 +216,6 @@ section h3{
     font-size: 2.3rem;
     transition: transform 0.3s ease, color 0.3s ease;
     transform-origin: left;
-}
-
-section h3:hover {
-    color: #c84a97;
-    transform: scale(1.1);   
 }
 
 ul {
@@ -231,6 +231,7 @@ ul {
 .tech-item {
     display: flex;
     align-items: center;
+    padding: 10px;
 }
 
 .tech-item img {
@@ -261,6 +262,6 @@ ul {
 }
 
 .video-container iframe {
-    border-radius: 15px; 
+    border-radius: 1em; 
     border: none;
 }

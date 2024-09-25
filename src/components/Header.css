@@ -48,6 +48,23 @@ nav {
   color: #c84a97;
 }
 
+#menue li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -12px; 
+  transform: scaleX(0);
+  transition: .5s;
+}
+
+#menue li a:hover::after {
+  transform: scaleX(1);
+    background: #c84a97;
+}
+
 .nav-logos {
   display: flex;
   align-items: center;
@@ -59,6 +76,11 @@ nav {
   height: 25px;
   margin-right: 35px;
   transition: transform 0.5s ease, filter 0.5s ease-in-out;
+}
+
+.nav-logos img:hover {
+  transform: scale(1.2);
+  filter: brightness(0) saturate(100%) invert(58%) sepia(44%) saturate(5402%) hue-rotate(294deg) brightness(96%) contrast(87%);
 }
 
 /* Hamburger Menu styles */

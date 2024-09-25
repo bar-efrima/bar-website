@@ -83,8 +83,17 @@
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+
+  .about-me {
+    height: auto;
+  }
+
   .about-me img {
     width: 150px;
+  }
+
+  .about-me-text{
+    width: 100%;
   }
 
   .about-me-text h2 {
