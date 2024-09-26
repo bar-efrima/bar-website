@@ -1,12 +1,15 @@
-/* About Me Section */
-
 .about-me {
   background-image: url('../assets/images/moon_abstract_background.png');
   background-size: cover;
-  width: auto;
-  background-repeat: no-repeat;
   background-position: center;
-  min-height: 80vh; /* Use min-height to ensure it takes full screen on large screens */
+  background-repeat: no-repeat;
+  width: 100%;
+  max-height: 100vh; /* Set a maximum height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center the content */
+  padding: 5% 0; /* Adjust padding for better control of section height */
 }
 
 .about-me img {
@@ -18,7 +21,6 @@
   transition: filter 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
-/* Flexbox to manage layout */
 .main-about-me {
   display: flex;
   flex-direction: column;
@@ -34,11 +36,12 @@
 .about-me-text {
   width: 60%;
   margin: 0 40px;
+  
 }
 
 .about-me-text h2 {
   color: #c84a97;
-  font-family: "Poppins", sans-serif; 
+  font-family: "Poppins", sans-serif;
   font-size: 2.5vw;
   line-height: 1.565;
   margin-bottom: 0;
@@ -48,7 +51,7 @@
 
 .letMe {
   color: white;
-  font-family: "Poppins", sans-serif; 
+  font-family: "Poppins", sans-serif;
   font-size: 1.5vw;
   line-height: 1.565;
   margin-bottom: 0;
@@ -60,40 +63,27 @@
   color: rgb(193, 193, 193);
   letter-spacing: 1px;
   line-height: 1.6vw;
-  font-family: "Poppins", sans-serif; /* Correct the font name */
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 1.1vw;
   padding-top: 20px;
-  margin-bottom: 45px;
-  transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
-}
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 4s forwards;
+  padding-bottom: 15%;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
 
   .about-me {
-    height: auto;
+    height: 50vh; /* Reduce the height even further on tablets */
+    padding: 2% 0; /* Less padding for smaller screens */
   }
 
   .about-me img {
-    width: 150px;
+    width: 120px; /* Reduce the image size */
   }
 
-  .about-me-text{
-    width: 100%;
+  .about-me-text {
+    width: 90%;
+    text-align: center; /* Center the text for better layout */
   }
 
   .about-me-text h2 {
@@ -107,6 +97,6 @@
   .about-me-text p {
     font-size: 14px; 
     line-height: 24px; 
+    text-align: center; /* Center the text for readability on tablets */
   }
 }
-

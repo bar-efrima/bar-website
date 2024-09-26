@@ -214,7 +214,7 @@ hr {
 
   /* Grid layout */
   .projects-grid {
-    margin-top: 10%;
+    margin-top: 20%;
     display: flex;
     flex-direction: column; /* Make sure each project is on a new line */
     gap: 10px; /* Small gap between the projects */

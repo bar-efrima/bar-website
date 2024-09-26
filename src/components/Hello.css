@@ -4,7 +4,7 @@
   background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
   margin-top: 5%;
-  height: 70vh; /* Viewport-based height */
+  height: 75vh; /* Viewport-based height */
   z-index: 1;
   background-image: url('../assets/images/pink_blue_background.jpg');
   background-size: cover;
@@ -163,4 +163,78 @@
 .logo-container a:hover img {
   transform: scale(1.1);
   filter: brightness(0) saturate(100%) invert(58%) sepia(44%) saturate(5402%) hue-rotate(294deg) brightness(96%) contrast(87%);
+}
+
+/* For screens smaller than 480px (mobile devices) */
+@media (max-width: 768px) {
+  .hello {
+    font-size: 3vw; 
+    width: auto;
+  }
+}
+
+/* For screens smaller than 480px (mobile devices) */
+@media (max-width: 480px) {
+
+  .mysite-pannel {
+    margin-top: 5%;
+    height: 60vh; /* Reduce the height for mobile screens */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  #myVideo {
+    height: 60vh; /* Reduce the height for mobile screens */
+    object-fit: cover;
+  }
+
+  .HelloWorld {
+    top: 45%; /* Adjust to center the text */
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .hello {
+    font-size: 4vw; 
+    width: auto;
+  }
+
+  .name {
+    font-size: 8vw; 
+      white-space: nowrap; /* Prevent text from wrapping to multiple lines */
+      overflow: hidden; 
+      padding: 0;
+    }
+
+  .more {
+    font-size: 3vw; 
+    padding-left: 3%; 
+    padding-right: 3%;
+    line-height: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .more.stroke {
+    padding-left: 6%;
+    padding-right: 8%;
+    padding-top: 0.8%;
+    padding-bottom: 0.8%;
+    border: 2px solid #afafafa0; 
+  }
+
+  .logo-container {
+    padding-top: 20px;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo-container img {
+    width: 6vw; 
+    height: 6vw; 
+    margin: 20px 10px; 
+  }
 }
