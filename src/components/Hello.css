@@ -166,11 +166,22 @@
 }
 
 /* For screens smaller than 480px (mobile devices) */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .hello {
-    font-size: 3vw; 
+    font-size: 4vw; 
     width: auto;
   }
+  .name{
+    font-size: 6vw; 
+    width:100%;
+  }
+
+  .logo-container img {
+    width: 3vw; 
+    height: 3vw; 
+    margin: 20px 10px; 
+  }
+
 }
 
 /* For screens smaller than 480px (mobile devices) */

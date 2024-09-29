@@ -52,8 +52,8 @@
 
 /* Hover effect using drop-shadow for PNG transparency */
 .project-image:hover {
-  filter: drop-shadow(0 0 80px rgba(214, 2, 108, 0.674)) /* Pinkish glow */
-    drop-shadow(0 0 100px rgba(255, 255, 255, 0.348)); /* Light blue glow */
+  filter: drop-shadow(0 0 80px rgba(214, 2, 108, 0.674)) 
+    drop-shadow(0 0 100px rgba(255, 255, 255, 0.348));
 }
 
 /* Project title box */
@@ -128,7 +128,7 @@ hr {
     gap: 3%;
     width: 100%;
     padding: 0;
-    justify-items: center; /* Center the grid items */
+    justify-items: center; 
     row-gap: 1%;
   }
 
@@ -136,13 +136,13 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5%; /* Add margin below each project */
-    width: 90%; /* Ensure the project items take up most of the screen width */
+    margin-bottom: 5%; 
+    width: 90%; 
   }
 
   /* Image wrapper */
   .project-image-wrapper {
-    width: 100%; /* Full width for image wrapper */
+    width: 100%; 
     height: auto;
     display: flex;
     justify-content: center;
@@ -151,7 +151,7 @@ hr {
 
   /* Image */
   .project-image {
-    width: 100%; /* Full-width images on small mobile screens */
+    width: 100%; 
     max-width: 100%; 
     border-radius: 1em;
   }
@@ -165,7 +165,7 @@ hr {
     border-radius: 1em;
     text-align: left;
     padding: 10px;
-    margin-top: 10px; /*  spacing between image and title box */
+    margin-top: 10px;
   }
 
   /* Title and description text */
@@ -223,23 +223,23 @@ hr {
     display: flex;
     flex-direction: column; /* Make sure each project is on a new line */
     gap: 10px; /* Small gap between the projects */
-    width: 100%; /* Full width */
+    width: 100%; 
     align-items: center; 
     justify-content: center; 
-    padding: 0; /* Remove extra padding */
+    padding: 0; 
   }
 
   .project-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 10%; /* Add margin below each project */
+    margin-bottom: 10%; 
     width: 90%; 
   }
 
   /* Image wrapper */
   .project-image-wrapper {
-    width: 100%; /* Full width for image wrapper */
+    width: 100%; 
     height: auto;
     display: flex;
     justify-content: center;
@@ -248,7 +248,7 @@ hr {
 
   /* Image */
   .project-image {
-    width: 100%; /* Full-width images on small mobile screens */
+    width: 100%; 
     max-width: 100%; 
     border-radius: 1em;
   }
@@ -262,14 +262,14 @@ hr {
     border-radius: 1em;
     text-align: left;
     padding: 10px;
-    margin-top: 10px; /*  spacing between image and title box */
+    margin-top: 10px; 
   }
 
   /* Title and description text */
   .project-type,
   .project-title,
   .project-desc {
-    font-size: 3vw; /* Smaller text size for mobile */
+    font-size: 3vw;
     margin: 0;
     padding-left: 10px;
     padding-right: 10px;
