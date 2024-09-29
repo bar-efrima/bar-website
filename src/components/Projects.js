@@ -111,6 +111,10 @@ function Projects() {
                     <Link to="/Kitchef">
                       <img src={project.image} alt={project.title} className="project-image" />
                     </Link>
+                  ) : project.title === 'Amazon Scraper' ? (
+                    <Link to="/amazon">
+                      <img src={project.image} alt={project.title} className="project-image" />
+                    </Link>
                   ) : (
                     <img src={project.image} alt={project.title} className="project-image" />
                   )}
