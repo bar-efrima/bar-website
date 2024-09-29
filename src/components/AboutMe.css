@@ -15,7 +15,6 @@
 .about-me img {
   width: 15%;
   z-index: 1;
-  margin-top: 20px;
   margin-bottom: 2%;
   border-radius: 50%; /* Ensure the container is circular */
   transition: filter 0.4s ease-in-out, transform 0.4s ease-in-out;
@@ -73,7 +72,7 @@
 @media (max-width: 768px) {
 
   .about-me {
-    height: 50vh; /* Reduce the height even further on tablets */
+    height: auto; 
     padding: 2% 0; /* Less padding for smaller screens */
   }
 

@@ -39,9 +39,9 @@ const projects = [
     youtube: 'https://milabgroup42022.wixsite.com/kitchef',
   },
   {
-    title: 'Caimbridge Research UK',
+    title: 'Blockchain Research',
     image: caimbridge,
-    type: 'Blockchain Research',
+    type: 'Caimbridge Research UK',
     description: 'FastAPI web app that displays item prices from multiple Amazon websites...',
     github: 'https://github.com/bar-efrima/Amazon-Product-Search',
     youtube: 'https://youtu.be/kTHfsLwlMJY',
@@ -104,23 +104,23 @@ function Projects() {
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div className="project-item" key={index}>
-            <div className="project-content">
-              <div className="project-image-wrapper">
-                {/* Check if the project is Kitchef and apply the Link */}
-                {project.title === 'Kitchef' ? (
-                  <Link to="/Kitchef">
+              <div className="project-content">
+                <div className="project-image-wrapper">
+                  {/* Check if the project is Kitchef and apply the Link */}
+                  {project.title === 'Kitchef' ? (
+                    <Link to="/Kitchef">
+                      <img src={project.image} alt={project.title} className="project-image" />
+                    </Link>
+                  ) : (
                     <img src={project.image} alt={project.title} className="project-image" />
-                  </Link>
-                ) : (
-                  <img src={project.image} alt={project.title} className="project-image" />
-                )}
-              </div>
-              <div className="project-title-box">
-                <h5 className="project-type">{project.type}</h5>
-                <hr />
-                <h3 className="project-title">{project.title}</h3>
-                <h6 className="project-description">{project.description}</h6>
-              </div>
+                  )}
+                </div>
+                <div className="project-title-box">
+                    <h5 className="project-type">{project.type}</h5>
+                    <hr />
+                    <h3 className="project-title">{project.title}</h3>
+                    <h6 className="project-desc">{project.description}</h6>
+                </div>
             </div>
           </div>
         ))}
