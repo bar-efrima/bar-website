@@ -153,7 +153,7 @@ function kitchef() {
     </div>
 
 <section class="project-description">
-        <h3>Awards</h3>
+        <h3 id="c">Awards</h3>
         <hr />
         <ul class="awards">
             <li>CHI Hawaii Conference</li>
