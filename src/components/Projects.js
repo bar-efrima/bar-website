@@ -47,10 +47,10 @@ const projects = [
     youtube: 'https://youtu.be/kTHfsLwlMJY',
   },
   {
-    title: 'The Musical Spray',
+    title: 'IoT Inventions',
     image: musical,
-    type: 'Arduino C++ Project',
-    description: 'Arduino-based C++ touch instrument...',
+    type: 'Arduino C++ Projects',
+    description: 'The musical spray, Emulating keyboard with fruits, The weather box, Kitchef ',
     github: 'https://github.com/bar-efrima/The-Musical-Spray',
     youtube: 'https://youtu.be/cg78-Zcp89s',
   },
@@ -70,14 +70,14 @@ const projects = [
     github: 'https://github.com/bar-efrima/Highlights-Creator/tree/main',
     youtube: 'https://youtu.be/dU6XqPEafqA',
   },
-  {
-    title: 'Gaming With Fruits',
-    image: bubbletrouble,
-    type: 'CPX Arduino Project',
-    description: 'Playing "Bubble Trouble" with fruits as the keyboard...',
-    github: 'https://github.com/bar-efrima/Emulating-Bubble-Trouble-With-Fruits',
-    youtube: 'https://youtu.be/XRUjBdCev2o',
-  },
+  // {
+  //   title: 'Gaming With Fruits',
+  //   image: bubbletrouble,
+  //   type: 'CPX Arduino Project',
+  //   description: 'Playing "Bubble Trouble" with fruits as the keyboard...',
+  //   github: 'https://github.com/bar-efrima/Emulating-Bubble-Trouble-With-Fruits',
+  //   youtube: 'https://youtu.be/XRUjBdCev2o',
+  // },
   {
     title: 'Royal Cats NFT',
     image: royalcats,
@@ -87,14 +87,14 @@ const projects = [
     twitter: 'https://twitter.com/RoyalCats_NFT',
     website: 'https://www.royalcatsnft.art/',
   },
-  {
-    title: 'The Weather Box',
-    image: weatherbox,
-    type: 'Arduino C++ Project',
-    description: 'A device that retrieves current weather conditions using a weather API...',
-    github: 'https://github.com/bar-efrima/The-Weather-Box',
-    youtube: 'https://youtu.be/788kr_7DwH4',
-  },
+  // {
+  //   title: 'The Weather Box',
+  //   image: weatherbox,
+  //   type: 'Arduino C++ Project',
+  //   description: 'A device that retrieves current weather conditions using a weather API...',
+  //   github: 'https://github.com/bar-efrima/The-Weather-Box',
+  //   youtube: 'https://youtu.be/788kr_7DwH4',
+  // },
 ];
 
 function Projects() {
