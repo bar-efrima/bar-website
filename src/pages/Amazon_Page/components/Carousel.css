@@ -1,0 +1,68 @@
+.carousel-wrapper {
+  margin: 50px auto;
+  width: 65%;
+  padding: 20px;
+
+}
+
+.carousel .slide {
+  overflow: visible; /* Ensure the shadow is not clipped */
+  padding: 20px;
+  position: relative;
+}
+
+.carousel .slide img {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  /* filter: drop-shadow(0 0 10px rgba(214, 2, 108, 0.674))  */
+  filter:      drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+.carousel .legend {
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+.bb p{
+  font-size: 16px;
+  color: #f50000;
+  padding: 10px;
+}
+
+/* Media Queries */
+
+/* For tablets (max-width 768px) */
+@media (max-width: 768px) {
+  .carousel-wrapper {
+      width: 80%;
+  }
+
+  .carousel .legend {
+      font-size: 14px;
+      padding: 8px;
+  }
+}
+
+/* For mobile devices (max-width 600px) */
+@media (max-width: 600px) {
+  .carousel-wrapper {
+      width: 90%; 
+      padding: 10px;
+  }
+
+  .carousel .legend {
+      font-size: 12px;
+      padding: 6px;
+  }
+
+  .carousel .slide img {
+      width: 100%; 
+  }
+}

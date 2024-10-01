@@ -1,7 +1,7 @@
 /* Skill Card Container */
 .tech-stack {
     width: 65%;
-    background-color: #0c0b0c;
+    background-color: #b1b1b16a;
     border: 1px solid #1a1a1a;
     border-radius: 10px;
     overflow: hidden;
@@ -56,14 +56,14 @@
 
 /* Skill Percent Bar */
 .skill-percent {
-    background-color: #ffffff;
+    background-color: #65a3ffc7;
     height: 100%;
 }
 
 /* Skill Percent Number */
 .skill-percent-number {
     margin-left: 10px; /* Add space between the progress bar and the percentage */
-    color: #656565;
+    color: #d4d4d4;
     text-align: left;
 }
 
@@ -82,7 +82,7 @@
 
 /* Inline-block list items with spacing */
 .other li {
-    background-color: #1f1f1f;
+    background-color: #393e49;
     padding: 10px 20px;
     margin-right: 10px;
     margin-bottom: 10px;
