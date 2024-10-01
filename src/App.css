@@ -17,8 +17,11 @@
 /* Body styles */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #000000; /* Dark background */
-  color: #ffffff; /* Light text for contrast */
+  background-color: #000000; 
+  background-image: url(assets/images/backgrounds/endless-nodes.svg); 
+  background-repeat: repeat;
+  background-size: auto; /* Keeps the original size of the image */
+  color: #ffffff; 
   font-weight: 400;
   line-height: 1.6;
   min-height: 100vh;

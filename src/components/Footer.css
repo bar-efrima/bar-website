@@ -1,16 +1,42 @@
-footer {
-  background-color: black;
-  text-align: center;
-  padding: 10px 0;
+/* Footer styles */
+.footer {
+  width: 100vw;
+  height: 10vh; /* Adjust the height as necessary */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 0;
+  z-index: 999;
+  overflow: hidden;
+  color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
-footer p {
-  color: #6c757d;
+/* Gradient animation for the footer */
+.gradient {
+  background: linear-gradient(334deg, #6b97f7, #7525e2, #f7137e);
+  background-size: 180% 180%;
+  animation: gradient-animation 6s ease infinite;
 }
 
-/* Responsive styles */
-@media only screen and (max-width: 450px) {
-  footer p {
-      font-size: 10px;
+/* Keyframes for the gradient animation */
+@keyframes gradient-animation {
+  0% {
+      background-position: 0% 50%;
   }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+/* Footer text content styles */
+.footer-content {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  font-size: 1.2rem; /* Adjust text size as needed */
 }
