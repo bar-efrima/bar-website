@@ -1,0 +1,159 @@
+/* Skill Card Container */
+.tech-stack {
+    width: 65%;
+    background-color: #0c0b0c;
+    border: 1px solid #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto; /* Center the container */
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Skill Progress Bar Body */
+.body {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Each Skill Row */
+.skill {
+    padding-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute space between items */
+    text-align: center;
+    margin-bottom: 15px; /* Space between skills */
+    max-width: 400px; /* Set a max width to keep the rows compact */
+    margin: 0 auto; /* Center each skill row */
+}
+
+/* Skill Name */
+.skill-name {
+    width: 120px;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: right; /* Align the text to the right */
+    transition: transform 0.3s ease; /* Transition for scaling effect */
+}
+
+/* Scale the skill name when hovered or touched */
+.skill-name:hover {
+    transform: scale(1.05); /* Slightly increase the size */
+}
+
+/* Skill Progress Bar */
+.skill-level {
+    width: 200px;
+    height: 10px;
+    background-color: #777777;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 20px;
+}
+
+/* Skill Percent Bar */
+.skill-percent {
+    background-color: #ffffff;
+    height: 100%;
+}
+
+/* Skill Percent Number */
+.skill-percent-number {
+    margin-left: 10px; /* Add space between the progress bar and the percentage */
+    color: #656565;
+    text-align: left;
+}
+
+/* Divider Line */
+#skills-line {
+    border: 0;
+    border-top: 1px solid #1A1A1A;
+    margin: 0 20px;
+}
+
+/* Technologies and Libraries List */
+.other ul {
+    padding: 0;
+    list-style: none;
+}
+
+/* Inline-block list items with spacing */
+.other li {
+    background-color: #1f1f1f;
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 0.8em;
+    font-size: 14px;
+    color: #d9d9d9;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Scale the skill when hovered or touched */
+.other li:hover {
+    transform: scale(1.05);
+}
+
+/* Other Skills Container */
+.other {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 850px) {
+    .tech-stack {
+        width: 80%;
+    }
+
+    .skill-name {
+        font-size: 14px;
+        width: 100px;
+    }
+
+    .skill-level {
+        width: 150px;
+    }
+
+    .skill-percent-number {
+        font-size: 14px;
+    }
+
+    .other li {
+        padding: 8px 15px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tech-stack {
+        width: 90%;
+    }
+
+    .skill-name {
+        font-size: 12px;
+        width: 90px;
+    }
+
+    .skill-level {
+        width: 130px;
+    }
+
+    .skill-percent-number {
+        font-size: 12px;
+    }
+
+    .other li {
+        padding: 6px 12px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        font-size: 10px;
+    }
+}

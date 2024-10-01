@@ -2,8 +2,6 @@ import React from 'react';
 import Hello from './Hello'; // Import the Hello section
 import AboutMe from './AboutMe'; // Import the AboutMe section
 import Projects from './Projects'; // Import the Projects section
-import Header from './Header'; // Import the head section
-import Footer from './Footer'; // Import the footer section
 
 
 function Home() {
@@ -13,7 +11,7 @@ function Home() {
         <Hello />
         <AboutMe />
         <Projects />
-        <Footer />
+
         </div>
   );
 }

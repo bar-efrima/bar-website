@@ -131,7 +131,7 @@ hr {
     margin: 0 20px;
 }
 
-/* Tech Stack, Created, Links, and About Sections */
+/* Created, Links, and About Sections */
  .created, .links, .about {
     background-color: #0B0B0C;
     border: 1px solid #1A1A1A;
@@ -147,6 +147,8 @@ hr {
 .links {
     background-color: #6600ff24;
     border: 1px solid #2e2e2e;
+    width: 65%;
+    margin: 0 auto;
 }
 
 .links p a {
@@ -398,79 +400,3 @@ hr {
     }
 
 }
-
-/* From Uiverse.io by ahmed150up */ 
-.tech-stack {
-    width: 65%;
-    background-color: #0B0B0C;
-    border: 1px solid #1A1A1A;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 0 auto; /* Center the list container */
-    margin-top: 20px;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  
-  .body {
-    padding: 20px;
-    
-  }
-  
-  .skill {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  .skill-name {
-    
-    width: 120px;
-    font-size: 16px;
-    color: #ffffff;
-  }
-  
-  .skill-level {
-    width: 200px;
-    height: 10px;
-    background-color: #777777;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-left: 20px;
-  }
-  
-  .skill-percent {
-    background-color: #ffffff;
-    height: 100%;
-  }
-  
-  .skill-percent-number {
-    margin-left: 20px;
-    font-size: 16px;
-    color: #656565;
-  }
-  
-  #skills-line{
-    width:85%;
-  }
-
-  .other li {
-    background-color: #1f1f1f;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-right: 20px;
-    border-radius: 0.8em;
-    font-size: 14px;
-    color: #d9d9d9;
-    display: inline-block;
-  }
-
-  .other{
-    margin-top: 20px;
-    padding-bottom: 20px;
-  }
-  

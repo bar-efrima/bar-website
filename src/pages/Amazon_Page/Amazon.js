@@ -2,14 +2,40 @@ import React from 'react';
 import './amazon.css'; // CSS file for styling
 import amazonLogo from './Images/amazon_logo.png'; // Amazon logo
 import projectScreenshot from './Images/projectScreenshot.jpg'; // Screenshot of the project
-import pythonLogo from './Stack/Python.png'; // Tech stack logos
+import SkillCard from '../../components/Skills'; // SkillCard component
+import AboutCard from '../../components/AboutProject'; // AboutCard component
+
 // import javascriptLogo from './Stack/javascript.png';
 // import beautifulSoupLogo from './Stack/beautifulSoup.png';
 // import fastApiLogo from './Stack/fastapi.png';
 // import sqliteLogo from './Stack/sqlite.png';
 
 function Amazon() {
+
+  const amazonSkills = [
+    { name: 'HTML', percent: 90 },
+    { name: 'CSS', percent: 80 },
+    { name: 'JavaScript', percent: 75 },
+    { name: 'Python', percent: 85 },
+  ];
+  const amazonSkillsList = [
+    { name: 'SQLite3' },
+    { name: 'BeautifulSoup' },
+    { name: 'FastApi' },
+    { name: 'Photoshop' },
+  ];
+
+  const AmazonDescription = `The Amazon Scraper is a web-based application 
+  that allows users to scrape product prices and details from multiple Amazon 
+  regions (US, UK, DE, CA) in real-time. It uses FastAPI as the backend framework, 
+  aiohttp for asynchronous HTTP requests, and BeautifulSoup for scraping. 
+  The app also features real-time currency conversion for accurate price 
+  comparisons across different regions. The project is designed to offer users 
+  the ability to retrieve product information efficiently, with asynchronous operations 
+  ensuring quick responses from multiple regions.`;
   return (
+   
+    
     <div>
       {/* Header Section */}
       <header>
@@ -28,74 +54,25 @@ function Amazon() {
       </div>
 
      {/* Tech Stack and Project Info */}
-      <div class="tech-stack">
-  <div class="body">
-    <div class="skill">
-      <div class="skill-name">HTML</div>
-      <div class="skill-level">
-        <div class="skill-percent" style={{ width: "90%" }}></div>
-      </div>
-      <div class="skill-percent-number">90%</div>
-    </div>
-    <div class="skill">
-      <div class="skill-name">CSS</div>
-      <div class="skill-level">
-        <div class="skill-percent" style={{ width: "80%" }}></div>
-      </div>
-      <div class="skill-percent-number">80%</div>
-    </div>
-    <div class="skill">
-      <div class="skill-name">JavaScript</div>
-      <div class="skill-level">
-        <div class="skill-percent" style={{ width: "75%" }}></div>
-      </div>
-      <div class="skill-percent-number">75%</div>
-    </div>
-  </div>
-
-  <hr id="skills-line"/>
-    <div class="other">
-  <ul>
-    <li>BeautifulSoup</li>
-    <li>SQLite3</li>
-    <li>FastApi</li>
-    <li>Midjourney</li>
-    <li>Photoshop</li>
-  </ul>
-  </div>
-</div>
-
-      {/* Main Content Container */}
-      <div className="content-container">
-        {/* About the Project Section */}
-        <div className="left-side">
-          <div className="about">
-            <h3>About the Project</h3>
-            <hr />
-            <p>
-              The Amazon Scraper is a web-based application that allows users to scrape product prices and details from multiple Amazon regions (US, UK, DE, CA) in real-time. It uses FastAPI as the backend framework, aiohttp for asynchronous HTTP requests, and BeautifulSoup for scraping. The app also features real-time currency conversion for accurate price comparisons across different regions. The project is designed to offer users the ability to retrieve product information efficiently, with asynchronous operations ensuring quick responses from multiple regions.
-            </p>
-          </div>
-        </div>
-
-
-          {/* Created Section */}
-          
-      </div>
      
-   
-      <div className="content-container">
-      <div className="created">
+     <SkillCard skills={amazonSkills} skillsList={amazonSkillsList} />
+     
+     <AboutCard description={AmazonDescription} />
+
+     <div className="project-showcase">
+        <img src={projectScreenshot} alt="Amazon Scraper Project Screenshot" />
+      </div>
+
+     <div className="links">
+            <p><a href="https://github.com/yourgithub/amazon-scraper" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>
+          </div>
+          <div className="created">
             <h3>Created</h3>
             <hr />
             <p>2023</p>
           </div>
-
-          {/* Links Section */}
-          <div className="links">
-            <p><a href="https://github.com/yourgithub/amazon-scraper" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>
-          </div>
-          </div>
+   
+     
       {/* Features Section */}
       <section className="project-description">
         <h3>Project Features</h3>
