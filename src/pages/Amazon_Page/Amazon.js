@@ -28,47 +28,42 @@ function Amazon() {
       </div>
 
      {/* Tech Stack and Project Info */}
-          <div className="tech-stack">
-            <h2>Tech Stack Used</h2>
-            <hr />
-            <ul>
-              <li className="tech-item">
-                <img src={pythonLogo} alt="Python" />
-                <div className="tech-info">
-                  <h4>Python</h4>
-                  <p>Core programming language for backend development.</p>
-                </div>
-              </li>
-              <li className="tech-item">
-                {/* <img src={javascriptLogo} alt="JavaScript" /> */}
-                <div className="tech-info">
-                  <h4>JavaScript</h4>
-                  <p>Frontend interaction and dynamic UI updates.</p>
-                </div>
-              </li>
-              <li className="tech-item">
-                {/* <img src={fastApiLogo} alt="FastAPI" /> */}
-                <div className="tech-info">
-                  <h4>FastAPI</h4>
-                  <p>Backend framework for building the web application.</p>
-                </div>
-              </li>
-              <li className="tech-item">
-                {/* <img src={beautifulSoupLogo} alt="BeautifulSoup" /> */}
-                <div className="tech-info">
-                  <h4>BeautifulSoup</h4>
-                  <p>Library for scraping HTML data from Amazon pages.</p>
-                </div>
-              </li>
-              <li className="tech-item">
-                {/* <img src={sqliteLogo} alt="SQLite" /> */}
-                <div className="tech-info">
-                  <h4>SQLite</h4>
-                  <p>Database for storing past searches and pricing results.</p>
-                </div>
-              </li>
-            </ul>
-        </div>
+      <div class="tech-stack">
+  <div class="body">
+    <div class="skill">
+      <div class="skill-name">HTML</div>
+      <div class="skill-level">
+        <div class="skill-percent" style={{ width: "90%" }}></div>
+      </div>
+      <div class="skill-percent-number">90%</div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">CSS</div>
+      <div class="skill-level">
+        <div class="skill-percent" style={{ width: "80%" }}></div>
+      </div>
+      <div class="skill-percent-number">80%</div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">JavaScript</div>
+      <div class="skill-level">
+        <div class="skill-percent" style={{ width: "75%" }}></div>
+      </div>
+      <div class="skill-percent-number">75%</div>
+    </div>
+  </div>
+
+  <hr id="skills-line"/>
+    <div class="other">
+  <ul>
+    <li>BeautifulSoup</li>
+    <li>SQLite3</li>
+    <li>FastApi</li>
+    <li>Midjourney</li>
+    <li>Photoshop</li>
+  </ul>
+  </div>
+</div>
 
       {/* Main Content Container */}
       <div className="content-container">
@@ -87,6 +82,8 @@ function Amazon() {
           {/* Created Section */}
           
       </div>
+     
+   
       <div className="content-container">
       <div className="created">
             <h3>Created</h3>

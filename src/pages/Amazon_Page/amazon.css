@@ -132,7 +132,7 @@ hr {
 }
 
 /* Tech Stack, Created, Links, and About Sections */
-.tech-stack, .created, .links, .about {
+ .created, .links, .about {
     background-color: #0B0B0C;
     border: 1px solid #1A1A1A;
     border-radius: 1em;
@@ -142,51 +142,6 @@ hr {
     
 }
 
-.tech-stack h2 {
-    font-size: 2rem;
-    color: #E2E6F6;
-    margin-bottom: 10px; /* Add some space between the title and the list */
-    text-align: center;
-    
-}
-
-.tech-stack ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.tech-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-.tech-item img {
-    width: 40px;
-    margin-right: 10px;
-}
-
-.tech-info h4 {
-    margin: 0;
-    font-size: 1.3rem;
-}
-
-.tech-info p {
-    margin: 0;
-    font-size: 1rem;
-    color: #CECECF;
-}
-
-/* Ensure the section is centered */
-.tech-stack {
-    text-align: center;
-    justify-content: center;
-    width: 65%;
-    margin: 0 auto;
-}
 
 /* Links Styling */
 .links {
@@ -306,8 +261,7 @@ hr {
     .links span img {
         width: 15px;
     }
-
-    .tech-stack, .created, .links, .about {
+     .created, .links, .about {
         padding: 15px;
         margin-bottom: 15px;
         border-radius: 1em;
@@ -317,27 +271,7 @@ hr {
         font-size: 2vw;
     }
 
-    .tech-stack ul {
-        padding: 5px;
-    }
-    .tech-info h4 {
-        margin-left: 12px;
-        padding-top: 15px;
-        font-size: 1rem;
-        font-weight: 500;
-        color: #CECECF;
-    }
-    
-    .tech-item {
-        display: flex;
-        align-items: center;
-        padding: 5px;
-    }
-    
-    .tech-item img {
-        width: 40px;
-        height: auto;
-    }
+
 
     .video-container {
         margin-top: 20px;
@@ -381,7 +315,6 @@ hr {
     .content-container,
     .project-description,
     .image3,
-    .tech-stack,
     .created {
         width: 90%; 
         padding-top: 0;
@@ -402,7 +335,6 @@ hr {
         margin-top: 10px;
     }
 
-    .tech-stack,
     .created ,
     .links{
         margin-top: 10px;
@@ -413,9 +345,6 @@ hr {
         margin: 0 auto;
     }
 
-    .tech-stack ul {
-        padding: 0px;
-    }
 
     /* Image 3 spacing */
     .image3 {
@@ -439,35 +368,6 @@ hr {
         margin-left: 0;
     }
 
-    .tech-stack,
-    .created {
-        padding: 15px;
-        margin-bottom: 15px;
-        border-radius: 1em;
-    }
-
-    .tech-stack ul {
-        padding: 5px;
-    }
-
-    .tech-info h4 {
-        margin-left: 12px;
-        font-size: 12px;
-        font-weight: 530;
-        color: #CECECF;
-        padding-top: 15px;
-    }
-    
-    .tech-item {
-        display: flex;
-        align-items: center;
-        padding: 0;
-    }
-    
-    .tech-item img {
-        width: 35px;
-        height: auto;
-    }
 
     .links p a {
         font-size: 12px;
@@ -499,5 +399,78 @@ hr {
 
 }
 
+/* From Uiverse.io by ahmed150up */ 
+.tech-stack {
+    width: 65%;
+    background-color: #0B0B0C;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto; /* Center the list container */
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  .body {
+    padding: 20px;
+    
+  }
+  
+  .skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .skill-name {
+    
+    width: 120px;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  
+  .skill-level {
+    width: 200px;
+    height: 10px;
+    background-color: #777777;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 20px;
+  }
+  
+  .skill-percent {
+    background-color: #ffffff;
+    height: 100%;
+  }
+  
+  .skill-percent-number {
+    margin-left: 20px;
+    font-size: 16px;
+    color: #656565;
+  }
+  
+  #skills-line{
+    width:85%;
+  }
 
+  .other li {
+    background-color: #1f1f1f;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 20px;
+    border-radius: 0.8em;
+    font-size: 14px;
+    color: #d9d9d9;
+    display: inline-block;
+  }
 
+  .other{
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+  

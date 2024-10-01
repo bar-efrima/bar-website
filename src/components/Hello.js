@@ -47,7 +47,19 @@ function Hello() {
           <p className="hello">Hello, World.</p>
           <p className="name">I'm Bar Efrima.</p>
           <a href="#aboutmeTag">
-            <p onClick={scrollToAboutMe} style={{ cursor: 'pointer' }} className="more stroke">more about me</p>
+          <button type="button" class="btn">
+            <strong>More About Me</strong>
+            <div id="container-stars">
+              <div id="stars"></div>
+            </div>
+
+            <div id="glow">
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+          </button>
+
+            {/* <p onClick={scrollToAboutMe} style={{ cursor: 'pointer' }} className="more stroke">more about me</p> */}
           </a>
           </div>
         <div className="logo-container">

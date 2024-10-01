@@ -15,7 +15,7 @@
 
 /* Gradient animation for the footer */
 .gradient {
-  background: linear-gradient(334deg, #6b97f7, #7525e2, #f7137e);
+  background: linear-gradient(334deg, #000000, #37116c, #ff0077);
   background-size: 180% 180%;
   animation: gradient-animation 6s ease infinite;
 }
