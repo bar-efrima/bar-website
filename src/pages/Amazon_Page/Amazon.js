@@ -2,22 +2,19 @@ import React from 'react';
 import './amazon.css'; // CSS file for styling
 import amazonLogo from './Images/amazon_logo.png'; // Amazon logo
 import projectScreenshot from './Images/projectScreenshot.jpg'; // Screenshot of the project
-import SkillCard from '../../components/Skills'; // SkillCard component
-import AboutCard from '../../components/AboutProject'; // AboutCard component
-import Carousel from './components/Carousel'; // Carousel component
+import SkillCard from '../components/Skills'; // SkillCard component
+import AboutCard from '../components/AboutProject'; // AboutCard component
+import Carousel from '../components/Carousel'; // Carousel component
+import linkIcon from '../General_Images/link.png';
 
-// import javascriptLogo from './Stack/javascript.png';
-// import beautifulSoupLogo from './Stack/beautifulSoup.png';
-// import fastApiLogo from './Stack/fastapi.png';
-// import sqliteLogo from './Stack/sqlite.png';
 
 function Amazon() {
 
   const amazonSkills = [
-    { name: 'HTML', percent: 90 },
-    { name: 'CSS', percent: 80 },
-    { name: 'JavaScript', percent: 75 },
-    { name: 'Python', percent: 85 },
+    { name: 'HTML', percent: 7.6 },
+    { name: 'CSS', percent: 13.5 },
+    { name: 'JavaScript', percent: 35.9 },
+    { name: 'Python', percent: 43 },
   ];
   const amazonSkillsList = [
     { name: 'SQLite3' },
@@ -53,25 +50,29 @@ function Amazon() {
       <div className="project-showcase">
         <img src={projectScreenshot} alt="Amazon Scraper Project Screenshot" />
       </div>
+  
+     <div className="amazon-info">
+  <div className="amazon-left">
+    <SkillCard skills={amazonSkills} skillsList={amazonSkillsList} />
+    
+    </div>
+    <div className="amazon-right">
+      <div className="year-created">
+      <h3>Created</h3>
+        <hr />
+        <p>2022</p>
+      </div>
+      <div className="github">
+        <p><a href="https://github.com/bar-efrima/Amazon-Product-Search" target="_blank" rel="noopener noreferrer">GitHub Repository</a><img src={linkIcon} alt="Link Icon" /></p>
+      </div>
+    </div>
+  </div>
 
-     {/* Tech Stack and Project Info */}
-     
-     <SkillCard skills={amazonSkills} skillsList={amazonSkillsList} />
+  <AboutCard description={AmazonDescription} />
 
-     <AboutCard description={AmazonDescription} />
+   <Carousel />
 
-     <Carousel />
 
-     <div className="links">
-            <p><a href="https://github.com/yourgithub/amazon-scraper" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>
-          </div>
-          <div className="created">
-            <h3>Created</h3>
-            <hr />
-            <p>2023</p>
-          </div>
-   
-     
       {/* Features Section */}
       <section className="project-description">
         <h3>Project Features</h3>

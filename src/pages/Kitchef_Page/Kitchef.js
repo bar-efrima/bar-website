@@ -6,7 +6,7 @@ import image1 from './Images/image1.jpg';
 import arduinoLogo from './Stack/Arduino.png';
 import cppLogo from './Stack/c++.svg';
 import adobeLogo from './Stack/Adobe.png';
-import linkIcon from './Images/link.png';
+import linkIcon from '../General_Images/link.png';
 import historyImage from './Images/history.jpg';
 import image3 from './Images/image3.jpg';
 import image4 from './Images/image4.jpg';
@@ -76,7 +76,7 @@ function kitchef() {
 
                     
                 </ul>
-            </div>
+            </div> 
             <div class="created">
                 <h3>Created</h3>
                 <hr />

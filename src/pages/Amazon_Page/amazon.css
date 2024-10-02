@@ -54,12 +54,14 @@ header img {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    
 }
 
 .project-showcase img {
     width: 65%;
     height: auto;
     border-radius: 2em;
+    margin-bottom: 10px;
 }
 
 /* Content Container */
@@ -88,15 +90,83 @@ header img {
     font-weight: 400;
     text-align: left;
 }
-
-.left-side {
-    width: 60%;
-    margin-top: 20px;
+.amazon-info {
+    display: flex;
+    justify-content: space-between;
+    width: 65%; 
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: stretch; 
+    gap: 20px; 
 }
 
-.right-side {
-    width: 38%;
-    margin-top: 20px;
+/* Left side (Skills) */
+.amazon-left {
+    width: 70%; 
+    padding-left: 0;
+    margin-left: 0;
+    text-align: left; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Right side (Created and Links) */
+.amazon-right {
+    width: 30%; /* Ensure it takes up the rest of the width */
+    display: flex;
+    gap: 20px; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Links Styling */
+.github {
+    background-color: #6600ff24;
+    border: 1px solid #2e2e2e;
+    border-radius: 1em;
+    height: 100%;
+    width: 100%; /* Take up the full width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.github p {
+    color: #CECECF;
+    font-size:1.5rem;
+    font-weight: 600;
+}
+
+.github img {
+    width: 20px;
+    height: auto;
+    margin-left: 10px;
+}
+
+/* Created Section */
+.year-created {
+    background-color: #6600ff24;
+    border: 1px solid #2e2e2e;
+    height: 100%;
+    border-radius: 1em;
+    width: 100%; /* Take up the full width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0B0B0C;
+    color: #CECECF;
+    border: 1px solid #1A1A1A;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.year-created h3 {
+    margin: 0;
+    font-size:2.3rem;
+    padding: 5px;
+}
+.year-created p {
+    padding: 5px;
+    font-size: 1rem;
 }
 
 /* Section Styling */
@@ -129,81 +199,6 @@ hr {
     border: 0;
     border-top: 1px solid #1A1A1A;
     margin: 0 20px;
-}
-
-/* Created, Links, and About Sections */
- .created, .links, .about {
-    background-color: #0B0B0C;
-    border: 1px solid #1A1A1A;
-    border-radius: 1em;
-    margin-bottom: 20px;
-    padding: 20px;
-    text-align: center;
-    
-}
-
-
-/* Links Styling */
-.links {
-    background-color: #6600ff24;
-    border: 1px solid #2e2e2e;
-    width: 65%;
-    margin: 0 auto;
-}
-
-.links p a {
-    font-size: 1.3rem;
-    font-weight: 530;
-    line-height: 1.5;
-    color: #CECECF;
-    text-decoration: none;
-}
-
-.links p a:hover {
-    color: #a6a6a6;
-}
-
-.links span img {
-    width: 20px;
-    height: auto;
-    margin-left: 10px;
-}
-
-/* Project Description */
-.project-description {
-    width: 65%;
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #0B0B0C;
-    border: 1px solid #1A1A1A;
-    border-radius: 1em;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.project-description h4, .project-description p {
-    text-align: left;
-    padding: 20px;
-}
-
-.project-description ul {
-    list-style-position: inside;
-    padding: 20px;
-    columns: 1;
-}
-
-/* Image Styling */
-.image1 img, .image3 img {
-    width: 100%;
-    height: auto;
-    border-radius: 1em;
-}
-
-.image3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 65%;
-    margin: 0 auto;
 }
 
 /* Video Container */
@@ -240,15 +235,11 @@ hr {
         margin-right: 30px;
     }
 
-    .project-showcase img, .project-description, .content-container,.image3 {
+    .project-showcase img, .content-container {
         width: 80%;
     }
 
-    .image3 {
-        margin: 0 auto;
-    }
-
-    .content-container p, .links p a {
+    .content-container p {
         font-size: 2vw;
         padding-top: 0;
         padding-left: 5px;
@@ -256,24 +247,12 @@ hr {
         padding-bottom: 10px;
     }
 
-    .content-container h3, .project-description h3{
+    .content-container h3{
         font-size: 3.5vw;
     }
-
-    .links span img {
-        width: 15px;
-    }
-     .created, .links, .about {
-        padding: 15px;
-        margin-bottom: 15px;
-        border-radius: 1em;
-    }
-
     section p {
         font-size: 2vw;
     }
-
-
 
     .video-container {
         margin-top: 20px;
@@ -314,10 +293,7 @@ hr {
 
     /* Adjust the showcase image and content to take 90% of screen width */
     .project-showcase img,
-    .content-container,
-    .project-description,
-    .image3,
-    .created {
+    .content-container {
         width: 90%; 
         padding-top: 0;
     }
@@ -330,12 +306,6 @@ hr {
         width: 90%; 
     }
 
-    /* Left and Right sides stacked vertically */
-    .left-side,
-    .right-side {
-        width: 100%; 
-        margin-top: 10px;
-    }
 
     .created ,
     .links{
@@ -346,7 +316,6 @@ hr {
         width: 100%;
         margin: 0 auto;
     }
-
 
     /* Image 3 spacing */
     .image3 {
@@ -400,3 +369,4 @@ hr {
     }
 
 }
+

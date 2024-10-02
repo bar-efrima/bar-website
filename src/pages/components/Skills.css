@@ -1,21 +1,23 @@
 /* Skill Card Container */
 .tech-stack {
-    width: 65%;
-    background-color: #b1b1b16a;
+    width: 100%;
+    background-color: #252525a7;
     border: 1px solid #1a1a1a;
-    border-radius: 10px;
+    border-radius: 1em;
     overflow: hidden;
     margin: 0 auto; /* Center the container */
     margin-top: 20px;
-    text-align: center;
+    text-align: left;
     padding: 20px;
-    margin-bottom: 20px;
+    height: auto;
+    margin-top: 0;
 }
 
 /* Skill Progress Bar Body */
 .body {
+    
     padding: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 /* Each Skill Row */
@@ -24,7 +26,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between; /* Distribute space between items */
-    text-align: center;
     margin-bottom: 15px; /* Space between skills */
     max-width: 400px; /* Set a max width to keep the rows compact */
     margin: 0 auto; /* Center each skill row */
@@ -35,7 +36,7 @@
     width: 120px;
     font-size: 16px;
     color: #ffffff;
-    text-align: right; /* Align the text to the right */
+    text-align: left; 
     transition: transform 0.3s ease; /* Transition for scaling effect */
 }
 

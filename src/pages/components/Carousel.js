@@ -1,8 +1,8 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import the carousel styles
-import image1 from '../Images/ca1.png';
-import image2 from '../Images/ca2.png';
+import image1 from '../Amazon_Page/Images/ca1.png';
+import image2 from '../Amazon_Page/Images/ca2.png';
 import './Carousel.css'; // Import the carousel component styles
 
 function PhotoCarousel() {
