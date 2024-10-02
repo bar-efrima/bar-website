@@ -9,59 +9,6 @@ body {
     font-weight: 700;
 }
 
-/* Header Section */
-header {
-    color: #fff;
-    padding: 60px 20px 10px;
-    text-align: left;
-}
-
-.header-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    padding-left: 17%;
-}
-
-header img {
-    border-radius: 3em;
-    width: 150px;
-    height: auto;
-    margin-right: 30px;
-}
-
-.text-container h1 {
-    font-size: 3.8rem;
-    margin: 0;
-    line-height: 1;
-    text-align: left;
-    background: linear-gradient(to bottom, #c2c2c2, #ffffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.text-container p {
-    font-size: 1.8rem;
-    margin: 0;
-    color: #B6B9C6;
-    text-align: left;
-}
-
-/* Project Showcase */
-.project-showcase {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.project-showcase img {
-    width: 65%;
-    height: auto;
-    border-radius: 2em;
-}
-
 /* Content Container */
 .content-container {
     width: 65%;
@@ -250,25 +197,8 @@ hr {
 
 /* Responsive Styles */
 @media (max-width: 850px) {
-    .header-container {
-        padding-left: 8%;
-    }
-
-    .text-container h1 {
-        font-size: 2.5rem;
-    }
-
-    .text-container p {
-        font-size: 1.3rem;
-    }
-
-    header img {
-        border-radius: 1em;
-        width: 100px;
-        margin-right: 30px;
-    }
-
-    .project-showcase img, .project-description, .content-container,.image3 {
+   
+    .project-description, .content-container,.image3 {
         width: 90%;
     }
 
@@ -331,20 +261,8 @@ hr {
 }
 
 @media (max-width: 600px) {
-    /* Center-align the header content */
-
-
-    /* Make the text smaller and adjust layout for mobile */
-
-    header img {
-        border-radius: 1em;
-        width: 80px;
-        margin-right: 30px;
-    }
-
 
     /* Adjust the showcase image and content to take 90% of screen width */
-    .project-showcase img,
     .content-container,
     .project-description,
     .image3,

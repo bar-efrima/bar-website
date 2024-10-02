@@ -10,25 +10,22 @@ import linkIcon from '../General_Images/link.png';
 import historyImage from './Images/history.jpg';
 import image3 from './Images/image3.jpg';
 import image4 from './Images/image4.jpg';
+import ProjectHeader from '../components/ProjectHeader';
 
 
 function kitchef() {
+
+    const kitchefHeader = {
+        title: 'Kitchef',
+        description: 'A TUI for Parent-Child Cooking Together',
+        logo: milabLogo,
+        screenshot: projectScreenshot,
+      }
+    
   return(
 <div>
-    <header>
-        <div class="header-container">
-            <img src={milabLogo} alt="Project Logo" />
-            <div class="text-container">
-                <h1>Kitchef</h1>
-                <p>A TUI for Parent-Child Cooking Together</p>
-            </div>
-        </div>
-    </header>
-    
-    <div class="project-showcase">
-        <img src={projectScreenshot} alt="Project Screenshot" />
-    </div>
-    
+<ProjectHeader title={kitchefHeader.title} description={kitchefHeader.description} logo={kitchefHeader.logo} screenshot={kitchefHeader.screenshot} />
+
     <div class="content-container">
         <div class="left-side">
             <div class="about">
@@ -82,47 +79,19 @@ function kitchef() {
                 <hr />
                 <p>2022</p>
             </div>
-            {/* <div class="full-article">
-                <h3><a href="https://www.tech12.co.il/index-technology_first/ai_revolution/Article-860576e73637981026.htm">Academic Paper</a></h3>
-            </div>
-            <div class="full-article">
-                <h3><a href="link_to_article">Kitchef in tech12</a></h3>
-            </div>  */}
             <div class="links">
                 <p><a href="https://milabgroup42022.wixsite.com/kitchef">Website <span><img src={linkIcon} alt="Link Icon" /></span></a></p>
                 <p><a href="https://dl.acm.org/doi/10.1145/3613905.3650970">Academic Paper <span><img src={linkIcon} alt="Link Icon"/></span></a></p>
                 <p><a href= "https://programs.sigchi.org/chi/2024/program/content/150804"> CHI Hawaii Conference <span><img src={linkIcon} alt={"Link Icon"}/></span></a></p>
                 <p><a href="https://www.tech12.co.il/index-technology_first/ai_revolution/Article-860576e73637981026.htm">tech12 <span><img src={linkIcon} alt="Link Icon"/></span></a></p>
             </div>
-            {/* <div class="image1">
-                <img src={image4} alt="image4"/>
-            </div> */}
 
         </div>
         </div>
-    {/* <section class="project-description">
-        <h3>About The Project</h3>
-        <hr />
-           <p> 
-                I was the prgrammer and Project Manager of the project. 
-                My team included one psychology student, one 2 comunication studdents,
-                two computer science students including me, an industrial designer, and academic advisors.
-                I managed the project from the beginning, 
-                planning this project, through the design process of the system, 
-                conducting experiments and interviews with participants, 
-                and up to writing an academic paper for the HRI 2021 conference.
-            </p>
-        </section>
-        <div class="image3">
-            <img src={historyImage} alt="Image 3"/>
-        </div>
-
-
-     */}
     <section class="project-description">
         <h3>My Role</h3>
         <hr />
-        
+        <p>
             <p>
             Design and conduct experiments: 
             Softtware devleoper and electronic operator: Led "Kitchef" project from concept 
@@ -145,6 +114,7 @@ function kitchef() {
             Involvement in writing an academic paper: Including literature reviews and a deep 
             understanding of the CyberBall paradigm. Writing specifically the Findings chapter 
             and dividing the qualitative findings into themes.
+            </p>
             </p>
     </section>
     <div class="image3">
