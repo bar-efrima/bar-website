@@ -11,6 +11,8 @@
 
 .content-container h3 {
     color: #E2E6F6;
+    text-align: left;
+    padding-left: 25px;
     margin-top: 15px;
     font-size: 2.3rem;
     transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
@@ -27,7 +29,7 @@
 
 @media (max-width: 850px) {
     .content-container {
-        width: 80%;
+        width: 90%;
     }
     .content-container p{
         font-size: 2vw;

@@ -26,7 +26,7 @@ header {
 
 header img {
     border-radius: 3em;
-    width: 200px;
+    width: 150px;
     height: auto;
     margin-right: 30px;
 }
@@ -269,7 +269,7 @@ hr {
     }
 
     .project-showcase img, .project-description, .content-container,.image3 {
-        width: 80%;
+        width: 90%;
     }
 
     .image3 {
@@ -332,34 +332,16 @@ hr {
 
 @media (max-width: 600px) {
     /* Center-align the header content */
-    .header-container {
-        padding-left: 7%;
-    }
 
-    .text-container p {
-        font-size: 1.8rem;
-        margin: 0;
-        text-align: left;
-        color: #B6B9C6;
-    }
 
     /* Make the text smaller and adjust layout for mobile */
-    .text-container h1 {
-        font-size: 2rem;
-    }
 
     header img {
         border-radius: 1em;
         width: 80px;
         margin-right: 30px;
     }
-    .text-container h1{
-        font-size: 1.8rem;
-    }
-    .text-container p {
-        font-size: 0.6rem;
-        width: 100%;
-    }
+
 
     /* Adjust the showcase image and content to take 90% of screen width */
     .project-showcase img,

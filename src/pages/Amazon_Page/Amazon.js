@@ -6,9 +6,19 @@ import SkillCard from '../components/Skills'; // SkillCard component
 import AboutCard from '../components/AboutProject'; // AboutCard component
 import Carousel from '../components/Carousel'; // Carousel component
 import linkIcon from '../General_Images/link.png';
+import YearCreated from '../components/YearCreated';
+import ProjectHeader from '../components/ProjectHeader';
+import GithubLink from '../components/Github';
 
 
 function Amazon() {
+
+  const amazonHeader = {
+    title: 'Amazon Scraper',
+    description: 'Multi-region Amazon price scraping tool',
+    logo: amazonLogo,
+    screenshot: projectScreenshot,
+  }
 
   const amazonSkills = [
     { name: 'HTML', percent: 7.6 },
@@ -16,12 +26,17 @@ function Amazon() {
     { name: 'JavaScript', percent: 35.9 },
     { name: 'Python', percent: 43 },
   ];
+
   const amazonSkillsList = [
     { name: 'SQLite3' },
     { name: 'BeautifulSoup' },
     { name: 'FastApi' },
     { name: 'Photoshop' },
   ];
+  
+  const yearCreated =  '2022' ;
+
+  const githubLink = 'https://github.com/bar-efrima/Amazon-Product-Search';
 
   const AmazonDescription = `The Amazon Scraper is a web-based application 
   that allows users to scrape product prices and details from multiple Amazon 
@@ -34,57 +49,40 @@ function Amazon() {
   return (
    
     
-    <div>
-      {/* Header Section */}
-      <header>
-        <div className="header-container">
-          <img src={amazonLogo} alt="Amazon Scraper Logo" />
-          <div className="text-container">
-            <h1>Amazon Scraper</h1>
-            <p>FastAPI-powered multi-region Amazon price scraping tool</p>
-          </div>
-        </div>
-      </header>
+  <div>
 
-      {/* Project Showcase Section */}
-      <div className="project-showcase">
-        <img src={projectScreenshot} alt="Amazon Scraper Project Screenshot" />
-      </div>
-  
-     <div className="amazon-info">
-  <div className="amazon-left">
-    <SkillCard skills={amazonSkills} skillsList={amazonSkillsList} />
+    <ProjectHeader title={amazonHeader.title} description={amazonHeader.description} logo={amazonHeader.logo} screenshot={amazonHeader.screenshot} />
     
-    </div>
-    <div className="amazon-right">
-      <div className="year-created">
-      <h3>Created</h3>
-        <hr />
-        <p>2022</p>
+    <div className="amazon-info">
+
+      <div className="amazon-left">
+        <SkillCard skills={amazonSkills} skillsList={amazonSkillsList} />
       </div>
-      <div className="github">
-        <p><a href="https://github.com/bar-efrima/Amazon-Product-Search" target="_blank" rel="noopener noreferrer">GitHub Repository</a><img src={linkIcon} alt="Link Icon" /></p>
+
+      <div className="amazon-right">
+        <YearCreated year={yearCreated} />
+        <GithubLink link={githubLink} linkIcon={linkIcon}/>
       </div>
+
     </div>
-  </div>
 
   <AboutCard description={AmazonDescription} />
+  
+  <Carousel />
 
-   <Carousel />
 
-
-      {/* Features Section */}
-      <section className="project-description">
-        <h3>Project Features</h3>
-        <hr />
-        <ul>
-          <li>Real-time product scraping from multiple Amazon regions (US, UK, DE, CA).</li>
-          <li>Asynchronous HTTP requests for efficient multi-site scraping using aiohttp.</li>
-          <li>BeautifulSoup for parsing HTML and extracting data like product prices, images, and ratings.</li>
-          <li>Real-time currency conversion with forex-python.</li>
-          <li>Stores past search data and allows users to review previous searches.</li>
-        </ul>
-      </section>
+    {/* Features Section */}
+    <section className="project-description">
+      <h3>Project Features</h3>
+      <hr />
+      <ul>
+        <li>Real-time product scraping from multiple Amazon regions (US, UK, DE, CA).</li>
+        <li>Asynchronous HTTP requests for efficient multi-site scraping using aiohttp.</li>
+        <li>BeautifulSoup for parsing HTML and extracting data like product prices, images, and ratings.</li>
+        <li>Real-time currency conversion with forex-python.</li>
+        <li>Stores past search data and allows users to review previous searches.</li>
+      </ul>
+    </section>
 
       {/* Video Demonstration Section */}
       <div className="video-container">

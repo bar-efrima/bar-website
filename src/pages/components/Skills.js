@@ -3,8 +3,8 @@ import './Skills.css';
 
 function Skills({ skills, skillsList }) {
   return (
-    <div className="tech-stack">
-      <div className="body">
+    <div className="tech-used">
+      <div className="skills-body">
         {skills.map((skill, index) => (
           <div className="skill" key={index}>
             <div className="skill-name">{skill.name}</div>

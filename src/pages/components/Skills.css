@@ -1,12 +1,11 @@
 /* Skill Card Container */
-.tech-stack {
+.tech-used {
     width: 100%;
     background-color: #252525a7;
     border: 1px solid #1a1a1a;
     border-radius: 1em;
     overflow: hidden;
     margin: 0 auto; /* Center the container */
-    margin-top: 20px;
     text-align: left;
     padding: 20px;
     height: auto;
@@ -14,8 +13,7 @@
 }
 
 /* Skill Progress Bar Body */
-.body {
-    
+.skills-body {
     padding: 20px;
     text-align: left;
 }
@@ -108,9 +106,6 @@
 
 /* Responsive Design */
 @media (max-width: 850px) {
-    .tech-stack {
-        width: 80%;
-    }
 
     .skill-name {
         font-size: 14px;
@@ -133,8 +128,9 @@
     }
 }
 
+
 @media (max-width: 600px) {
-    .tech-stack {
+    .tech-used {
         width: 90%;
     }
 
