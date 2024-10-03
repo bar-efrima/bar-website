@@ -64,7 +64,7 @@ function Amazon() {
   return (
    
     
-  <div>
+  <div class="amazon">
 
     <ProjectHeader title={amazonHeader.title} description={amazonHeader.description} logo={amazonHeader.logo} screenshot={amazonHeader.screenshot} />
     <TextCard projectDescription={amazonDescription} />
@@ -80,10 +80,6 @@ function Amazon() {
       </div>
 
     </div>
-
-  
-  
-
 
   <TextCard projectDescription={amazonFeatures} />
   <Carousel />

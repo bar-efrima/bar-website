@@ -5,7 +5,8 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
+    /* padding: 10px 0; */
+    padding-bottom: 0;
     letter-spacing: 1px;
 }
 
@@ -25,6 +26,8 @@
     padding: 25px;
     font-weight: 400;
     text-align: left;
+    padding-bottom: 0; 
+    margin-bottom: 0;
 }
 
 @media (max-width: 850px) {

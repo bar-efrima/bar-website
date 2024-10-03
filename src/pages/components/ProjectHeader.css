@@ -2,7 +2,6 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 0;
     color: #333;
     background: #030303;
     font-weight: 700;
@@ -11,7 +10,7 @@ body {
 /* Header Section */ 
 header {
     color: #fff;
-    padding: 60px 20px 10px;
+    padding: 60px 20px 10px 10px;
     text-align: left;
 }
 

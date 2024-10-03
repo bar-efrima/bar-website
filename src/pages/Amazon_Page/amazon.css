@@ -9,14 +9,15 @@ body {
     font-weight: 700;
 }
 
+
 /* Content Container */
 .amazon-info {
     display: flex;
     justify-content: space-between;
     width: 65%; 
     margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
     align-items: stretch; 
     gap: 20px; 
 }
@@ -54,7 +55,7 @@ hr {
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-    padding-bottom: 40px;
+    /* padding-bottom: 40px; */
 }
 
 .video-container iframe {
