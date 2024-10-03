@@ -33,9 +33,9 @@
 /* Media Queries */
 
 /* For tablets (max-width 768px) */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .carousel-wrapper {
-      width: 80%;
+      width: 90%;
   }
 
   .carousel .legend {

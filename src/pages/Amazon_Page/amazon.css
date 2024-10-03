@@ -12,19 +12,17 @@ body {
 .amazon{
     margin-top: 60px;
     margin-bottom: 60px;
-    display: flex; /* or grid if you're using grid layout */
-    flex-wrap: wrap; /* ensures the components wrap if necessary */
-    gap: 20px; /* Adds 10px space between each component */
-}
-
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+} 
+ 
 /* Content Container */
 .amazon-info {
     display: flex;
     justify-content: space-between;
     width: 65%; 
     margin: 0 auto;
-    /* margin-top: 10px;
-    margin-bottom: 10px; */
     align-items: stretch; 
     gap: 20px; 
 }
@@ -132,6 +130,11 @@ hr {
     .text-container p {
         font-size: 0.6rem;
         width: 100%;
+    }
+
+    .amazon-left{
+        padding-right: 0;
+        margin-left: 0;
     }
 
     /* Ensure the video container maintains good spacing */

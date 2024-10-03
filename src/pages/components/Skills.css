@@ -23,9 +23,9 @@
     padding-top: 8px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Distribute space between items */
-    margin-bottom: 15px; /* Space between skills */
-    max-width: 400px; /* Set a max width to keep the rows compact */
+    justify-content: space-between; 
+    margin-bottom: 15px; 
+    max-width: 400px; 
     margin: 0 auto; /* Center each skill row */
 }
 
@@ -61,7 +61,7 @@
 
 /* Skill Percent Number */
 .skill-percent-number {
-    margin-left: 10px; /* Add space between the progress bar and the percentage */
+    margin-left: 10px; 
     color: #d4d4d4;
     text-align: left;
 }
@@ -70,7 +70,7 @@
 #skills-line {
     border: 0;
     border-top: 1px solid #1A1A1A;
-    margin: 0 20px;
+    margin: 0 20px; 
 }
 
 /* Technologies and Libraries List */
@@ -131,7 +131,8 @@
 
 @media (max-width: 600px) {
     .tech-used {
-        width: 90%;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .skill-name {

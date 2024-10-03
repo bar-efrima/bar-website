@@ -144,6 +144,5 @@ header img {
     /* Adjust the showcase image and content to take 90% of screen width */
     .project-showcase img{
         width: 90%; 
-        padding-top: 0;
     }
 }

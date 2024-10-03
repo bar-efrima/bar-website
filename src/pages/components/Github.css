@@ -13,7 +13,10 @@
 .github p {
     color: #CECECF;
     font-size:1.5rem;
-    font-weight: 600;
+    font-weight: 600; 
+}
+.github p a{
+    padding: 5px;
 }
 
 .github img {
@@ -28,6 +31,6 @@
     }
 
     .github p {
-        font-size: 1.4rem; 
+        font-size: 1rem; 
     }
 }
