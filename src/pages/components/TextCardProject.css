@@ -9,6 +9,14 @@
     padding-bottom: 0;
     letter-spacing: 1px;
 }
+.card-description{
+    background-color: #0B0B0C;
+    border: 1px solid #1A1A1A;
+    border-radius: 1em;
+    margin-bottom: 20px; 
+    padding: 20px;
+    margin-bottom: 0;
+}
 
 .content-card h3 {
     color: #CECECF;
@@ -49,7 +57,11 @@
     .content-card p {
         padding: 10px;
     }
-
+    .card-description {
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 1em;
+    }
     .content-card h3{
         font-size: 3.5vw;
     }
@@ -67,6 +79,11 @@
     .content-card p{
         font-size: 12px;
         padding: 0;
+    }
+
+    .card-description{
+        text-align:left;
+        margin-left: 0;
     }
 
     /* Adjust heading sizes for mobile */

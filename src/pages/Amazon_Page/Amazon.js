@@ -1,4 +1,4 @@
-import React from 'react';
+import {useEffect, React} from 'react';
 import './amazon.css'; // CSS file for styling
 import amazonLogo from './Images/amazon_logo.png'; // Amazon logo
 import projectScreenshot from './Images/projectScreenshot.jpg'; // Screenshot of the project
@@ -9,9 +9,19 @@ import linkIcon from '../General_Images/link.png';
 import YearCreated from '../components/YearCreated';
 import ProjectHeader from '../components/ProjectHeader';
 import GithubLink from '../components/Github';
+import VideoCard from '../components/VideoCard';
 
 
 function Amazon() {
+
+   // Use useEffect to pop to the top when the component is mounted
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant' // Make sure the scroll happens instantly
+    });
+  }, []); 
 
   const amazonHeader = {
     title: 'Amazon Scraper',
@@ -60,6 +70,7 @@ function Amazon() {
       Stores past search data and allows users to review previous searches.`
   }
 
+  const videoLink = 'https://www.youtube.com/embed/kTHfsLwlMJY?si=sgDaJnytJMaJ5aoI';
 
   return (
    
@@ -83,14 +94,7 @@ function Amazon() {
 
   <TextCard projectDescription={amazonFeatures} />
   <Carousel />
-
-      {/* Video Demonstration Section */}
-      <div className="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/kTHfsLwlMJY?si=sgDaJnytJMaJ5aoI"
-      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-      gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-      </iframe>
-      </div>
+  <VideoCard videoLink={videoLink} />
     </div>
   );
 }

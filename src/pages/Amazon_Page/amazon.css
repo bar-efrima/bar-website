@@ -9,6 +9,13 @@ body {
     font-weight: 700;
 }
 
+.amazon{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex; /* or grid if you're using grid layout */
+    flex-wrap: wrap; /* ensures the components wrap if necessary */
+    gap: 20px; /* Adds 10px space between each component */
+}
 
 /* Content Container */
 .amazon-info {

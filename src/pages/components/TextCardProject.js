@@ -4,7 +4,7 @@ import './TextCardProject.css'; // Import CSS specific to this component
 function TextCardProject({ projectDescription }) {
   return (
     <div className="content-card">
-          <div className="about">
+          <div className="card-description">
             <h3>{projectDescription.title}</h3>
             <hr />
             <p>

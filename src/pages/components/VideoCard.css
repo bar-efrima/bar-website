@@ -1,0 +1,32 @@
+/* Video Container */
+.video-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    /* margin-top: 40px; */
+    /* padding-bottom: 40px; */
+}
+
+.video-card iframe {
+    border-radius: 1em;
+    border: none;
+}
+
+/* For screens below 850px */
+@media (max-width: 850px) {
+    .video-card{
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+/* For screens below 600px */
+@media (max-width: 600px) {
+    .video-card {
+        margin-top: 20px;
+        margin: 20px;
+        border-radius: 1em;
+        padding-bottom: 20px;
+    }
+}
