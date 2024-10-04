@@ -179,22 +179,6 @@ hr {
     width: 65%;
     margin: 0 auto;
 }
-
-/* Video Container */
-.video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    padding-bottom: 40px;
-}
-
-.video-container iframe {
-    border-radius: 1em;
-    
-    border: none;
-}
-
 /* Responsive Styles */
 @media (max-width: 850px) {
    
@@ -254,10 +238,6 @@ hr {
         height: auto;
     }
 
-    .video-container {
-        margin-top: 20px;
-        padding-bottom: 20px;
-    }
 }
 
 @media (max-width: 600px) {
@@ -363,14 +343,6 @@ hr {
     }
     .links span img {
         width: 10px;
-    }
-
-    /* Ensure the video container maintains good spacing */
-    .video-container {
-        margin-top: 20px;
-        margin: 20px;
-        border-radius: 1em;
-        padding-bottom: 20px;
     }
 
     .project-description #c{

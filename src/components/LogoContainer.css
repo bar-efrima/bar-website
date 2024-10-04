@@ -1,25 +1,46 @@
-/* src/components/LogoContainer.css */
-
+/* Logo container with responsive image sizes */
 .logo-container {
-    
-    position: absolute;
+  bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  padding-top: 40px;
+}
+
+.logo-container img {
+  width: 2vw;
+  height: 2vw;
+  margin: 50px 20px;
+  transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+}
+
+.logo-container a:hover img {
+  transform: scale(1.1);
+  filter: brightness(0) saturate(100%) invert(58%) sepia(44%) saturate(5402%) hue-rotate(294deg) brightness(96%) contrast(87%);
+}
+
+@media (max-width: 900px) {
+  .logo-container img {
+    width: 3vw; 
+    height: 3vw; 
+    margin: 20px 10px; 
+  }
+}
+
+/* For screens smaller than 480px (mobile devices) */
+@media (max-width: 480px) {
+
+  .logo-container {
+    padding-top: 20px;
     bottom: 20px;
-    width: 100%;
     display: flex;
     justify-content: center;
-    z-index: 2;
   }
-  
+
   .logo-container img {
-    margin-top: 50%;
-    width: 30px;
-    height: 30px;
-    margin: 50px 20px;
-    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+    width: 6vw; 
+    height: 6vw; 
+    margin: 20px 10px; 
   }
-  
-  .logo-container a:hover img {
-    transform: scale(1.1);
-    filter: brightness(0) saturate(100%) invert(58%) sepia(44%) saturate(5402%) hue-rotate(294deg) brightness(96%) contrast(87%);
-  }
-  
+}

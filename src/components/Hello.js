@@ -4,6 +4,8 @@ import './Hello.css';
 import starsVideo from '../assets/videos/stars.webm';
 import linkedinLogo from '../assets/logos/linkedin.png';
 import githubLogo from '../assets/logos/github.png';
+import LogoContainer from './LogoContainer';
+import SpaceButton from './SpaceButton';
 
 function Hello() {
 
@@ -47,30 +49,13 @@ function Hello() {
           <p className="hello">Hello, World.</p>
           <p className="name">I'm Bar Efrima.</p>
           <a href="#aboutmeTag">
-          <button type="button" class="btn">
-            <strong>More About Me</strong>
-            <div id="container-stars">
-              <div id="stars"></div>
-            </div>
-
-            <div id="glow">
-              <div class="circle"></div>
-              <div class="circle"></div>
-            </div>
-          </button>
-
+          <SpaceButton></SpaceButton>
             {/* <p onClick={scrollToAboutMe} style={{ cursor: 'pointer' }} className="more stroke">more about me</p> */}
           </a>
-          </div>
-        <div className="logo-container">
-      <a href="https://www.linkedin.com/in/bar-efrima/" target="_blank" rel="noopener noreferrer">
-        <img src={linkedinLogo} alt="LinkedIn" />
-      </a>
-      <a href="https://github.com/bar-efrima/" target="_blank" rel="noopener noreferrer">
-        <img src={githubLogo} alt="GitHub" />
-      </a>
-      
+         
+      <LogoContainer ></LogoContainer>
     </div>
+    
       </section>
       
     </div>

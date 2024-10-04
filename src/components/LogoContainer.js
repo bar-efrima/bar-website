@@ -15,7 +15,6 @@ function LogoContainer() {
       <a href="https://github.com/bar-efrima/" target="_blank" rel="noopener noreferrer">
         <img src={githubLogo} alt="GitHub" />
       </a>
-      {/* Add more logos as needed */}
     </div>
   );
 }

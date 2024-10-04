@@ -11,6 +11,9 @@ import historyImage from './Images/history.jpg';
 import image3 from './Images/image3.jpg';
 import image4 from './Images/image4.jpg';
 import ProjectHeader from '../components/ProjectHeader';
+import Projectcard from '../components/TextCardProject';
+import VideoCard from '../components/VideoCard';
+import ImageCard from '../components/ImageCard';
 
 
 function kitchef() {
@@ -21,6 +24,38 @@ function kitchef() {
         logo: milabLogo,
         screenshot: projectScreenshot,
       }
+    
+    const kitchefMyRole = {
+        title: 'My Role',
+        description: `Design and conduct experiments:
+        Softtware devleoper and electronic operator: Led "Kitchef" project from concept
+        through development, designed and programmed an IoT
+        using Arduino, BLE, CAD, and 3D printing
+        The child’s wristband contained a magnet, while the parent’s wristband
+        is equipped with a XIAO BLE NRF52840 sense controller. This
+        controller is powered by a compact portable battery with an activation
+        switch and connected to a magnetism sensor. This sensor
+        interacts with the magnet in the child’s band. When brought into
+        close proximity, the XIAO controller detects the change in magnetism
+        caused by the child’s wristband and communicates this data
+        via Bluetooth to an ESP32 controller inside the recipe box. Processing
+        the data in real-time, the RGB LED strip behind the recipe lights
+        up to guide the cooking steps.
+        reaserch: Helped in the research team: Conducting and managing the research and the team,
+        including the definition of timetable, goals for every step, and supervision on the whole process
+        Involvement in writing an academic paper: Including literature reviews and a deep
+        understanding of the CyberBall paradigm. Writing specifically the Findings chapter
+        and dividing the qualitative findings into themes.`,
+    } ;
+
+    const awards = 
+    {
+        title: 'Awards',
+        description: 'CHI Hawaii Conference, tech12, Academic Paper',
+    } ;
+
+    const kitchefVideoLink = 'https://www.youtube.com/embed/idCBrHXxCg8?si=gDtIRs0fPgZ4DGyl';
+    
     
   return(
 <div>
@@ -88,41 +123,10 @@ function kitchef() {
 
         </div>
         </div>
-    <section class="project-description">
-        <h3>My Role</h3>
-        <hr />
-        <p>
-            <p>
-            Design and conduct experiments: 
-            Softtware devleoper and electronic operator: Led "Kitchef" project from concept 
-            through development, designed and programmed an IoT
-            using Arduino, BLE, CAD, and 3D printing
-            The child’s wristband contained a magnet, while the parent’s wristband
-            is equipped with a XIAO BLE NRF52840 sense controller. This
-            controller is powered by a compact portable battery with an activation
-            switch and connected to a magnetism sensor. This sensor
-            interacts with the magnet in the child’s band. When brought into
-            close proximity, the XIAO controller detects the change in magnetism
-            caused by the child’s wristband and communicates this data
-            via Bluetooth to an ESP32 controller inside the recipe box. Processing
-            the data in real-time, the RGB LED strip behind the recipe lights
-            up to guide the cooking steps.
-            </p>
-            <p>
-            reaserch: Helped in the research team: Conducting and managing the research and the team, 
-            including the definition of timetable, goals for every step, and supervision on the whole process
-            Involvement in writing an academic paper: Including literature reviews and a deep 
-            understanding of the CyberBall paradigm. Writing specifically the Findings chapter 
-            and dividing the qualitative findings into themes.
-            </p>
-            </p>
-    </section>
-    <div class="image3">
-        <img src={image3} alt="Image 3"/>
-    
-    </div>
-
-<section class="project-description">
+     <Projectcard projectDescription={kitchefMyRole} />   
+    <ImageCard image={image3} />
+    <Projectcard projectDescription={awards} />
+{/* <section class="project-description">
         <h3 id="c">Awards</h3>
         <hr />
         <ul class="awards">
@@ -130,19 +134,10 @@ function kitchef() {
             <li>tech12</li>
             <li>Academic Paper</li>
         </ul>
-        </section>
+        </section> */}
 
 
-
-    
-    <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/idCBrHXxCg8?si=gDtIRs0fPgZ4DGyl" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-            gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-        </iframe>
-    </div>
-
-
+    <VideoCard videoLink={kitchefVideoLink} />
 
     </div>
   );
