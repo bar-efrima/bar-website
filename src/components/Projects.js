@@ -2,12 +2,12 @@ import './Projects.css';
 import amazon from '../assets/projects/ama.png';
 import navigation from '../assets/projects/navi.png';
 import kitchef from '../assets/projects/Kitchef.jpg';
-import musical from '../assets/projects/musical.jpg';
-import weatherbox from '../assets/projects/wea.png';
+import musical from '../assets/projects/musical2.jpg';
+// import weatherbox from '../assets/projects/Weather-Box.jpg';
 import gamehighlights from '../assets/projects/game.png';
-import bubbletrouble from '../assets/projects/BubbleTrouble.jpg';
+// import bubbletrouble from '../assets/projects/BubbleTrouble.jpg';
 import royalcats from '../assets/projects/Royal-cats.jpg';
-import weatherwizard from '../assets/projects/WeatherWizard.jpg';
+import weatherWizard from '../assets/projects/Weather-Wizard.png';
 import caimbridge from '../assets/projects/caimbrige.jpg';
 // import stars from '../assets/videos/stars.webm';
 import { Link } from 'react-router-dom';
@@ -56,7 +56,7 @@ const projects = [
   },
   {
     title: 'WeatherWizard App',
-    image: weatherbox,
+    image: weatherWizard,
     type: 'Ionic React App',
     description: 'Cross-platform weather app using React Ionic...',
     github: 'https://github.com/bar-efrima/WeatherWizard-App',

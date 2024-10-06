@@ -1,0 +1,25 @@
+/* Slider container */
+.slider-container {
+  width: 100%; /* Full width */
+  overflow: hidden; 
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Slider images */
+.slider-image {
+  width: auto;
+  height: 150px; 
+  object-fit: cover;
+  margin-right: 15px; 
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+/* Remove the dots and arrows */
+.slick-dots, .slick-prev, .slick-next {
+  display: none !important;
+}

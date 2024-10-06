@@ -7,14 +7,13 @@ import arduinoLogo from './Stack/Arduino.png';
 import cppLogo from './Stack/c++.svg';
 import adobeLogo from './Stack/Adobe.png';
 import linkIcon from '../General_Images/link.png';
-import historyImage from './Images/history.jpg';
 import image3 from './Images/image3.jpg';
-import image4 from './Images/image4.jpg';
 import ProjectHeader from '../components/ProjectHeader';
 import Projectcard from '../components/TextCardProject';
 import VideoCard from '../components/VideoCard';
 import ImageCard from '../components/ImageCard';
-
+import YearCreated from '../components/YearCreated';
+import ImageSlider from '../components/ImageSlider';
 
 function kitchef() {
 
@@ -28,7 +27,7 @@ function kitchef() {
     const kitchefMyRole = {
         title: 'My Role',
         description: `Design and conduct experiments:
-        Softtware devleoper and electronic operator: Led "Kitchef" project from concept
+        Softtware kitchefMyRoledevleoper and electronic operator: Led "Kitchef" project from concept
         through development, designed and programmed an IoT
         using Arduino, BLE, CAD, and 3D printing
         The child’s wristband contained a magnet, while the parent’s wristband
@@ -56,30 +55,46 @@ function kitchef() {
 
     const kitchefVideoLink = 'https://www.youtube.com/embed/idCBrHXxCg8?si=gDtIRs0fPgZ4DGyl';
     
-    
+    const aboutKitchef = {
+        title: 'About the Project',
+        description: `Kitchef is a wearable technology, designed to create physical closeness and an emotional 
+        connection between children and their parents during a shared cooking experience. 
+        The technology enables an interactive and playful experience that strengthens the 
+        parent-child relationship and enhances the child’s sense of independence and security. 
+        The Kitchef cooking kit includes two bracelets and a recipe box that accompanies the parent and 
+        child in the cooking process.`,
+    }
+
+    const yearCreated =  {
+        title: 'Created',
+        description: '2023',
+    }
+
   return(
-<div>
+<div class="kitchef">
 <ProjectHeader title={kitchefHeader.title} description={kitchefHeader.description} logo={kitchefHeader.logo} screenshot={kitchefHeader.screenshot} />
 
-    <div class="content-container">
-        <div class="left-side">
-            <div class="about">
-            <h3>About the Project</h3>
-            <hr />
-            <p>
-                Kitchef is a wearable technology, designed to create physical closeness and an emotional 
-                connection between children and their parents during a shared cooking experience. 
-                The technology enables an interactive and playful experience that strengthens the 
-                parent-child relationship and enhances the child’s sense of independence and security. 
-                The Kitchef cooking kit includes two bracelets and a recipe box that accompanies the parent and 
-                child in the cooking process.</p>
+    <div class="kitchef-info">
+        <div class="kitchef-left">
+          
+            <div class ="about-kitchef">
+                <h3>About the Project</h3>
+                <hr />
+                <p>Kitchef is a wearable technology, designed to create physical closeness and an emotional connection between children and their parents during a shared cooking experience. The technology enables an interactive and playful experience that strengthens the parent-child relationship and enhances the child’s sense of independence and security. The Kitchef cooking kit includes two bracelets and a recipe box that accompanies the parent and child in the cooking process.</p>
             </div>
             <div class="image1">
                 <img src={image1} alt="Image 1"/>
             </div>
         </div>
         
-        <div class="right-side">
+        <div class="kitchef-right">
+        {/* <div class="year-create">
+                <h3>Year Created</h3>
+                <hr />
+                <p>{yearCreated}</p>
+            </div> */}
+
+        <Projectcard projectDescription={yearCreated}  style={{width:'100%' ,margin:'0', flexDirection: 'column'}}/>
             <div class="tech-stack">
                 <h3>Tech Used</h3>
                 <hr />
@@ -88,32 +103,25 @@ function kitchef() {
                         <img src={arduinoLogo} alt="Arduino Logo" />
                         <div class="tech-info">
                             <h4>Arduino</h4>
-                           {/* <p>Electronic prototyping board</p> */}
                         </div>
                     </div>
                     <div class="tech-item">
                         <img src={cppLogo} alt="C++ Logo" />
                         <div class="tech-info">
                             <h4>C++</h4>
-                           {/* <p>JavaScript library for building UI</p> */}
                         </div>
                     </div>
                     <div class="tech-item">
                         <img src={adobeLogo} alt="C++ Logo" />
                         <div class="tech-info">
                             <h4>Adobe Suit</h4>
-                            {/* <p>JavaScript library for building UI</p> */}
                     </div>
                     </div>
 
                     
                 </ul>
             </div> 
-            <div class="created">
-                <h3>Created</h3>
-                <hr />
-                <p>2022</p>
-            </div>
+           
             <div class="links">
                 <p><a href="https://milabgroup42022.wixsite.com/kitchef">Website <span><img src={linkIcon} alt="Link Icon" /></span></a></p>
                 <p><a href="https://dl.acm.org/doi/10.1145/3613905.3650970">Academic Paper <span><img src={linkIcon} alt="Link Icon"/></span></a></p>
@@ -122,10 +130,12 @@ function kitchef() {
             </div>
 
         </div>
-        </div>
+    </div>
+    
      <Projectcard projectDescription={kitchefMyRole} />   
-    <ImageCard image={image3} />
-    <Projectcard projectDescription={awards} />
+     <ImageSlider />
+    
+    <Projectcard projectDescription={awards} style={{flexDirection: 'column'}} />
 {/* <section class="project-description">
         <h3 id="c">Awards</h3>
         <hr />
@@ -138,7 +148,7 @@ function kitchef() {
 
 
     <VideoCard videoLink={kitchefVideoLink} />
-
+    
     </div>
   );
 }
