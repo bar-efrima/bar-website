@@ -45,20 +45,6 @@ function Kitchef() {
 
     const kitchefVideoLink = 'https://www.youtube.com/embed/idCBrHXxCg8?si=gDtIRs0fPgZ4DGyl';
     
-    const aboutKitchef = {
-        title: 'About the Project',
-        description: `Kitchef is a wearable technology, designed to create physical closeness and an emotional 
-        connection between children and their parents during a shared cooking experience. 
-        The technology enables an interactive and playful experience that strengthens the 
-        parent-child relationship and enhances the child’s sense of independence and security. 
-        The Kitchef cooking kit includes two bracelets and a recipe box that accompanies the parent and 
-        child in the cooking process.`,
-    }
-
-    const yearCreated =  {
-        title: 'Created',
-        description: '2023',
-    }
 
   return(
 

@@ -10,6 +10,7 @@ import YearCreated from '../components/YearCreated';
 import ProjectHeader from '../components/ProjectHeader';
 import GithubLink from '../components/Github';
 import VideoCard from '../components/VideoCard';
+import ProjectFeatures from '../components/ProjectFeatures';
 
 
 function Amazon() {
@@ -23,23 +24,6 @@ function Amazon() {
     });
   }, []); 
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const items = document.querySelectorAll('.amazon .amazon-item');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            } else {
-                entry.target.classList.remove('visible'); // Remove if you want to reset when scrolling up
-            }
-        });
-    });
-
-    // Observe each item
-    items.forEach(item => {
-        observer.observe(item);
-    });
-});
 
   const amazonHeader = {
     title: 'Amazon Scraper',
@@ -60,6 +44,15 @@ function Amazon() {
     { name: 'BeautifulSoup' },
     { name: 'FastApi' },
     { name: 'Photoshop' },
+  ];
+
+  const featuresList = [
+    { description: 'Users can search Amazon.com for items, displaying the top 10 results with names and images.' },
+    { description: 'View prices of selected items from various Amazon sites in USD, with clickable links to product pages.' },
+    { description: 'Users can access a list of their past searches.' },
+    {  description: 'Scrapes multiple Amazon sites simultaneously to minimize wait times.' },
+    {  description: 'Stores past searches and shared user data in a local SQLite database.' },
+    {  description: 'Limits users to 10 searches per day, with a prompt to upgrade for more searches.' }
   ];
   
   const yearCreated =  '2022' ;
@@ -83,14 +76,17 @@ function Amazon() {
 
     <ProjectHeader title={amazonHeader.title} description={amazonHeader.description} logo={amazonHeader.logo} screenshot={amazonHeader.screenshot} />
     <TextCard projectDescription={amazonDescription}> 
-    <p> The Amazon Scraper is a web-based application 
-    that allows users to scrape product prices and details from multiple Amazon 
-    regions (US, UK, DE, CA) in real-time. It uses FastAPI as the backend framework, 
-    aiohttp for asynchronous HTTP requests, and BeautifulSoup for scraping. 
-    The app also features real-time currency conversion for accurate price 
-    comparisons across different regions. The project is designed to offer users 
-    the ability to retrieve product information efficiently, with asynchronous operations 
-    ensuring quick responses from multiple regions.</p>
+    <p> The Amazon Scraper project is a web application designed to display item prices from various Amazon websites,
+       providing users with a simple and efficient way to compare prices across regions. 
+       </p> <br></br><p>
+       Built using Python and the FastAPI framework for the backend, and plain HTML, 
+       JavaScript, and the fetch API for the frontend, this project showcases the ability
+        to scrape data in real time and present it in a user-friendly format. 
+        The project uses a local SQLite database to store user search data, 
+        ensuring fast access to past searches. 
+
+      </p> <p> <br></br>It is important to note that this 
+      project was created for educational purposes, adhering to ethical guidelines and terms of service for web scraping.</p>
     </TextCard>
     <div className="amazon-info">
 
@@ -104,15 +100,10 @@ function Amazon() {
       </div>
 
     </div>
+    <Carousel />
+ <ProjectFeatures features={featuresList} />
 
-  <TextCard projectDescription={amazonFeatures} >
-    <p>    Real-time product scraping from multiple Amazon regions (US, UK, DE, CA).
-      Asynchronous HTTP requests for efficient multi-site scraping using aiohttp.
-      BeautifulSoup for parsing HTML and extracting data like product prices, images, and ratings.
-      Real-time currency conversion with forex-python.
-      Stores past search data and allows users to review previous searches.</p> 
-  </TextCard>
-  <Carousel />
+
   <VideoCard videoLink={videoLink} />
     </div>
   );

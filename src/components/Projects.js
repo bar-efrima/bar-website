@@ -1,4 +1,5 @@
 import './Projects.css';
+import React, { useEffect, useRef } from 'react';
 import amazon from '../assets/projects/ama.png';
 import navigation from '../assets/projects/navi.png';
 import kitchef from '../assets/projects/Kitchef.jpg';
@@ -13,6 +14,7 @@ import caimbridge from '../assets/projects/caimbrige.jpg';
 import { Link } from 'react-router-dom';
 
 // Projects data array
+
 const projects = [
   {
     title: 'Amazon Scraper',
@@ -98,33 +100,57 @@ const projects = [
 ];
 
 function Projects() {
+  const projectsRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.05 } // Trigger when 10% of the element is visible
+    );
+
+    if (projectsRef.current) {
+      observer.observe(projectsRef.current);
+    }
+
+    return () => {
+      if (projectsRef.current) {
+        observer.unobserve(projectsRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section className="projects">
       <a name="projectsTag"></a>
-      <div className="projects-grid">
+      <div className="projects-grid" ref={projectsRef}>
         {projects.map((project, index) => (
-          <div className="project-item" key={index}>
-              <div className="project-content">
-                <div className="project-image-wrapper">
-                  {/* Check if the project is Kitchef and apply the Link */}
-                  {project.title === 'Kitchef' ? (
-                    <Link to="/Kitchef">
-                      <img src={project.image} alt={project.title} className="project-image" />
-                    </Link>
-                  ) : project.title === 'Amazon Scraper' ? (
-                    <Link to="/amazon">
-                      <img src={project.image} alt={project.title} className="project-image" />
-                    </Link>
-                  ) : (
+          <div className="project-item amazon-item" key={index}>
+            <div className="project-content">
+              <div className="project-image-wrapper">
+                {project.title === 'Kitchef' ? (
+                  <Link to="/Kitchef">
                     <img src={project.image} alt={project.title} className="project-image" />
-                  )}
-                </div>
-                <div className="project-title-box">
-                    <h5 className="project-type">{project.type}</h5>
-                    <hr />
-                    <h3 className="project-title">{project.title}</h3>
-                    <h6 className="project-desc">{project.description}</h6>
-                </div>
+                  </Link>
+                ) : project.title === 'Amazon Scraper' ? (
+                  <Link to="/amazon">
+                    <img src={project.image} alt={project.title} className="project-image" />
+                  </Link>
+                ) : (
+                  <img src={project.image} alt={project.title} className="project-image" />
+                )}
+              </div>
+              <div className="project-title-box">
+                <h5 className="project-type">{project.type}</h5>
+                <hr />
+                <h3 className="project-title">{project.title}</h3>
+                <h6 className="project-desc">{project.description}</h6>
+              </div>
             </div>
           </div>
         ))}
@@ -132,5 +158,6 @@ function Projects() {
     </section>
   );
 }
+
 
 export default Projects;

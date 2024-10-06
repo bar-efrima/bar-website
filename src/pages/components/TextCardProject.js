@@ -3,8 +3,6 @@ import './TextCardProject.css'; // Import CSS specific to this component
 
 function TextCardProject({ projectDescription , style={}, children}) {
   const cardStyle = {
-    
-    width: '65%',
     justifyContent: 'space-between',
     ...style,
   };
@@ -19,7 +17,7 @@ function TextCardProject({ projectDescription , style={}, children}) {
             </p>
           </div>
         </div>
-  );
+  ); 
 }
 
 export default TextCardProject;

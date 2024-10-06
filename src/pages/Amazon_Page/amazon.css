@@ -5,7 +5,6 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background: #030303;
     font-weight: 700;
 }
 /* Default state for each component inside the .amazon container */
@@ -100,8 +99,6 @@ hr {
 
     .amazon-info {
         width: 90%; 
-        margin-top: 5px;
-        margin-bottom: 5px;
         gap: 10px; 
     }
 

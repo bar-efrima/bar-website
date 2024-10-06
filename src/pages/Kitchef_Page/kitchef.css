@@ -263,6 +263,14 @@ hr {
         height: auto;
     }
 
+    .about-kitchef h3{
+        padding:0;
+    }
+
+    .banner img{
+        width: 90%;
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -305,6 +313,10 @@ hr {
 
     .tech-stack ul {
         padding: 0px;
+    }
+
+    .tech-stack hr {
+        width: 95%;
     }
 
     /* Image 3 spacing */
@@ -377,6 +389,14 @@ hr {
 
     .image3 {
         margin: 20px auto; 
+    }
+
+    .about-kitchef h3{
+        text-align: center;
+    }
+    .about-kitchef p{
+        padding-top:10px;
+        text-align: center;
     }
 
 }

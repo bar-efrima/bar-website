@@ -1,0 +1,124 @@
+.amazon-features {
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.feature-description {
+    background-color: #0B0B0C;
+    border: 1px solid #1A1A1A;
+    border-radius: 1em;
+    padding: 50px; 
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.amazon-features h3 {
+    color: #CECECF;
+    text-align: left;
+    font-size: 2.3rem;
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+    margin-bottom: 0;
+}
+
+.line {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.amazon-features ul {
+
+    padding-left: 0;
+    text-align: left; 
+}
+
+.amazon-features li {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #CECECF;
+    font-weight: 400;
+    margin-bottom: 15px;
+    text-align: left; 
+    padding-left: 15px; 
+}
+
+.featureTitle {
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: left; 
+    margin-bottom: 5px; 
+}
+
+.amazon-features li div + div {
+    margin-left: 20px; 
+    text-align: left;
+}
+.feature-space {
+    text-align: left;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 850px) {
+    .amazon-features {
+        width: 90%;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .amazon-features li {
+        font-size: 2vw;
+        padding: 10px;
+    }
+
+    .amazon-features h3 {
+        font-size: 2rem;
+    }
+
+    .feature-description {
+        padding: 15px;
+        border-radius: 1em;
+    }
+
+    .amazon-features h3 {
+        font-size: 3.5vw;
+    }
+    .line #bar{
+        margin-top: 2px;
+        color: aqua;
+        margin-bottom:5px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .amazon-features {
+        
+        box-sizing: border-box;
+        margin-left: 0;
+    }
+
+    .amazon-features h3 {
+        font-size: 1.2rem;
+    }
+
+    .amazon-features li {
+        font-size: 12px;
+        padding: 0;
+    }
+
+    .feature-description {
+        text-align: left;
+        padding: 50px;
+        margin-left: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
