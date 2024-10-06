@@ -177,16 +177,16 @@ strong {
 /* For small screens (mobile) */
 @media (max-width: 480px) {
   .btn {
-    width: 8rem; /* Smaller width */
-    height: 2rem; /* Smaller height */
+    width: 8rem; 
+    height: 2rem; 
     transform: scale(1); /* Reduce scale for smaller screens */
   }
   strong {
-    font-size: 8px; /* Smaller text */
-    letter-spacing: 2px; /* Adjusted spacing */
+    font-size: 8px; 
+    letter-spacing: 2px; 
   }
   #glow {
-    width: 7rem; /* Smaller glow for mobile */
+    width: 7rem; 
   }
 }
 
@@ -209,7 +209,7 @@ strong {
 /* For large screens (desktops) */
 @media (min-width: 769px) {
   .btn {
-    width: 11rem; /* Smaller width for larger screens */
+    width: 11rem; 
     height: 2.75rem;
     transform: scale(1.05); /* Keep smaller scale */
   }

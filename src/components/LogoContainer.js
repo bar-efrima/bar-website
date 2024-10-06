@@ -1,7 +1,5 @@
-// src/components/LogoContainer.js
 import React from 'react';
-import './LogoContainer.css'; // Add styles here
-
+import './LogoContainer.css';
 // Import all logos
 import linkedinLogo from '../assets/logos/linkedin.png';
 import githubLogo from '../assets/logos/github.png';

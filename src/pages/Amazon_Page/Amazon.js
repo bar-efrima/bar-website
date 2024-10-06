@@ -23,6 +23,24 @@ function Amazon() {
     });
   }, []); 
 
+  document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll('.amazon .amazon-item');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible'); // Remove if you want to reset when scrolling up
+            }
+        });
+    });
+
+    // Observe each item
+    items.forEach(item => {
+        observer.observe(item);
+    });
+});
+
   const amazonHeader = {
     title: 'Amazon Scraper',
     description: 'Multi-region Amazon price scraping tool',
@@ -50,24 +68,10 @@ function Amazon() {
 
   const amazonDescription ={
     title: 'About the Project', 
-    description: `The Amazon Scraper is a web-based application 
-    that allows users to scrape product prices and details from multiple Amazon 
-    regions (US, UK, DE, CA) in real-time. It uses FastAPI as the backend framework, 
-    aiohttp for asynchronous HTTP requests, and BeautifulSoup for scraping. 
-    The app also features real-time currency conversion for accurate price 
-    comparisons across different regions. The project is designed to offer users 
-    the ability to retrieve product information efficiently, with asynchronous operations 
-    ensuring quick responses from multiple regions.`
   };
 
   const amazonFeatures = {
     title: 'Project Features',
-    description: 
-    `Real-time product scraping from multiple Amazon regions (US, UK, DE, CA).
-      Asynchronous HTTP requests for efficient multi-site scraping using aiohttp.
-      BeautifulSoup for parsing HTML and extracting data like product prices, images, and ratings.
-      Real-time currency conversion with forex-python.
-      Stores past search data and allows users to review previous searches.`
   }
 
   const videoLink = 'https://www.youtube.com/embed/kTHfsLwlMJY?si=sgDaJnytJMaJ5aoI';
@@ -78,7 +82,16 @@ function Amazon() {
   <div class="amazon">
 
     <ProjectHeader title={amazonHeader.title} description={amazonHeader.description} logo={amazonHeader.logo} screenshot={amazonHeader.screenshot} />
-    <TextCard projectDescription={amazonDescription} />
+    <TextCard projectDescription={amazonDescription}> 
+    <p> The Amazon Scraper is a web-based application 
+    that allows users to scrape product prices and details from multiple Amazon 
+    regions (US, UK, DE, CA) in real-time. It uses FastAPI as the backend framework, 
+    aiohttp for asynchronous HTTP requests, and BeautifulSoup for scraping. 
+    The app also features real-time currency conversion for accurate price 
+    comparisons across different regions. The project is designed to offer users 
+    the ability to retrieve product information efficiently, with asynchronous operations 
+    ensuring quick responses from multiple regions.</p>
+    </TextCard>
     <div className="amazon-info">
 
       <div className="amazon-left">
@@ -92,7 +105,13 @@ function Amazon() {
 
     </div>
 
-  <TextCard projectDescription={amazonFeatures} />
+  <TextCard projectDescription={amazonFeatures} >
+    <p>    Real-time product scraping from multiple Amazon regions (US, UK, DE, CA).
+      Asynchronous HTTP requests for efficient multi-site scraping using aiohttp.
+      BeautifulSoup for parsing HTML and extracting data like product prices, images, and ratings.
+      Real-time currency conversion with forex-python.
+      Stores past search data and allows users to review previous searches.</p> 
+  </TextCard>
   <Carousel />
   <VideoCard videoLink={videoLink} />
     </div>

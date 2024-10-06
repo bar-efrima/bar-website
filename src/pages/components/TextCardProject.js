@@ -1,7 +1,7 @@
 import React from 'react';
 import './TextCardProject.css'; // Import CSS specific to this component
 
-function TextCardProject({ projectDescription , style={}}) {
+function TextCardProject({ projectDescription , style={}, children}) {
   const cardStyle = {
     
     width: '65%',
@@ -13,9 +13,9 @@ function TextCardProject({ projectDescription , style={}}) {
     <div className="content-card" style={cardStyle}>
           <div className="card-description">
             <h3>{projectDescription.title}</h3>
-            <hr />
+            <hr className="line"/>
             <p>
-            {projectDescription.description}
+            {children}
             </p>
           </div>
         </div>

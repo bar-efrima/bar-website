@@ -4,7 +4,7 @@
   background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
   margin-top: 5%;
-  height: 75vh; /* Viewport-based height */
+  height: 75vh;
   z-index: 1;
   background-image: url('../assets/images/pink_blue_background.jpg');
   background-size: cover;

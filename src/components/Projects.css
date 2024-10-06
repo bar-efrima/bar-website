@@ -47,7 +47,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   border-radius: 1em;
   transition: filter 0.4s ease-in-out, transform 0.4s ease-in-out;
   filter: none;
-  filter: drop-shadow(0 0 40px rgba(46, 46, 46, 0.1)) /* Pinkish glow */
+  filter: drop-shadow(0 0 40px rgba(197, 211, 42, 0.1)) /* Pinkish glow */
     drop-shadow(0 0 50px rgba(255, 255, 255, 0.2)); /* Light blue glow */
 }
 

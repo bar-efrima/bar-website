@@ -14,6 +14,20 @@ body {
     display: flex; 
     flex-wrap: wrap; 
     gap: 20px; 
+    transform: translateY(20px); /* a slight vertical move */
+    animation: fadeIn 1.5s ease-in-out forwards; /* Trigger animation */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Slight movement */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Element in its final position */
+    }
 }
 
 /* Content Container */
@@ -139,6 +153,9 @@ hr {
     color: #CECECF;
     text-decoration: none;
 }
+.links p  {
+   padding:20px ;
+}
 
 .links p a:hover {
     color: #a6a6a6;
@@ -173,6 +190,20 @@ hr {
     width: 65%;
     margin: 0 auto;
 }
+
+.banner {
+    width: 100%; 
+    display: flex;
+    justify-content: center; 
+  }
+  
+  /* Banner Image Styling */
+  .banner img {
+    width: 65%; 
+    height: auto; 
+    border-radius: 2em;;
+    object-fit: cover; 
+  }
 /* Responsive Styles */
 @media (max-width: 850px) {
    

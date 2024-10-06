@@ -1,4 +1,4 @@
-import React from 'react';
+import {useEffect, React, Children} from 'react';
 import './kitchef.css'; // Import the CSS file
 import milabLogo from './Images/milab_logo.jpg';
 import projectScreenshot from './Images/projectScreenshot.jpg';
@@ -14,8 +14,18 @@ import VideoCard from '../components/VideoCard';
 import ImageCard from '../components/ImageCard';
 import YearCreated from '../components/YearCreated';
 import ImageSlider from '../components/ImageSlider';
+import banner from './Images/CHI2024_e.jpg';
 
-function kitchef() {
+function Kitchef() {
+
+    // Use useEffect to pop to the top when the component is mounted
+    useEffect(() => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'instant' // Make sure the scroll happens instantly
+        });
+      }, []); 
 
     const kitchefHeader = {
         title: 'Kitchef',
@@ -26,32 +36,12 @@ function kitchef() {
     
     const kitchefMyRole = {
         title: 'My Role',
-        description: `Design and conduct experiments:
-        Softtware kitchefMyRoledevleoper and electronic operator: Led "Kitchef" project from concept
-        through development, designed and programmed an IoT
-        using Arduino, BLE, CAD, and 3D printing
-        The child’s wristband contained a magnet, while the parent’s wristband
-        is equipped with a XIAO BLE NRF52840 sense controller. This
-        controller is powered by a compact portable battery with an activation
-        switch and connected to a magnetism sensor. This sensor
-        interacts with the magnet in the child’s band. When brought into
-        close proximity, the XIAO controller detects the change in magnetism
-        caused by the child’s wristband and communicates this data
-        via Bluetooth to an ESP32 controller inside the recipe box. Processing
-        the data in real-time, the RGB LED strip behind the recipe lights
-        up to guide the cooking steps.
-        reaserch: Helped in the research team: Conducting and managing the research and the team,
-        including the definition of timetable, goals for every step, and supervision on the whole process
-        Involvement in writing an academic paper: Including literature reviews and a deep
-        understanding of the CyberBall paradigm. Writing specifically the Findings chapter
-        and dividing the qualitative findings into themes.`,
     } ;
 
     const awards = 
     {
-        title: 'Awards',
-        description: 'CHI Hawaii Conference, tech12, Academic Paper',
-    } ;
+        title: 'Achivements 🏆',
+    };
 
     const kitchefVideoLink = 'https://www.youtube.com/embed/idCBrHXxCg8?si=gDtIRs0fPgZ4DGyl';
     
@@ -71,30 +61,34 @@ function kitchef() {
     }
 
   return(
+
 <div class="kitchef">
-<ProjectHeader title={kitchefHeader.title} description={kitchefHeader.description} logo={kitchefHeader.logo} screenshot={kitchefHeader.screenshot} />
+    <ProjectHeader title={kitchefHeader.title} description={kitchefHeader.description} logo={kitchefHeader.logo} screenshot={kitchefHeader.screenshot} />
 
     <div class="kitchef-info">
+        
         <div class="kitchef-left">
-          
             <div class ="about-kitchef">
                 <h3>About the Project</h3>
                 <hr />
-                <p>Kitchef is a wearable technology, designed to create physical closeness and an emotional connection between children and their parents during a shared cooking experience. The technology enables an interactive and playful experience that strengthens the parent-child relationship and enhances the child’s sense of independence and security. The Kitchef cooking kit includes two bracelets and a recipe box that accompanies the parent and child in the cooking process.</p>
-            </div>
+                <p>Kitchef is a wearable technology, designed to create physical closeness and an emotional 
+                    connection between children and their parents during a shared cooking experience. 
+                    The technology enables an interactive and playful experience that strengthens the 
+                    parent-child relationship and enhances the child’s sense of independence and security.
+                    The Kitchef cooking kit includes two bracelets and a recipe box that accompanies
+                    the parent and child in the cooking process.</p>
+                </div>
             <div class="image1">
                 <img src={image1} alt="Image 1"/>
             </div>
         </div>
         
-        <div class="kitchef-right">
-        {/* <div class="year-create">
-                <h3>Year Created</h3>
+    <div class="kitchef-right">
+        <div class="about-kitchef">
+                <h3>Created</h3>
                 <hr />
-                <p>{yearCreated}</p>
-            </div> */}
-
-        <Projectcard projectDescription={yearCreated}  style={{width:'100%' ,margin:'0', flexDirection: 'column'}}/>
+                <p>2022</p>
+            </div>
             <div class="tech-stack">
                 <h3>Tech Used</h3>
                 <hr />
@@ -117,11 +111,8 @@ function kitchef() {
                             <h4>Adobe Suit</h4>
                     </div>
                     </div>
-
-                    
                 </ul>
             </div> 
-           
             <div class="links">
                 <p><a href="https://milabgroup42022.wixsite.com/kitchef">Website <span><img src={linkIcon} alt="Link Icon" /></span></a></p>
                 <p><a href="https://dl.acm.org/doi/10.1145/3613905.3650970">Academic Paper <span><img src={linkIcon} alt="Link Icon"/></span></a></p>
@@ -131,20 +122,50 @@ function kitchef() {
 
         </div>
     </div>
-    
-     <Projectcard projectDescription={kitchefMyRole} />   
-     <ImageSlider />
-    
-    <Projectcard projectDescription={awards} style={{flexDirection: 'column'}} />
-{/* <section class="project-description">
-        <h3 id="c">Awards</h3>
-        <hr />
-        <ul class="awards">
-            <li>CHI Hawaii Conference</li>
-            <li>tech12</li>
-            <li>Academic Paper</li>
-        </ul>
-        </section> */}
+
+    <ImageSlider />
+
+    <Projectcard projectDescription={kitchefMyRole}> 
+        <p>As the IoT Developer and Research Assistant for the Kitchef project, 
+            I led the technical development and overall coordination of this Tangible User Interface 
+            (TUI) aimed at encouraging collaborative cooking between parents and children. 
+            I programmed the system primarily using C++ in Arduino, developing key features 
+            such as magnet-based wristbands and a smart recipe box that allowed users to 
+            interact through a step-based cooking process. I was responsible for all wiring, 
+            electrical components, and integrating Bluetooth Low Energy (BLE) communication via ESP32 controllers 
+            to ensure seamless functionality between hardware and software components.
+        </p><br></br><p>
+            In addition to my programming responsibilities, I acted as a product manager for the project, 
+            overseeing all aspects of development and ensuring that each part of the system worked cohesively. 
+            I collaborated with a multidisciplinary team, including a psychology and business student, two communication 
+            students, and an additional programmer. With the guidance of external and internal mentors—including our lab
+            professor, innovation lab mentors, and an industrial designer—I translated insights from various disciplines 
+            into effective technical solutions, making sure the project aligned with the needs and goals of all stakeholders.
+        </p><br></br><p>
+            My role extended to product design, where I contributed to the 3D design and fabrication of the Kitchef 
+            box using CNC machining and 3D printing, and I also designed the Kitchef logo. I conducted user research, 
+            observations, and validations during testing to refine the system. Additionally, I presented Kitchef at 
+            several showcases, where I interacted with audiences and demonstrated the project’s functionality, 
+            gathering valuable feedback. My broad involvement ensured that I had a deep understanding of how everything
+            worked and how it should work, allowing me to guide the project to success.</p>
+    </Projectcard>  
+
+<div class="banner">
+    <img src={banner} alt="banner"/>
+</div>
+
+<Projectcard projectDescription={awards} style={{
+    marginTop: '40px', 
+    marginBottom: '40px',
+    flexDirection: 'column',
+    filter: `drop-shadow(0 0 20px rgba(255, 171, 16, 0.8))
+    drop-shadow(0 0 30px rgba(255, 0, 242, 0.1))`
+    }}>
+    <p>🔸 Published an Academic Paper</p>
+    <p>🔸 Presented at CHI 2024 Hawaii Conference</p>
+    <p>🔸 Participated in IsraHCI 2024 Research Conference</p>
+    <p>🔸 Featured in an article on Tech12</p>
+</Projectcard>
 
 
     <VideoCard videoLink={kitchefVideoLink} />
@@ -153,5 +174,5 @@ function kitchef() {
   );
 }
 
-export default kitchef;
+export default Kitchef;
 

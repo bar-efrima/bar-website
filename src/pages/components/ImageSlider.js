@@ -1,17 +1,17 @@
 import React from 'react';
 import Slider from 'react-slick';
-import image1 from '../Amazon_Page/Images/1.jpg';
-import image2 from '../Amazon_Page/Images/2.jpg';
-import image3 from '../Amazon_Page/Images/3.jpg';
-import image4 from '../Amazon_Page/Images/4.jpg';
-import image5 from '../Amazon_Page/Images/5.jpg';
-import image6 from '../Amazon_Page/Images/6.jpg';
-import image7 from '../Amazon_Page/Images/7.jpg';
-import image8 from '../Amazon_Page/Images/8.jpg';
-import image9 from '../Amazon_Page/Images/9.jpg';
-import image10 from '../Amazon_Page/Images/10.jpg';
-import image11 from '../Amazon_Page/Images/11.jpg';
-import image12 from '../Amazon_Page/Images/12.jpg';
+import image1 from '../Kitchef_Page/Images/1.jpg';
+import image2 from '../Kitchef_Page/Images/2.jpg';
+import image3 from '../Kitchef_Page/Images/3.jpg';
+import image4 from '../Kitchef_Page/Images/4.jpg';
+import image5 from '../Kitchef_Page/Images/5.jpg';
+import image6 from '../Kitchef_Page/Images/6.jpg';
+import image7 from '../Kitchef_Page/Images/7.jpg';
+import image8 from '../Kitchef_Page/Images/8.jpg';
+import image9 from '../Kitchef_Page/Images/9.jpg';
+import image10 from '../Kitchef_Page/Images/10.jpg';
+import image11 from '../Kitchef_Page/Images/11.jpg';
+import image12 from '../Kitchef_Page/Images/12.jpg';
 import './ImageSlider.css';
 
 

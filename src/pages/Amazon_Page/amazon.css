@@ -8,6 +8,19 @@ body {
     background: #030303;
     font-weight: 700;
 }
+/* Default state for each component inside the .amazon container */
+.amazon .amazon-item {
+    opacity: 0;
+    transform: translateY(20px); /* Slight movement */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* When the item is in view, apply the fade-in effect */
+.amazon .amazon-item.visible {
+    opacity: 1;
+    transform: translateY(0); /* Return to normal position */
+}
+
 
 .amazon{
     margin-top: 60px;
@@ -15,7 +28,22 @@ body {
     display: flex; 
     flex-wrap: wrap; 
     gap: 20px; 
-} 
+    opacity: 0;
+    transform: translateY(20px); /* a slight vertical move */
+    animation: fadeIn 1.5s ease-in-out forwards; /* Trigger animation */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Slight movement */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Element in its final position */
+    }
+}
  
 /* Content Container */
 .amazon-info {
@@ -39,7 +67,7 @@ body {
 
 /* Right side (Created and Links) */
 .amazon-right {
-    width: 30%; /* Ensure it takes up the rest of the width */
+    width: 30%;
     display: flex;
     gap: 20px; 
     flex-direction: column;
@@ -60,7 +88,6 @@ hr {
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-    /* padding-bottom: 40px; */
 }
 
 .video-container iframe {
