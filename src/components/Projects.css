@@ -125,7 +125,8 @@ hr {
 
   /* Project container */
   .projects {
-    margin: 0;
+    margin: 0 auto;
+    margin-bottom: 100px;
     padding: 0;
     padding-top: 10%;
     background-color: #000000;

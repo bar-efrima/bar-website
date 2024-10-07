@@ -47,7 +47,8 @@ function Header() {
 
   return (
     <nav id="nav-bar" className={`${isSticky ? 'sticky' : ''} ${isMenuOpen ? 'open' : ''}`}>
-      <h2 className="myname">Bar Efrima</h2>
+      {/* when the name is pressed you got back home page */}
+      <h2 className="myname" onClick={() => navigateAndScroll('helloTag')}>Bar Efrima</h2>
       
       {/* Hamburger icon for smaller screens */}
       <div className={`hamburger ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
@@ -62,10 +63,10 @@ function Header() {
           <a href="#helloTag" onClick={() => navigateAndScroll('helloTag')}>Home</a>
         </li>
         <li>
-          <a href="#aboutmeTag" onClick={() => navigateAndScroll('aboutmeTag')}>About Me</a>
+          <a href="#aboutmeTag" onClick={() => navigateAndScroll('aboutTag')}>About Me</a>
         </li>
         <li>
-          <a href="#projectsTag" onClick={() => navigateAndScroll('projectsTag')}>Projects</a>
+          <a href="#projectsTag" onClick={() => navigateAndScroll('projectsTag')}>Projects</a> 
         </li>
       </ul>
 

@@ -4,11 +4,12 @@
   background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
   margin-top: 5%;
-  height: 75vh;
+  height: 80vh;
   z-index: 1;
   background-image: url('../assets/images/pink_blue_background.jpg');
   background-size: cover;
   background-position: center;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
 }
 
 #myVideo {
