@@ -1,29 +1,58 @@
-/* From Uiverse.io by StealthWorm */ 
-.btn {
+/* Base styling for the button */
+/* From Uiverse.io by StealthWorm */   
+.space-btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: poppins, sans-serif;
   margin: 0 auto;
-  width: 10rem; /* Smaller default width */
-  overflow: hidden;
-  height: 2.5rem; /* Smaller default height */
-  background-size: 300% 300%;
+  width: 18rem; 
+  height: 4rem; 
   cursor: pointer;
   backdrop-filter: blur(1rem);
-  border-radius: 1rem;
+  border-radius: 0.25rem; 
   transition: 0.5s;
-  animation: gradient_301 5s ease infinite;
-  border: double 4px transparent;
-  background-image: linear-gradient(#212121, #212121),
-    linear-gradient(
-      137.48deg,
-      #790b67 45%,
-      #b9b9b9 67%,
-      #28939d 87%
-    );
+  padding: 10px 25px; 
+  border: 3px solid transparent; 
   background-origin: border-box;
   background-clip: content-box, border-box;
-  transform: scale(1.05); /* Smaller default scale */
+  white-space: nowrap; 
+  background: none; 
+  border: 3px solid #afafafa0; 
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.space-btn:hover {
+  transform: scale(1.1); 
+  border-image: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%) 1; /* Gradient border on hover */
+  background: none; 
+}
+
+/* Container for text and arrow */
+.more-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between text and arrow */
+  padding-left: 15px; /* Add padding to the left of the text */
+  padding-right: 15px; /* Add padding to the right of the arrow */
+}
+
+/* Arrow next to the text */
+.arrow-icon {
+  width: 16px; 
+  height: auto;
+  animation: moveUpDown 2s infinite ease-in-out; /* Infinite up-down animation */
+}
+
+/* Infinite up-down animation for arrow */
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px); /* Arrow moves */
+  }
 }
 
 #container-stars {
@@ -34,53 +63,15 @@
   overflow: hidden;
   transition: 0.5s;
   backdrop-filter: blur(1rem);
-  border-radius: 1rem;
-  background-color: #212121;
+  border-radius: 0.25rem; 
 }
 
 strong {
   z-index: 2;
   font-family: "poppins", sans-serif;
-  font-size: 10px; /* Smaller text */
-  letter-spacing: 3px; /* Adjusted letter spacing */
+  font-size: 16px; 
+  letter-spacing: 3px;
   color: #ffffff;
-}
-
-#glow {
-  position: absolute;
-  display: flex;
-  width: 8rem; /* Smaller glow */
-}
-
-.circle {
-  width: 100%;
-  height: 25px; /* Adjusted circle height */
-  filter: blur(2rem);
-  animation: pulse_3011 4s infinite;
-  z-index: -1;
-}
-
-.circle:nth-of-type(1) {
-  background: rgba(254, 83, 186, 0.636);
-}
-
-.circle:nth-of-type(2) {
-  background: rgba(142, 81, 234, 0.704);
-}
-
-.btn:hover {
-  transform: scale(1.1); /* Slightly increase the scale on hover */
-}
-
-.btn:active {
-  border: double 4px #fe53bb;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  animation: none;
-}
-
-.btn:active .circle {
-  background: #fe53bb;
 }
 
 #stars {
@@ -125,7 +116,6 @@ strong {
   from {
     transform: translateY(0);
   }
-
   to {
     transform: translateY(-135rem);
   }
@@ -135,89 +125,61 @@ strong {
   from {
     transform: rotate(360deg);
   }
-
   to {
     transform: rotate(0);
-  }
-}
-
-@keyframes gradient_301 {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes pulse_3011 {
-  0% {
-    transform: scale(0.75);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-  }
-
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-  }
-
-  100% {
-    transform: scale(0.75);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
 }
 
 /* Media queries for responsiveness */
 
 /* For small screens (mobile) */
-@media (max-width: 480px) {
-  .btn {
-    width: 8rem; 
-    height: 2rem; 
-    transform: scale(1); /* Reduce scale for smaller screens */
+@media (max-width: 600px) {
+  .space-btn { /* Reduce button size*/
+    width: 11rem; 
+    height: 3rem; 
+    padding: 5px 12px; 
   }
+
+  .arrow-icon {
+    width: 12px; /* Reduce arrow size */
+  }
+
   strong {
-    font-size: 8px; 
+    font-size: 12px;
     letter-spacing: 2px; 
-  }
-  #glow {
-    width: 7rem; 
   }
 }
 
 /* For medium screens (tablets) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .btn {
-    width: 9rem;
-    height: 2.25rem;
-    transform: scale(1.03); /* Adjusted scale for medium screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .space-btn {
+    width: 15rem; 
+    height: 3.5rem; 
+    padding: 9px 20px;
   }
+
+  .arrow-icon {
+    width: 14px; 
+  }
+
   strong {
-    font-size: 9px;
-    letter-spacing: 2.5px;
-  }
-  #glow {
-    width: 8rem;
+    font-size: 15px; 
+    letter-spacing: 2.5px; 
   }
 }
 
 /* For large screens (desktops) */
-@media (min-width: 769px) {
-  .btn {
-    width: 11rem; 
-    height: 2.75rem;
-    transform: scale(1.05); /* Keep smaller scale */
+@media (min-width: 1025px) {
+  .space-btn {
+    width: 18rem; 
+    height: 4rem; 
   }
+
+  .arrow-icon {
+    width: 16px; 
+  }
+
   strong {
-    font-size: 11px; /* Slightly smaller text */
-    letter-spacing: 4px;
-  }
-  #glow {
-    width: 9rem;
+    font-size: 16px; 
   }
 }

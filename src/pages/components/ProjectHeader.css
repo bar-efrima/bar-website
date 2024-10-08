@@ -28,6 +28,11 @@ header img {
     height: auto;
     margin-right: 30px;
     margin-bottom: 0;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.05);
 }
 
 .text-container h1 {
@@ -38,6 +43,14 @@ header img {
     background: linear-gradient(to bottom, #c2c2c2, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.text-container {
+    transition: transform 0.3s ease;
+}
+
+.text-container:hover {
+    transform: scale(1.05);
 }
 
 .text-container p {

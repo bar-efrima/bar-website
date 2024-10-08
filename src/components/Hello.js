@@ -48,9 +48,8 @@ function Hello() {
         <div className="hidden">
           <p className="hello">Hello, World.</p>
           <p className="name">I'm Bar Efrima.</p>
-          <a href="#aboutmeTag">
+          <a href="#aboutTag">
           <SpaceButton></SpaceButton>
-            {/* <p onClick={scrollToAboutMe} style={{ cursor: 'pointer' }} className="more stroke">more about me</p> */}
           </a>
          
       <LogoContainer ></LogoContainer>

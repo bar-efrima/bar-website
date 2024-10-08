@@ -120,6 +120,7 @@ hr {
 
 .tech-info h4 {
     margin-left: 20px;
+    padding-top: 15px;
     font-size: 1.3rem;
     font-weight: 500;
     color: #CECECF;
@@ -129,7 +130,13 @@ hr {
     display: flex;
     align-items: center;
     padding: 5px;
+    transition: transform 0.3s ease;
 }
+
+.tech-item:hover {
+    transform: scale(1.05);
+}
+
 
 .tech-item img {
     width: 50px;
@@ -155,11 +162,17 @@ hr {
 }
 .links p  {
    padding:20px ;
+   transition: transform 0.3s ease;
+}
+
+.links p:hover {
+    transform: scale(1.05);
 }
 
 .links p a:hover {
-    color: #a6a6a6;
+    color: #c84a97;
 }
+
 
 .links span img {
     width: 20px;

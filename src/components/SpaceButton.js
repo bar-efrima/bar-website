@@ -1,21 +1,24 @@
-// src/components/LogoContainer.js
 import React from 'react';
-import './SpaceButton.css'; // Add styles here
+import './SpaceButton.css'; 
+import arrow from '../assets/logos/smallArrow.png'; // Ensure the path to the arrow image is correct
 
 function SpaceButton() {
   return (
-    <button type="button" class="btn">
-            <strong>More About Me</strong>
-            <div id="container-stars">
-              <div id="stars"></div>
-            </div>
+    <button type="button" className="space-btn">
+      <div className="more-container">
+        <strong>MORE ABOUT ME</strong>
+        <img src={arrow} alt="arrow" className="arrow-icon" />
+      </div>
 
-            <div id="glow">
-              <div class="circle"></div>
-              <div class="circle"></div>
-            </div>
-          </button>
+      <div id="container-stars">
+        <div id="stars"></div>
+      </div>
 
+      <div id="glow">
+        <div className="circle"></div>
+        <div className="circle"></div>
+      </div>
+    </button>
   );
 }
 

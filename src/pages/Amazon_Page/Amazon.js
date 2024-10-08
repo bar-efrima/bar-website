@@ -73,16 +73,17 @@ function Amazon() {
 
     <ProjectHeader title={amazonHeader.title} description={amazonHeader.description} logo={amazonHeader.logo} screenshot={amazonHeader.screenshot} />
     <TextCard projectDescription={amazonDescription}> 
-    <p> The Amazon Scraper project is a web application designed to display item prices from various Amazon websites,
-       providing users with a simple and efficient way to compare prices across regions. 
-       </p> ...<p>
-       Built using Python and the FastAPI framework for the backend, and plain HTML, 
-       JavaScript, and the fetch API for the frontend, this project showcases the ability
-        to scrape data in real time and present it in a user-friendly format. 
-        The project uses a local SQLite database to store user search data, 
-        ensuring fast access to past searches. 
-
-      </p>... <p>It is important to note that this 
+      <p> The Amazon Scraper project is a web application designed to display item prices from various Amazon websites,
+      providing users with a simple and efficient way to compare prices across regions. </p>
+      <br/>
+      <p>
+      Built using Python and the FastAPI framework for the backend, and plain HTML, 
+      JavaScript, and the fetch API for the frontend, this project showcases the ability
+      to scrape data in real time and present it in a user-friendly format. 
+      The project uses a local SQLite database to store user search data, 
+      ensuring fast access to past searches. </p> 
+      <br/>
+      <p>It is important to note that this 
       project was created for educational purposes, adhering to ethical guidelines and terms of service for web scraping.</p>
     </TextCard>
     <div className="amazon-info">

@@ -34,10 +34,6 @@ a {
   transition: color 0.3s ease-in-out;
 }
 
-a:hover {
-  color: #c84a97; /* Hover color */
-}
-
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
@@ -74,21 +70,6 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease-in-out;
 }
 
-/* General button styles */
-button {
-  background-color: #c84a97;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  font-family: 'Poppins', sans-serif;
-}
-
-button:hover {
-  background-color: #a7377e;
-}
 
 button:focus {
   outline: none;
