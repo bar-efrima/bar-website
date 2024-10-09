@@ -11,7 +11,8 @@ import ProjectHeader from '../components/ProjectHeader';
 import GithubLink from '../components/Github';
 import VideoCard from '../components/VideoCard';
 import ProjectFeatures from '../components/ProjectFeatures';
-
+import image1 from './Images/ca1.png';
+import image2 from './Images/ca2.png';
 
 function Amazon() {
 
@@ -24,6 +25,10 @@ function Amazon() {
     });
   }, []); 
 
+  const carouselImages = [
+    image1,
+    image2,
+  ];
 
   const amazonHeader = {
     title: 'Amazon Scraper',
@@ -98,7 +103,7 @@ function Amazon() {
       </div>
 
     </div>
-    <Carousel />
+    <Carousel images={carouselImages} />
  <ProjectFeatures features={featuresList} />
 
 

@@ -37,8 +37,8 @@ function Header() {
     const section = document.getElementById(sectionId);
     if (!section) return;
 
-    const targetPosition = section.getBoundingClientRect().top + window.pageYOffset;
-    const startPosition = window.pageYOffset;
+    const targetPosition = section.getBoundingClientRect().top + window.scrollY;
+    const startPosition = window.scrollY;
     const distance = targetPosition - startPosition;
     const duration = 200; // Increase for slower scrolling
     let start = null;

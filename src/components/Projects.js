@@ -109,7 +109,8 @@ function Projects() {
   }, []);
 
   return (
-    <section className="projects" id ="projectsTag">
+    <section className="projects" id = "projectsTag">
+
       <h2>MY PROJECTS</h2>
       <div className="projects-grid" ref={projectsRef}>
         {projects.map((project, index) => (
@@ -117,14 +118,19 @@ function Projects() {
             <div className="project-content">
               <div className="project-image-wrapper">
                 {project.title === 'Kitchef' ? (
-                  <Link to="/Kitchef">
+                  <Link to="/Kitchef" className="project-img-link">
                     <img src={project.image} alt={project.title} className="project-image" />
                   </Link>
                 ) : project.title === 'Amazon Scraper' ? (
-                  <Link to="/amazon">
+                  <Link to="/amazon" className="project-img-link">
                     <img src={project.image} alt={project.title} className="project-image" />
                   </Link>
-                ) : (
+                ) : project.title === 'Navigation App'? (
+                  <Link to="/Unavigate" className="project-img-link">
+                    <img src={project.image} alt={project.title} className="project-image" />
+                  </Link>
+                ) :
+                (
                   <img src={project.image} alt={project.title} className="project-image" />
                 )}
               </div>
