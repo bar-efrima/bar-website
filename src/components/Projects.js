@@ -3,14 +3,11 @@ import React, { useEffect, useRef } from 'react';
 import amazon from '../assets/projects/ama.png';
 import navigation from '../assets/projects/navi.png';
 import kitchef from '../assets/projects/Kitchef.jpg';
-import musical from '../assets/projects/musical2.jpg';
-// import weatherbox from '../assets/projects/Weather-Box.jpg';
+import musical from '../assets/projects/iot-projects.jpg';
 import gamehighlights from '../assets/projects/game.png';
-// import bubbletrouble from '../assets/projects/BubbleTrouble.jpg';
 import royalcats from '../assets/projects/Royal-cats.jpg';
 import weatherWizard from '../assets/projects/Weather-Wizard.png';
-import caimbridge from '../assets/projects/caimbrige.jpg';
-// import stars from '../assets/videos/stars.webm';
+import caimbridge from '../assets/projects/pokadex.png';
 import { Link } from 'react-router-dom';
 
 // Projects data array
@@ -20,31 +17,31 @@ const projects = [
     title: 'Amazon Scraper',
     image: amazon,
     type: 'FastAPI Web App',
-    description: 'FastAPI web app that displays item prices from multiple Amazon websites...',
+    description: 'A FastAPI web app that scrapes and displays item prices from multiple Amazon websites.',
     github: 'https://github.com/bar-efrima/Amazon-Product-Search',
     youtube: 'https://youtu.be/kTHfsLwlMJY',
   },
   {
     title: 'Navigation App',
     image: navigation,
-    type: 'Ionic React App',
-    description: 'Created a cross-platform app for Reichman University using Ionic React...',
+    type: 'Ionic React Cross-Platform App',
+    description: 'A cross-platform app helping users at Reichman University easily navigate to places.',
     github: 'https://github.com/bar-efrima/Unavigate',
     youtube: 'https://youtu.be/-sBSDOqAaPk',
   },
   {
     title: 'Kitchef',
     image: kitchef,
-    type: 'IoT Prototype Project',
-    description: 'Kitchef is an IoT prototype project...',
+    type: 'IoT Prototype & Reasearch',
+    description: 'An IoT prototype developed for HCI research, integrating wearable tech and smart objects for collaborative cooking.',
     github: 'https://github.com/bar-efrima/Kitchef',
     youtube: 'https://milabgroup42022.wixsite.com/kitchef',
   },
   {
-    title: 'Blockchain Research',
+    title: 'Pokémon Pokédex',
     image: caimbridge,
-    type: 'Caimbridge Research UK',
-    description: 'FastAPI web app that displays item prices from multiple Amazon websites...',
+    type: 'React Web App',
+    description: 'An Pokédex web app using the Pokémon API, displaying a list of all Pokémon with options to view details, catch, and save them.',
     github: 'https://github.com/bar-efrima/Amazon-Product-Search',
     youtube: 'https://youtu.be/kTHfsLwlMJY',
   },
@@ -52,51 +49,37 @@ const projects = [
     title: 'IoT Inventions',
     image: musical,
     type: 'Arduino C++ Projects',
-    description: 'The musical spray, Emulating keyboard with fruits, The weather box, Kitchef ',
+    description: 'Developed Arduino-based projects such as interactive sound instrument, weather-based light display and fruits as game controllers. ',
     github: 'https://github.com/bar-efrima/The-Musical-Spray',
     youtube: 'https://youtu.be/cg78-Zcp89s',
   },
   {
     title: 'WeatherWizard App',
     image: weatherWizard,
-    type: 'Ionic React App',
-    description: 'Cross-platform weather app using React Ionic...',
+    type: 'Ionic React Cross Platform App',
+    description: 'A cross-platform weather app that fetches current weather for selected cities.',
     github: 'https://github.com/bar-efrima/WeatherWizard-App',
     youtube: 'https://youtu.be/PVBT4ktRmHY',
   },
   {
     title: 'Highlights Maker',
     image: gamehighlights,
-    type: 'Python Project',
-    description: 'A Python program that extracts important moments from sports games...',
+    type: 'Speech To Text Python Web App',
+    description: 'A sports highlights extractor, implementing speech recognition to analyze audio and key moments from sports game videos.',
     github: 'https://github.com/bar-efrima/Highlights-Creator/tree/main',
     youtube: 'https://youtu.be/dU6XqPEafqA',
   },
-  // {
-  //   title: 'Gaming With Fruits',
-  //   image: bubbletrouble,
-  //   type: 'CPX Arduino Project',
-  //   description: 'Playing "Bubble Trouble" with fruits as the keyboard...',
-  //   github: 'https://github.com/bar-efrima/Emulating-Bubble-Trouble-With-Fruits',
-  //   youtube: 'https://youtu.be/XRUjBdCev2o',
-  // },
+
   {
     title: 'Royal Cats NFT',
     image: royalcats,
     type: 'Blockchain Project',
-    description: 'Founder and Owner of "Royal Cats NFT" blockchain project...',
+    description: 'Founder of "Royal Cats NFT" blockchain project, where I programmed an ERC-721 contract, created 10k NFTs, and built a community of 8K+',
     discord: 'https://discord.gg/SezePJFhtQ',
     twitter: 'https://twitter.com/RoyalCats_NFT',
     website: 'https://www.royalcatsnft.art/',
   },
-  // {
-  //   title: 'The Weather Box',
-  //   image: weatherbox,
-  //   type: 'Arduino C++ Project',
-  //   description: 'A device that retrieves current weather conditions using a weather API...',
-  //   github: 'https://github.com/bar-efrima/The-Weather-Box',
-  //   youtube: 'https://youtu.be/788kr_7DwH4',
-  // },
+
 ];
 
 function Projects() {
@@ -126,8 +109,8 @@ function Projects() {
   }, []);
 
   return (
-    <section className="projects">
-      <a name="projectsTag"></a>
+    <section className="projects" id ="projectsTag">
+      <h2>MY PROJECTS</h2>
       <div className="projects-grid" ref={projectsRef}>
         {projects.map((project, index) => (
           <div className="project-item amazon-item" key={index}>

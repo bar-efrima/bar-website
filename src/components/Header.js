@@ -12,32 +12,56 @@ function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const menu = document.getElementById('menue');
-      if (window.pageYOffset >= menu.offsetTop) {
+      if (window.scrollY >= menu.offsetTop) {
         setIsSticky(true);
       } else {
         setIsSticky(false);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll); 
+
+    // If there's a hash in the URL, scroll to the section when the page loads
+    const hash = window.location.hash;
+    if (hash) {
+      slowScrollToSection(hash.substring(1));
+    }
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  const scrollToSection = (sectionId) => {
+  // Custom smooth scroll with adjustable duration
+  const slowScrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (!section) return;
+
+    const targetPosition = section.getBoundingClientRect().top + window.pageYOffset;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 200; // Increase for slower scrolling
+    let start = null;
+
+    const step = (timestamp) => {
+      if (!start) start = timestamp;
+      const progress = timestamp - start;
+      const progressRatio = Math.min(progress / duration, 1);
+      window.scrollTo(0, startPosition + distance * progressRatio);
+      if (progress < duration) {
+        window.requestAnimationFrame(step);
+      }
+    };
+
+    window.requestAnimationFrame(step);
   };
 
   const navigateAndScroll = (sectionId) => {
     if (location.pathname !== '/') {
-      window.location.href = `/#${sectionId}`;
+      // Navigate to home and pass the sectionId in the URL
+      window.location.replace(`/#${sectionId}`);
     } else {
-      scrollToSection(sectionId);
+      slowScrollToSection(sectionId); // Use the custom slow scroll function
     }
   };
 
@@ -47,17 +71,14 @@ function Header() {
 
   return (
     <nav id="nav-bar" className={`${isSticky ? 'sticky' : ''} ${isMenuOpen ? 'open' : ''}`}>
-      {/* when the name is pressed you got back home page */}
       <h2 className="myname" onClick={() => navigateAndScroll('helloTag')}>Bar Efrima</h2>
       
-      {/* Hamburger icon for smaller screens */}
       <div className={`hamburger ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <div></div>
         <div></div>
         <div></div>
       </div>
 
-      {/* Navigation Menu */}
       <ul id="menue">
         <li>
           <a href="#helloTag" onClick={() => navigateAndScroll('helloTag')}>Home</a>
@@ -70,7 +91,6 @@ function Header() {
         </li>
       </ul>
 
-      {/* Social Icons */}
       <div className="nav-logos">
         <a href="mailto:bar2798@gmail.com" target="_blank" rel="noopener noreferrer">
           <img src={mailLogo} id="mail-logo" alt="Mail" />

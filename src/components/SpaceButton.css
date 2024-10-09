@@ -1,5 +1,4 @@
 /* Base styling for the button */
-/* From Uiverse.io by StealthWorm */   
 .space-btn {
   display: flex;
   justify-content: center;
@@ -54,7 +53,7 @@
     transform: translateY(-3px); /* Arrow moves */
   }
 }
-
+/* Stars From Uiverse.io by StealthWorm */   
 #container-stars {
   position: absolute;
   z-index: -1;
