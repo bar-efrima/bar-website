@@ -1,6 +1,6 @@
 import {useEffect, React} from 'react';
 import './amazon.css'; // CSS file for styling
-import amazonLogo from './Images/amazon_logo.png'; // Amazon logo
+import project_logo from './Images/amazon_logo.png'; // Amazon logo
 import projectScreenshot from './Images/projectScreenshot.jpg'; // Screenshot of the project
 import SkillCard from '../components/Skills'; // SkillCard component
 import TextCard from '../components/TextCardProject'; // AboutCard component
@@ -30,21 +30,21 @@ function Amazon() {
     image2,
   ];
 
-  const amazonHeader = {
+  const ProjectInfo = {
     title: 'Amazon Scraper',
     description: 'Multi-region Amazon price scraping tool',
-    logo: amazonLogo,
+    logo: project_logo,
     screenshot: projectScreenshot,
   }
 
-  const amazonSkills = [
+  const projectSkills = [
     { name: 'HTML', percent: 7.6 },
     { name: 'CSS', percent: 13.5 },
     { name: 'JavaScript', percent: 35.9 },
     { name: 'Python', percent: 43 },
   ];
 
-  const amazonSkillsList = [
+  const projectSkillsList = [
     { name: 'SQLite3' },
     { name: 'BeautifulSoup' },
     { name: 'FastApi' },
@@ -76,7 +76,7 @@ function Amazon() {
     
   <div className="amazon">
 
-    <ProjectHeader title={amazonHeader.title} description={amazonHeader.description} logo={amazonHeader.logo} screenshot={amazonHeader.screenshot} />
+    <ProjectHeader title={ProjectInfo.title} description={ProjectInfo.description} logo={ProjectInfo.logo} screenshot={ProjectInfo.screenshot} />
     <TextCard projectDescription={amazonDescription}> 
       <p> The Amazon Scraper project is a web application designed to display item prices from various Amazon websites,
       providing users with a simple and efficient way to compare prices across regions. </p>
@@ -94,7 +94,7 @@ function Amazon() {
     <div className="amazon-info">
 
       <div className="amazon-left">
-        <SkillCard skills={amazonSkills} skillsList={amazonSkillsList} />
+        <SkillCard skills={projectSkills} skillsList={projectSkillsList} />
       </div>
 
       <div className="amazon-right">

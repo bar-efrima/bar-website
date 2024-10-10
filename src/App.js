@@ -3,8 +3,10 @@ import Home from './components/Home'; // Home contains all sections
 import Kitchef from './pages/Kitchef_Page/Kitchef'; // Kitchef project page
 import Amazon from './pages/Amazon_Page/Amazon'; // Kitchef project page
 import Unavigate from './pages/Unavigate_Page/Unavigate'; // Unavigate project page
+import Pokemon from './pages/Pokemon_Page/Pokemon';
 import Header from './components/Header';
 import Footer from './components/Footer';
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
         <Route path="/kitchef" element={<Kitchef />} />
         <Route path="/Amazon" element={<Amazon />} />
         <Route path="/Unavigate" element={<Unavigate />} />
+        <Route path="/Pokemon" element={<Pokemon />} />
       </Routes>
       <Footer />
     </Router>

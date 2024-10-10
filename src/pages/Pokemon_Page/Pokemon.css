@@ -7,21 +7,21 @@ body {
     color: #333;
     font-weight: 700;
 }
-/* Default state for each component inside the .Unavigate container */
-.Unavigate .Unavigate-item {
+/* Default state for each component inside the .Pokemon container */
+.Pokemon .Pokemon-item {
     opacity: 0;
     transform: translateY(20px); /* Slight movement */
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 /* When the item is in view, apply the fade-in effect */
-.Unavigate .Unavigate-item.visible {
+.Pokemon .Pokemon-item.visible {
     opacity: 1;
     transform: translateY(0); /* Return to normal position */
 }
 
 
-.Unavigate{
+.Pokemon{
     margin-top: 60px;
     margin-bottom: 60px;
     display: flex; 
@@ -45,7 +45,7 @@ body {
 }
  
 /* Content Container */
-.Unavigate-info {
+.Pokemon-info {
     display: flex;
     justify-content: space-between;
     width: 65%; 
@@ -55,7 +55,7 @@ body {
 }
 
 /* Left side (Skills) */
-.Unavigate-left {
+.Pokemon-left {
     width: 70%; 
     padding-left: 0;
     margin-left: 0;
@@ -65,7 +65,7 @@ body {
 }
 
 /* Right side (Created and Links) */
-.Unavigate-right {
+.Pokemon-right {
     width: 30%;
     display: flex;
     gap: 20px; 
@@ -97,12 +97,12 @@ hr {
 /* Responsive Styles */
 @media (max-width: 850px) {
 
-    .Unavigate-info {
+    .Pokemon-info {
         width: 90%; 
         gap: 10px; 
     }
 
-    .Unavigate-right {
+    .Pokemon-right {
         padding-left: 0;
         margin-left: 0;
         text-align: left; 
@@ -110,7 +110,7 @@ hr {
         gap: 10px; 
         flex-direction: column;
     }
-    .Unavigate-left {
+    .Pokemon-left {
         padding-bottom: 0;
     }
     
@@ -156,7 +156,7 @@ hr {
         width: 100%;
     }
 
-    .Unavigate-left{
+    .Pokemon-left{
         padding-right: 0;
         margin-left: 0;
     }

@@ -1,6 +1,6 @@
 import {useEffect, React} from 'react';
 import './Unavigate.css'; // CSS file for styling
-import navigateLogo from './Images/navigate_logo.png'; // Unavigate logo
+import project_logo from './Images/navigate_logo.png'; // Unavigate logo
 import projectScreenshot from './Images/projectScreenshot.jpg'; // Screenshot of the project
 import SkillCard from '../components/Skills'; // SkillCard component
 import TextCard from '../components/TextCardProject'; // AboutCard component
@@ -33,14 +33,14 @@ function Unavigate() {
     image3,
   ];
 
-  const UnavigateHeader = {
+  const ProjectInfo = {
     title: 'Campus Navigation App',
     description: 'Real-time campus navigation app for Reichman University',
-    logo: navigateLogo,
+    logo: project_logo,
     screenshot: projectScreenshot,
   }
 
-  const UnavigateSkills = [
+  const ProjectSkills = [
     { name: 'TypeScript', percent: 56.6 },
     { name: 'CSS', percent: 32.3 },
     { name: 'Python', percent: 7.9 },
@@ -48,7 +48,7 @@ function Unavigate() {
     { name: 'JavaScript', percent: 0.9 }
   ];  
   
-  const UnavigateSkillsList = [
+  const ProjectSkillsList = [
     { name: 'Ionic React'},
     { name: 'Mapbox API'},
     { name: 'OpenStreetMap' },
@@ -86,7 +86,7 @@ function Unavigate() {
     
   <div className="Unavigate">
 
-    <ProjectHeader title={UnavigateHeader.title} description={UnavigateHeader.description} logo={UnavigateHeader.logo} screenshot={UnavigateHeader.screenshot} />
+    <ProjectHeader title={ProjectInfo.title} description={ProjectInfo.description} logo={ProjectInfo.logo} screenshot={ProjectInfo.screenshot} />
     <TextCard projectDescription={UnavigateDescription}> 
       <p> Unavigate is a navigation app specifically designed for Reichman University, providing accurate and
         user-friendly guidance throughout the campus. Developed with Ionic React and integrated with the Mapbox API, 
@@ -107,7 +107,7 @@ function Unavigate() {
     <div className="Unavigate-info">
 
       <div className="Unavigate-left">
-        <SkillCard skills={UnavigateSkills} skillsList={UnavigateSkillsList} />
+        <SkillCard skills={ProjectSkills} skillsList={ProjectSkillsList} />
       </div>
 
       <div className="Unavigate-right">

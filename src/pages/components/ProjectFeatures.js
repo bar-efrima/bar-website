@@ -1,9 +1,9 @@
 import React from 'react';
-import './ProjectFeatures.css'; // Ensure you import the correct CSS file
+import './ProjectFeatures.css';
 
 const AmazonFeatures = ({ features }) => {
   return (
-    <div className="amazon-features">
+    <div className="project-features">
       <div className="feature-description">
         <h3>Project Features</h3>
         <hr className="line" />

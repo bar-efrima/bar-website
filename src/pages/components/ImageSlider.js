@@ -1,21 +1,8 @@
 import React from 'react';
 import Slider from 'react-slick';
-import image1 from '../Kitchef_Page/Images/1.jpg';
-import image2 from '../Kitchef_Page/Images/2.jpg';
-import image3 from '../Kitchef_Page/Images/3.jpg';
-import image4 from '../Kitchef_Page/Images/4.jpg';
-import image5 from '../Kitchef_Page/Images/5.jpg';
-import image6 from '../Kitchef_Page/Images/6.jpg';
-import image7 from '../Kitchef_Page/Images/7.jpg';
-import image8 from '../Kitchef_Page/Images/8.jpg';
-import image9 from '../Kitchef_Page/Images/9.jpg';
-import image10 from '../Kitchef_Page/Images/10.jpg';
-import image11 from '../Kitchef_Page/Images/11.jpg';
-import image12 from '../Kitchef_Page/Images/12.jpg';
 import './ImageSlider.css';
 
-
-function ImageSlider() {
+function ImageSlider({ images }) {
   const sliderSettings = {
     infinite: true, // Infinite loop
     speed: 6000, // Slow transition speed
@@ -32,46 +19,14 @@ function ImageSlider() {
   return (
     <div className="slider-container">
       <Slider {...sliderSettings}>
-        <div>
-          <img src={image1} alt="Slide 1" className="slider-image" />
-        </div>
-        <div>
-          <img src={image2} alt="Slide 2" className="slider-image" />
-        </div>
-        <div>
-          <img src={image3} alt="Slide 3" className="slider-image" />
-        </div>
-        <div>
-          <img src={image4} alt="Slide 4" className="slider-image" />
-        </div>
-        <div>
-          <img src={image5} alt="Slide 5" className="slider-image" />
-        </div>
-        <div>
-          <img src={image6} alt="Slide 6" className="slider-image" />
-        </div>
-        <div>
-          <img src={image7} alt="Slide 7" className="slider-image" />
-        </div>
-        <div>
-          <img src={image8} alt="Slide 8" className="slider-image" />
-        </div>
-        <div>
-          <img src={image9} alt="Slide 9" className="slider-image" />
-        </div>
-        <div>
-          <img src={image10} alt="Slide 10" className="slider-image" />
-        </div>
-        <div>
-          <img src={image11} alt="Slide 11" className="slider-image" />
-        </div>
-        <div>
-          <img src={image12} alt="Slide 12" className="slider-image" />
-        </div>
+        {images.map((image, index) => (
+          <div key={index}>
+            <img src={image} alt={`Slide ${index + 1}`} className="slider-image" />
+          </div>
+        ))}
       </Slider>
     </div>
   );
 }
 
 export default ImageSlider;
-

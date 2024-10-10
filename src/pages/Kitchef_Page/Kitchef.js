@@ -1,20 +1,34 @@
 import {useEffect, React, Children} from 'react';
 import './kitchef.css'; // Import the CSS file
-import milabLogo from './Images/milab_logo.jpg';
+import projectLogo from './Images/milab_logo.jpg';
 import projectScreenshot from './Images/projectScreenshot.jpg';
 import image1 from './Images/image1.jpg';
 import arduinoLogo from './Stack/Arduino.png';
 import cppLogo from './Stack/c++.svg';
 import adobeLogo from './Stack/Adobe.png';
 import linkIcon from '../General_Images/link.png';
-import image3 from './Images/image3.jpg';
 import ProjectHeader from '../components/ProjectHeader';
 import Projectcard from '../components/TextCardProject';
 import VideoCard from '../components/VideoCard';
-import ImageCard from '../components/ImageCard';
-import YearCreated from '../components/YearCreated';
 import ImageSlider from '../components/ImageSlider';
-import banner from './Images/CHI2024_e.jpg';
+import bannerImage from './Images/CHI2024_e.jpg';
+import Banner from '../components/Banner';
+
+const sliderImages = [
+    require('../Kitchef_Page/Images/Slider/1.jpg'),
+    require('../Kitchef_Page/Images/Slider/2.jpg'),
+    require('../Kitchef_Page/Images/Slider/3.jpg'),
+    require('../Kitchef_Page/Images/Slider/4.jpg'),
+    require('../Kitchef_Page/Images/Slider/5.jpg'),
+    require('../Kitchef_Page/Images/Slider/6.jpg'),
+    require('../Kitchef_Page/Images/Slider/7.jpg'),
+    require('../Kitchef_Page/Images/Slider/8.jpg'),
+    require('../Kitchef_Page/Images/Slider/9.jpg'),
+    require('../Kitchef_Page/Images/Slider/10.jpg'),
+    require('../Kitchef_Page/Images/Slider/11.jpg'),
+    require('../Kitchef_Page/Images/Slider/12.jpg'),
+  ];
+  
 
 function Kitchef() {
 
@@ -27,10 +41,10 @@ function Kitchef() {
         });
       }, []); 
 
-    const kitchefHeader = {
+    const ProjectInfo = {
         title: 'Kitchef',
         description: 'A TUI for Parent-Child Cooking Together',
-        logo: milabLogo,
+        logo: projectLogo,
         screenshot: projectScreenshot,
       }
     
@@ -49,7 +63,7 @@ function Kitchef() {
   return(
 
 <div class="kitchef">
-    <ProjectHeader title={kitchefHeader.title} description={kitchefHeader.description} logo={kitchefHeader.logo} screenshot={kitchefHeader.screenshot} />
+    <ProjectHeader title={ProjectInfo.title} description={ProjectInfo.description} logo={ProjectInfo.logo} screenshot={ProjectInfo.screenshot} />
 
     <div class="kitchef-info">
         
@@ -109,7 +123,7 @@ function Kitchef() {
         </div>
     </div>
 
-    <ImageSlider />
+    <ImageSlider images={sliderImages} />
 
     <Projectcard projectDescription={kitchefMyRole}> 
         <p>As the IoT Developer and Research Assistant for the Kitchef project, 
@@ -136,9 +150,7 @@ function Kitchef() {
             worked and how it should work, allowing me to guide the project to success.</p>
     </Projectcard>  
 
-<div class="banner">
-    <img src={banner} alt="banner"/>
-</div>
+<Banner image={bannerImage} />
 
 <Projectcard projectDescription={awards} style={{
     marginTop: '40px', 

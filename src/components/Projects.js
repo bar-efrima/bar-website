@@ -129,7 +129,11 @@ function Projects() {
                   <Link to="/Unavigate" className="project-img-link">
                     <img src={project.image} alt={project.title} className="project-image" />
                   </Link>
-                ) :
+                ) : project.title === 'Pokémon Pokédex'? (
+                <Link to="/Pokemon" className="project-img-link">
+                  <img src={project.image} alt={project.title} className="project-image" />
+                </Link>
+              ) :
                 (
                   <img src={project.image} alt={project.title} className="project-image" />
                 )}
