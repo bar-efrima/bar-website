@@ -114,7 +114,7 @@ function Kitchef() {
                 </ul>
             </div> 
             <div class="links">
-                <p><a href="https://milabgroup42022.wixsite.com/kitchef">Website <span><img src={linkIcon} alt="Link Icon" /></span></a></p>
+                <p><a href="https://milabgroup42022.wixsite.com/kitchef">🌐 Website <span><img src={linkIcon} alt="Link Icon" /></span></a></p>
                 <p><a href="https://dl.acm.org/doi/10.1145/3613905.3650970">Academic Paper <span><img src={linkIcon} alt="Link Icon"/></span></a></p>
                 <p><a href= "https://programs.sigchi.org/chi/2024/program/content/150804"> CHI Hawaii Conference <span><img src={linkIcon} alt={"Link Icon"}/></span></a></p>
                 <p><a href="https://www.tech12.co.il/index-technology_first/ai_revolution/Article-860576e73637981026.htm">tech12 <span><img src={linkIcon} alt="Link Icon"/></span></a></p>

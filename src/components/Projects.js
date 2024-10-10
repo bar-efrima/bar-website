@@ -138,6 +138,10 @@ function Projects() {
                 <Link to="/Highlights" className="project-img-link">
                   <img src={project.image} alt={project.title} className="project-image" />
                 </Link>
+              ) : project.title === 'Royal Cats NFT'? (
+                <Link to="/NFT" className="project-img-link">
+                  <img src={project.image} alt={project.title} className="project-image" />
+                </Link>
               ) 
                : (
                   <img src={project.image} alt={project.title} className="project-image" />

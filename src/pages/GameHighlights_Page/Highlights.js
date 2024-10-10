@@ -12,6 +12,7 @@ import GithubLink from '../components/Github';
 import ProjectFeatures from '../components/ProjectFeatures';
 import image1 from './Images/ca1.gif';
 import image2 from './Images/ca2.png';
+import VideoCard from '../components/VideoCard';
 
 
 function Highlights() {
@@ -52,7 +53,6 @@ function Highlights() {
     { name: 'OpenCV Captioning' },
   ];
   
-
   const featuresList = [
     { description: 'Extracts important moments based on audio volume peaks during exciting moments in a sports game.' },
     { description: 'Uses speech recognition to detect keywords and enhance highlight identification.' },
@@ -70,6 +70,7 @@ function Highlights() {
     title: 'About the Project', 
   };
 
+  const youtubeLink = 'https://www.youtube.com/embed/dU6XqPEafqA?si=5soyqLAy5Xv-ZAs6';
 
   return (
    
@@ -106,6 +107,7 @@ function Highlights() {
 
     <Carousel images={carouselImages} />
 
+    <VideoCard videoLink={youtubeLink} />
   </div>
   );
 }

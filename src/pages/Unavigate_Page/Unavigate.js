@@ -79,7 +79,7 @@ function Unavigate() {
   };
 
 
-  const videoLink = 'https://www.youtube.com/watch?v=h7GF-v64Uvg&ab_channel=BarEfrima';
+  const videoLink = 'https://www.youtube.com/embed/h7GF-v64Uvg?si=KywZsmI2UCkaMSiw';
 
   return (
    
