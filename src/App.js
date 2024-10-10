@@ -7,6 +7,7 @@ import Pokemon from './pages/Pokemon_Page/Pokemon'; // Pokemon project page
 import Highlights from './pages/GameHighlights_Page/Highlights'; // Highlights project page
 import NFT from './pages/NFT_Page/NFT'; // NFT project page
 import IoT from './pages/IoT_Page/IoT'; // IoT project page
+import Applications from './pages/Applications_Page/Applications'; // Mobile applications project page
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/Highlights" element={<Highlights />} />
         <Route path="/NFT" element={<NFT />} />
         <Route path="/IoT" element={<IoT />} />
+        <Route path="/Applications" element={<Applications />} />
       </Routes>
       <Footer />
     </Router>
