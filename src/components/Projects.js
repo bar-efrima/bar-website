@@ -46,6 +46,23 @@ const projects = [
     youtube: 'https://youtu.be/kTHfsLwlMJY',
   },
   {
+    title: 'Highlights Creator',
+    image: gamehighlights,
+    type: 'Speech To Text Python Web App',
+    description: 'A sports highlights extractor, implementing speech recognition to analyze audio and key moments from sports game videos.',
+    github: 'https://github.com/bar-efrima/Highlights-Creator/tree/main',
+    youtube: 'https://youtu.be/dU6XqPEafqA',
+  },
+  {
+    title: 'Royal Cats NFT',
+    image: royalcats,
+    type: 'Blockchain Project',
+    description: 'Founder of "Royal Cats NFT" blockchain project, where I programmed an ERC-721 contract, created 10k NFTs, and built a community of 8K+',
+    discord: 'https://discord.gg/SezePJFhtQ',
+    twitter: 'https://twitter.com/RoyalCats_NFT',
+    website: 'https://www.royalcatsnft.art/',
+  },
+  {
     title: 'IoT Inventions',
     image: musical,
     type: 'Arduino C++ Projects',
@@ -60,24 +77,6 @@ const projects = [
     description: 'A cross-platform weather app that fetches current weather for selected cities.',
     github: 'https://github.com/bar-efrima/WeatherWizard-App',
     youtube: 'https://youtu.be/PVBT4ktRmHY',
-  },
-  {
-    title: 'Highlights Creator',
-    image: gamehighlights,
-    type: 'Speech To Text Python Web App',
-    description: 'A sports highlights extractor, implementing speech recognition to analyze audio and key moments from sports game videos.',
-    github: 'https://github.com/bar-efrima/Highlights-Creator/tree/main',
-    youtube: 'https://youtu.be/dU6XqPEafqA',
-  },
-
-  {
-    title: 'Royal Cats NFT',
-    image: royalcats,
-    type: 'Blockchain Project',
-    description: 'Founder of "Royal Cats NFT" blockchain project, where I programmed an ERC-721 contract, created 10k NFTs, and built a community of 8K+',
-    discord: 'https://discord.gg/SezePJFhtQ',
-    twitter: 'https://twitter.com/RoyalCats_NFT',
-    website: 'https://www.royalcatsnft.art/',
   },
 
 ];
@@ -142,7 +141,11 @@ function Projects() {
                 <Link to="/NFT" className="project-img-link">
                   <img src={project.image} alt={project.title} className="project-image" />
                 </Link>
-              ) 
+              ) : project.title === 'IoT Inventions'? (
+              <Link to="/IoT" className="project-img-link">
+                <img src={project.image} alt={project.title} className="project-image" />
+              </Link>
+            ) 
                : (
                   <img src={project.image} alt={project.title} className="project-image" />
                 )}

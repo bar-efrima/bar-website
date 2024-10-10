@@ -135,7 +135,6 @@ const featuresList = [
       </div>
 
       <div className="NFT-right">
-        {/* <YearCreated year={yearCreated} /> */}
         <div class="links">
                 <p><a href="https://royalcatssite.webflow.io/">🌐 Website <span><img src={linkIcon} alt="Link Icon" /></span></a></p>
                 <p><a href="https://etherscan.io/address/0x7d79ba6848c0f6533459b4e27fc5b59403a053c9">Contract <span><img src={linkIcon} alt="Link Icon"/></span></a></p>

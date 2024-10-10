@@ -6,6 +6,7 @@ import Unavigate from './pages/Unavigate_Page/Unavigate'; // Unavigate project p
 import Pokemon from './pages/Pokemon_Page/Pokemon'; // Pokemon project page
 import Highlights from './pages/GameHighlights_Page/Highlights'; // Highlights project page
 import NFT from './pages/NFT_Page/NFT'; // NFT project page
+import IoT from './pages/IoT_Page/IoT'; // IoT project page
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/Pokemon" element={<Pokemon />} />
         <Route path="/Highlights" element={<Highlights />} />
         <Route path="/NFT" element={<NFT />} />
+        <Route path="/IoT" element={<IoT />} />
       </Routes>
       <Footer />
     </Router>
