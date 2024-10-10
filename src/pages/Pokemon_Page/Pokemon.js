@@ -52,8 +52,8 @@ function Pokemon() {
     { name: 'Local Storage' },
     { name: 'Pokémon API' },
     { name: 'Vite' },
-    { name: 'React', percent: 50 },
-    { name: 'Axios', percent: 20 },
+    { name: 'React' },
+    { name: 'Axios' },
   ];
   
 
@@ -71,7 +71,7 @@ function Pokemon() {
   
   const yearCreated =  '2024' ;
 
-  const githubLink = 'https://github.com/bar-efrima/Pokemon/tree/main';
+  const githubLink = 'https://github.com/bar-efrima/fe-task';
 
   const PokemonDescription ={
     title: 'About the Project', 

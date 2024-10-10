@@ -62,7 +62,7 @@ const projects = [
     youtube: 'https://youtu.be/PVBT4ktRmHY',
   },
   {
-    title: 'Highlights Maker',
+    title: 'Highlights Creator',
     image: gamehighlights,
     type: 'Speech To Text Python Web App',
     description: 'A sports highlights extractor, implementing speech recognition to analyze audio and key moments from sports game videos.',
@@ -133,8 +133,13 @@ function Projects() {
                 <Link to="/Pokemon" className="project-img-link">
                   <img src={project.image} alt={project.title} className="project-image" />
                 </Link>
-              ) :
-                (
+              ) 
+               : project.title === 'Highlights Creator'? (
+                <Link to="/Highlights" className="project-img-link">
+                  <img src={project.image} alt={project.title} className="project-image" />
+                </Link>
+              ) 
+               : (
                   <img src={project.image} alt={project.title} className="project-image" />
                 )}
               </div>
