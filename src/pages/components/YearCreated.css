@@ -35,7 +35,7 @@
 /* Media Queries */
 @media (max-width: 1100px) {
     .year-created h3 {
-        font-size: 1.8rem; /* Adjust font size for smaller screens */
+        font-size: 1.8rem; 
     }
 
     .year-created p {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './SpaceButton.css'; 
-import arrow from '../assets/logos/smallArrow.png'; // Ensure the path to the arrow image is correct
+import arrow from '../assets/logos/smallArrow.png'; 
 
 function SpaceButton() {
   return (

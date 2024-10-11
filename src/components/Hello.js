@@ -1,9 +1,6 @@
-// src/components/Home.js
 import React, { useEffect } from 'react';
 import './Hello.css'; 
 import starsVideo from '../assets/videos/stars.webm';
-import linkedinLogo from '../assets/logos/linkedin.png';
-import githubLogo from '../assets/logos/github.png';
 import LogoContainer from './LogoContainer';
 import SpaceButton from './SpaceButton';
 

@@ -1,6 +1,5 @@
-// src/components/Overlay.js
 import React, { useState } from 'react';
-import './Overlay.css'; // Ensure this file exists
+import './Overlay.css'; 
 
 function Overlay({ children }) {
   const [isOpen, setIsOpen] = useState(false);

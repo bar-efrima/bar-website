@@ -1,5 +1,5 @@
 import React from 'react';
-import './VideoCard.css'; // Optional: if you want to style it separately
+import './VideoCard.css';
 
 function VideoCard({ videoLink }) {
   return (

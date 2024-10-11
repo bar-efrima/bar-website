@@ -1,5 +1,5 @@
 import React from 'react';
-import './TextCardProject.css'; // Import CSS specific to this component
+import './TextCardProject.css';
 
 function TextCardProject({ projectDescription , style={}, children}) {
   const cardStyle = {
