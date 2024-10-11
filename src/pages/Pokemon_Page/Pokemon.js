@@ -36,7 +36,7 @@ function Pokemon() {
 
   const ProjectInfo = {
     title: 'Pokémon Pokédex',
-    description: 'A React Pokédex app to explore, catch, and save Pokémon.',
+    description: 'A React Pokédex app to explore, catch, and save Pokémons',
     logo: project_logo,
     screenshot: projectScreenshot,
   }

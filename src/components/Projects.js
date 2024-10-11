@@ -6,7 +6,7 @@ import kitchef from '../assets/projects/Kitchef.jpg';
 import musical from '../assets/projects/iot-projects.jpg';
 import gamehighlights from '../assets/projects/game.png';
 import royalcats from '../assets/projects/Royal-cats.jpg';
-import weatherWizard from '../assets/projects/Weather-Wizard.png';
+import mobileApps from '../assets/projects/mobile.png';
 import caimbridge from '../assets/projects/pokadex.png';
 import { Link } from 'react-router-dom';
 
@@ -59,7 +59,7 @@ const projects = [
   },
   {
     title: 'Mobile Apps',
-    image: weatherWizard,
+    image: mobileApps,
     type: 'Mobile App Projects',
     description: 'Developed "Fruit Info App" for sorting fruit data and "Weather Wizard" for real-time weather with custom UI animations.',
   },
