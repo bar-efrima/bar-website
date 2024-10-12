@@ -37,7 +37,7 @@ function Hello() {
   return (
     
     <div className="mysite-pannel" id="helloTag">
-      <a name="helloTag"></a>
+      {/* <a name="helloTag"></a> */}
       <video autoPlay muted loop id="myVideo">
         <source src={starsVideo} type="video/webm" />
       </video>

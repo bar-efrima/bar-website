@@ -8,7 +8,7 @@ function ProjectHeader({ title, description, logo, screenshot }) {
       <header>
         <div className="header-container">
           <img src={logo} />
-          <div className="text-container">
+          <div className="header-text-container">
             <h1>{title}</h1>
             <p>{description}</p>
           </div>

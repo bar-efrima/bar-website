@@ -7,11 +7,9 @@ import Projects from './Projects'; // Import the Projects section
 function Home() {
   return (
     <div className="App"> 
-    {/* <section id="home"></section>   */}
         <Hello />
         <AboutMe />
         <Projects />
-
         </div>
   );
 }
