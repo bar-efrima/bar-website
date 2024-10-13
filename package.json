@@ -2,6 +2,7 @@
   "name": "bar-website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://bar-efrima.github.io/bar-website",
   "dependencies": {
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
@@ -10,12 +11,14 @@
     "react-dom": "^18.3.1",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.27.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^4.2.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,6 +43,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "gh-pages": "^6.2.0"
   }
 }

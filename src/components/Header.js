@@ -71,7 +71,7 @@ function Header() {
 
   return (
     <nav id="nav-bar" className={`${isSticky ? 'sticky' : ''} ${isMenuOpen ? 'open' : ''}`}>
-      <h2 className="myname" onClick={() => navigateAndScroll('helloTag')}>Bar Efrima</h2>
+      <h2 className="myname" onClick={() => navigateAndScroll('helloWorldTag')}>Bar Efrima</h2>
       
       <div className={`hamburger ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <div></div>
@@ -81,7 +81,7 @@ function Header() {
 
       <ul id="menue">
         <li>
-          <a href="#helloTag" onClick={() => navigateAndScroll('helloTag')}>Home</a>
+          <a href="#helloWorldTag" onClick={() => navigateAndScroll('helloWorldTag')}>Home</a>
         </li>
         <li>
           <a href="#aboutmeTag" onClick={() => navigateAndScroll('aboutTag')}>About Me</a>
