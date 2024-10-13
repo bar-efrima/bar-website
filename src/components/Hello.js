@@ -27,12 +27,6 @@ function Hello() {
     };
   }, []);
 
-  const scrollToAboutMe = () => {
-    const aboutMeSection = document.getElementById('aboutTag');
-    if (aboutMeSection) {
-      aboutMeSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     

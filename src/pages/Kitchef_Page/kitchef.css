@@ -166,11 +166,36 @@ hr {
     width: 65%;
     margin: 0 auto;
 }
+@media (max-width: 1400px) {
+    
+    
+    .tech-stack ul {
+        padding: 5px;
+    }
+    .tech-info h4 {
+        margin-left: 12px;
+        padding-top: 15px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #CECECF;
+    }
+    
+    .tech-item {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+    
+    .tech-item img {
+        width: 40px;
+        height: auto;
+    }
 
+}
 /* Responsive Styles */
 @media (max-width: 850px) {
    
-    .project-description, .kitchef-info,.image3 {
+    .kitchef-info,.image3 {
         width: 90%;
     }
 

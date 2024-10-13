@@ -2,7 +2,7 @@ import {useEffect, React, Children} from 'react';
 import './kitchef.css'; // Import the CSS file
 import projectLogo from './Images/milab_logo.jpg';
 import projectScreenshot from './Images/projectScreenshot.jpg';
-import image1 from './Images/image1.jpg';
+import momChildkit from './Images/image1.jpg';
 import arduinoLogo from './Stack/Arduino.png';
 import cppLogo from './Stack/c++.svg';
 import adobeLogo from './Stack/Adobe.png';
@@ -86,7 +86,7 @@ function Kitchef() {
                     the parent and child in the cooking process.</p>
                 </div>
             <div className="image1">
-                <img src={image1} alt="Mother % Child"/>
+                <img src={momChildkit} alt="Mother & Child"/>
             </div>
         </div>
         
