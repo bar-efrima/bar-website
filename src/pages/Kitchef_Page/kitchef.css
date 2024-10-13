@@ -94,8 +94,8 @@ hr {
     margin: 0 20px;
 }
 
-/* Tech Stack, Created, Links, and About Sections */
-.tech-stack, .links {
+/* Tech Stack  card */
+.tech-stack {
     background-color: #0B0B0C;
     border: 1px solid #1A1A1A;
     border-radius: 1em;
@@ -143,43 +143,6 @@ hr {
     height: auto;
 }
 
-/* Links Styling */
-.links {
-    background-color: #6600ff24;
-    border: 1px solid #2e2e2e;
-    height: auto; 
-    margin-top: 0; 
-    height: 100%;
-}
-
-
-.links p a {
-    font-size: 1.3rem;
-    font-weight: 530;
-    line-height: 1.5;
-    color: #CECECF;
-    text-decoration: none;
-}
-.links p  {
-   padding:20px ;
-   transition: transform 0.3s ease;
-}
-
-.links p:hover {
-    transform: scale(1.05);
-}
-
-.links p a:hover {
-    color: #c84a97;
-}
-
-
-.links span img {
-    width: 20px;
-    margin-left: 10px;
-    margin: 0;
-}
-
 /* Image Styling */
 
 .image1 img, .image3 img {
@@ -204,19 +167,6 @@ hr {
     margin: 0 auto;
 }
 
-.banner {
-    width: 100%; 
-    display: flex;
-    justify-content: center; 
-  }
-  
-  /* Banner Image Styling */
-  .banner img {
-    width: 65%; 
-    height: auto; 
-    border-radius: 2em;;
-    object-fit: cover; 
-  }
 /* Responsive Styles */
 @media (max-width: 850px) {
    
@@ -228,7 +178,7 @@ hr {
         margin: 0 auto;
     }
 
-    .kitchef-info p, .links p a {
+    .kitchef-info p{
         font-size: 2vw;
         padding-top: 0;
         padding-left: 5px;
@@ -236,20 +186,11 @@ hr {
         padding-bottom: 10px;
     }
 
+
     .kitchef-info h3, .project-description h3{
         font-size: 3.5vw;
     }
-
-    .links span img {
-        width: 15px;
-    }
-
-    .tech-stack, .created, .links, .about {
-        padding: 15px;
-        margin-bottom: 15px;
-        border-radius: 1em;
-    }
-
+ 
     section p {
         font-size: 2vw;
     }
@@ -280,17 +221,12 @@ hr {
         padding:0;
     }
 
-    .banner img{
-        width: 90%;
-    }
-
 }
 
 @media (max-width: 600px) {
 
     /* Adjust the showcase image and content to take 90% of screen width */
     .kitchef-info,
-    .project-description,
     .image3,
     .tech-stack,
     .created {
@@ -313,9 +249,7 @@ hr {
         margin-top: 10px;
     }
 
-    .tech-stack,
-    .created ,
-    .links{
+    .tech-stack{
         margin-top: 10px;
         display: flex;
         flex-direction: column;
@@ -382,22 +316,6 @@ hr {
     .tech-item img {
         width: 35px;
         height: auto;
-    }
-
-    .links p a {
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 1.5;
-        color: #CECECF;
-        text-decoration: none;
-    }
-    .links span img {
-        width: 10px;
-    }
-
-    .project-description #c{
-        text-align: center;
-        margin-left: 0;
     }
 
     .image3 {

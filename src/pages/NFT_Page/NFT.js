@@ -5,7 +5,6 @@ import projectScreenshot from './Images/projectScreenshot.jpg'; // Screenshot of
 import SkillCard from '../components/Skills'; // SkillCard component
 import TextCard from '../components/TextCardProject'; // AboutCard component
 import Carousel from '../components/Carousel'; // Carousel component
-import linkIcon from '../General_Images/link.png';
 import ProjectHeader from '../components/ProjectHeader';
 import ProjectFeatures from '../components/ProjectFeatures';
 import image1 from './Images/ca1.gif';
@@ -17,6 +16,7 @@ import ImageSlider from '../components/ImageSlider';
 import ImageCard from '../components/ImageCard';
 import Scroll from './Images/scroll.png';
 import bannerimg from './Images/banner2.png';
+import LinksCard from '../components/LinksCard';
 
 const sliderImages = [
   require('../NFT_Page/Images/Slider/1.jpg'),
@@ -89,12 +89,18 @@ const featuresList = [
   { description: 'While fundraising goals were not fully achieved, the project successfully raised awareness for stray animals.' }
 ];
 
-
   const NFTDescription ={
     title: 'About the Project', 
   };
 
   const youtubeLink = 'https://www.youtube.com/embed/B7kZ8gUAdIA?si=-zjpdNBJlaOv94yU';
+
+  const projectLinks = {
+    'https://royalcatssite.webflow.io/': '🌐 Website',
+    'https://etherscan.io/address/0x7d79ba6848c0f6533459b4e27fc5b59403a053c9': 'Contract',
+    'https://discord.gg/SezePJFhtQ': 'Discord Channel',
+    'https://twitter.com/RoyalCats_NFT': 'Twitter',
+  };
 
   return (
    
@@ -135,12 +141,7 @@ const featuresList = [
       </div>
 
       <div className="NFT-right">
-        <div class="links">
-                <p><a href="https://royalcatssite.webflow.io/">🌐 Website <span><img src={linkIcon} alt="Link Icon" /></span></a></p>
-                <p><a href="https://etherscan.io/address/0x7d79ba6848c0f6533459b4e27fc5b59403a053c9">Contract <span><img src={linkIcon} alt="Link Icon"/></span></a></p>
-                <p><a href="https://discord.gg/SezePJFhtQ">Discord Channel <span><img src={linkIcon} alt={"Link Icon"}/></span></a></p>
-                <p><a href="https://twitter.com/RoyalCats_NFT">Twitter <span><img src={linkIcon} alt="Link Icon"/></span></a></p>
-            </div>
+        <LinksCard projectLinks={projectLinks} />
       </div>
 
     </div>

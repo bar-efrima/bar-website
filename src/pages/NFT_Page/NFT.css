@@ -29,7 +29,7 @@ body {
     gap: 20px; 
     opacity: 0;
     transform: translateY(20px); /* a slight vertical move */
-    animation: fadeIn 1.5s ease-in-out forwards; /* Trigger animation */
+    animation: fadeIn 1.5s ease-in-out forwards; 
 }
 
 /* Keyframes for fade-in effect */
@@ -40,7 +40,7 @@ body {
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* Element in its final position */
+        transform: translateY(0); 
     }
 }
  
@@ -64,7 +64,7 @@ body {
     flex-direction: column;
 }
 
-/* Right side (Created and Links) */
+/* Right side  */
 .NFT-right {
     width: 30%;
     display: flex;
@@ -126,6 +126,27 @@ hr {
 }
 
 @media (max-width: 600px) {
+    /* Adjust the showcase image and content to take 90% of screen width */
+    .NFT-info{
+        width: 90%; 
+        padding-top: 0;
+    }
+
+    /* Stack the content below each other */
+    .NFT-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%; 
+    }
+
+    .NFT-left {
+        width: 100%;
+    }
+
+    .NFT-right {
+        width: 100%;
+    }
     /* Center-align the header content */
     .header-container {
         padding-left: 7%;

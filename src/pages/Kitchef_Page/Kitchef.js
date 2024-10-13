@@ -6,13 +6,13 @@ import image1 from './Images/image1.jpg';
 import arduinoLogo from './Stack/Arduino.png';
 import cppLogo from './Stack/c++.svg';
 import adobeLogo from './Stack/Adobe.png';
-import linkIcon from '../General_Images/link.png';
 import ProjectHeader from '../components/ProjectHeader';
 import Projectcard from '../components/TextCardProject';
 import VideoCard from '../components/VideoCard';
 import ImageSlider from '../components/ImageSlider';
 import bannerImage from './Images/CHI2024_e.jpg';
 import Banner from '../components/Banner';
+import LinksCard from '../components/LinksCard';
 
 const sliderImages = [
     require('../Kitchef_Page/Images/Slider/1.jpg'),
@@ -58,17 +58,24 @@ function Kitchef() {
     };
 
     const kitchefVideoLink = 'https://www.youtube.com/embed/idCBrHXxCg8?si=gDtIRs0fPgZ4DGyl';
+
+    const projectLinks = {
+        'https://milabgroup42022.wixsite.com/kitchef': '🌐 Website',
+        'https://dl.acm.org/doi/10.1145/3613905.3650970': 'Academic Paper',
+        'https://programs.sigchi.org/chi/2024/program/content/150804': 'CHI Hawaii Conference',
+        'https://www.tech12.co.il/index-technology_first/ai_revolution/Article-860576e73637981026.htm': 'Tech12',
+    }
     
 
   return(
 
-<div class="kitchef">
+<div className="kitchef">
     <ProjectHeader title={ProjectInfo.title} description={ProjectInfo.description} logo={ProjectInfo.logo} screenshot={ProjectInfo.screenshot} />
 
-    <div class="kitchef-info">
+    <div className="kitchef-info">
         
-        <div class="kitchef-left">
-            <div class ="about-kitchef">
+        <div className="kitchef-left">
+            <div className ="about-kitchef">
                 <h3>About the Project</h3>
                 <hr />
                 <p>Kitchef is a wearable technology, designed to create physical closeness and an emotional 
@@ -78,47 +85,42 @@ function Kitchef() {
                     The Kitchef cooking kit includes two bracelets and a recipe box that accompanies
                     the parent and child in the cooking process.</p>
                 </div>
-            <div class="image1">
-                <img src={image1} alt="Image 1"/>
+            <div className="image1">
+                <img src={image1} alt="Mother % Child"/>
             </div>
         </div>
         
-    <div class="kitchef-right">
-        <div class="about-kitchef">
+    <div className="kitchef-right">
+        <div className="about-kitchef">
                 <h3>Created</h3>
                 <hr />
                 <p>2022</p>
             </div>
-            <div class="tech-stack">
+            <div className="tech-stack">
                 <h3>Tech Used</h3>
                 <hr />
                 <ul>
-                    <div class="tech-item">
+                    <div className="tech-item">
                         <img src={arduinoLogo} alt="Arduino Logo" />
-                        <div class="tech-info">
+                        <div className="tech-info">
                             <h4>Arduino</h4>
                         </div>
                     </div>
-                    <div class="tech-item">
+                    <div className="tech-item">
                         <img src={cppLogo} alt="C++ Logo" />
-                        <div class="tech-info">
+                        <div className="tech-info">
                             <h4>C++</h4>
                         </div>
                     </div>
-                    <div class="tech-item">
+                    <div className="tech-item">
                         <img src={adobeLogo} alt="C++ Logo" />
-                        <div class="tech-info">
+                        <div className="tech-info">
                             <h4>Adobe Suit</h4>
                     </div>
                     </div>
                 </ul>
             </div> 
-            <div class="links">
-                <p><a href="https://milabgroup42022.wixsite.com/kitchef">🌐 Website <span><img src={linkIcon} alt="Link Icon" /></span></a></p>
-                <p><a href="https://dl.acm.org/doi/10.1145/3613905.3650970">Academic Paper <span><img src={linkIcon} alt="Link Icon"/></span></a></p>
-                <p><a href= "https://programs.sigchi.org/chi/2024/program/content/150804"> CHI Hawaii Conference <span><img src={linkIcon} alt={"Link Icon"}/></span></a></p>
-                <p><a href="https://www.tech12.co.il/index-technology_first/ai_revolution/Article-860576e73637981026.htm">tech12 <span><img src={linkIcon} alt="Link Icon"/></span></a></p>
-            </div>
+            <LinksCard projectLinks={projectLinks} />
 
         </div>
     </div>
