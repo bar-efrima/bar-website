@@ -161,12 +161,12 @@
 
 }
 
-/* For screens smaller than 480px (mobile devices) */
-@media (max-width: 480px) {
+/* For screens smaller than 600px (mobile devices) */
+@media (max-width: 600px) {
 
   .mysite-pannel {
     margin-top: 5%;
-    height: 60vh; 
+    height: 80vh; 
     background-size: cover;
     background-position: center;
     position: relative;

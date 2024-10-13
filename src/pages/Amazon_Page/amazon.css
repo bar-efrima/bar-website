@@ -131,6 +131,21 @@ hr {
         padding-left: 7%;
     }
 
+    .amazon-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%; 
+    }
+    
+    .amazon-right , .amazon-left {
+        width: 100%;
+    }
+
+    .amazon{
+        margin-bottom: 10px;
+    }
+
     .text-container p {
         font-size: 1.8rem;
         margin: 0;
@@ -154,19 +169,6 @@ hr {
     .text-container p {
         font-size: 0.6rem;
         width: 100%;
-    }
-
-    .amazon-left{
-        padding-right: 0;
-        margin-left: 0;
-    }
-
-    /* Ensure the video container maintains good spacing */
-    .video-container {
-        margin-top: 20px;
-        margin: 20px;
-        border-radius: 1em;
-        padding-bottom: 20px;
     }
 
 }

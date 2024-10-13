@@ -155,18 +155,19 @@ hr {
         font-size: 0.6rem;
         width: 100%;
     }
-
-    .Highlights-left{
-        padding-right: 0;
-        margin-left: 0;
+    .Highlights-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%; 
     }
 
-    /* Ensure the video container maintains good spacing */
-    .video-container {
-        margin-top: 20px;
-        margin: 20px;
-        border-radius: 1em;
-        padding-bottom: 20px;
+    .Highlights-right , .Highlights-left {
+        width: 100%;
+    }
+
+    .Highlights{
+        margin-bottom: 10px;
     }
 
 }

@@ -95,13 +95,14 @@
     }
 
     .content-card p {
-        font-size: 12px;
+        font-size: 14px;
         padding: 0;
     }
 
     .card-description {
         text-align: left;
         margin-left: 0;
+        padding: 30px;
         width: 100%; /* Ensure full width */
         box-sizing: border-box;
     }

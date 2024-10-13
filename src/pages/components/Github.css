@@ -46,6 +46,10 @@
 }
 
 @media (max-width: 600px) {
+
+    .github{
+        padding: 10px;
+    }
     .github img {
         width: 12px; 
         margin-left: 2px;

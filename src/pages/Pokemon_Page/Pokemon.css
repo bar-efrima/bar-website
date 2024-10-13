@@ -118,11 +118,6 @@ hr {
         font-size: 2vw;
     }
 
-
-    .video-container {
-        margin-top: 20px;
-        padding-bottom: 20px;
-    }
 }
 
 @media (max-width: 600px) {
@@ -156,17 +151,19 @@ hr {
         width: 100%;
     }
 
-    .Pokemon-left{
-        padding-right: 0;
-        margin-left: 0;
+    .Pokemon-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%; 
     }
 
-    /* Ensure the video container maintains good spacing */
-    .video-container {
-        margin-top: 20px;
-        margin: 20px;
-        border-radius: 1em;
-        padding-bottom: 20px;
+    .Pokemon-right , .Pokemon-left {
+        width: 100%;
+    }
+
+    .Pokemon{
+        margin-bottom: 10px;
     }
 
 }

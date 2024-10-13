@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: center; /* Center the content */
   padding: 5% 0; /* Adjust padding for better control of section height */
+  margin-top: 50px;;
 }
 
 .about-me img {

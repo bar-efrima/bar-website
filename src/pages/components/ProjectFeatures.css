@@ -7,7 +7,7 @@
     text-align: left;
 }
 
-.feature-description {
+.feature-description { 
     background-color: #0B0B0C;
     border: 1px solid #1A1A1A;
     border-radius: 1em;
@@ -115,13 +115,13 @@
     }
 
     .project-features li {
-        font-size: 12px;
+        font-size: 14px;
         padding: 0;
     }
 
     .feature-description {
         text-align: left;
-        padding: 50px;
+        padding: 30px;
         margin-left: 0;
         width: 100%;
         box-sizing: border-box;
