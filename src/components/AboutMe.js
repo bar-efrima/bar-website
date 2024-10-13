@@ -31,7 +31,7 @@ function AboutMe() {
         <img src={myPhoto} alt="Bar Efrima" />
         <div className="about-me-text">
           <h2>About Me</h2>
-          <h1 className="letMe">Let me introduce myself.</h1>
+          <h1 className="letMe">Let me introduce.</h1>
           <p className={isVisible ? 'fade-in' : ''}>
             Bar Efrima, a 25-year-old BSc. Computer Science student,
             passionate about innovation, AI, and problem-solving. 
