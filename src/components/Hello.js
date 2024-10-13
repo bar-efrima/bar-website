@@ -42,12 +42,9 @@ function Hello() {
           <a href="#aboutTag">
           <SpaceButton></SpaceButton>
           </a>
-         
       <LogoContainer ></LogoContainer>
     </div>
-    
       </section>
-      
     </div>
   );
 }
