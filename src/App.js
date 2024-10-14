@@ -18,8 +18,7 @@ import Footer from './components/Footer';
 function App() {
   // Initialize Google Analytics once when the app starts
   useEffect(() => {
-    ReactGA.initialize('G-RWY26598QH', { debug: true });
- // Google Analytics Tracking ID
+    ReactGA.initialize('G-RWY26598QH', { debug: true }); 
   }, []);
 
   // A custom hook to track page views on route changes
