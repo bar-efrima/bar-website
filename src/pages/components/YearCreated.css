@@ -1,5 +1,4 @@
 .year-created {
-    background-color: #6600ff24;
     border: 1px solid #2e2e2e;
     height: 100%;
     border-radius: 1em;
@@ -7,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #0B0B0C;
+    background-color: #3a20c024;
     color: #CECECF;
     border: 1px solid #1A1A1A;
     flex-direction: column;

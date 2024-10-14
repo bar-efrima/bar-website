@@ -3,6 +3,7 @@
   margin-left: 20%;
   margin-right: 20%;
   padding-top: 0;
+  padding-top: 5%;
 }
 
 .projects h2 {
@@ -158,6 +159,7 @@ hr {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding-top: 10%;
   }
 
   .projects h2 {
@@ -262,6 +264,7 @@ hr {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding-top: 10%;
   }
 
   /* Grid layout */
@@ -370,6 +373,7 @@ hr {
     flex-direction: column;
     align-items: center; 
     width: 100%; 
+    padding-top: 10%;
   }
 
   /* Grid layout */
@@ -430,6 +434,9 @@ hr {
     margin: 0;
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .project-type{
+    padding-bottom: 6px;
   }
   
 

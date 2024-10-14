@@ -31,5 +31,7 @@
     .video-card {
         width: 70%; 
         padding-bottom: 40%; 
+        margin-top:0;
+        margin-bottom: 40px;
     }
 }

@@ -11,8 +11,8 @@ import ProjectHeader from '../components/ProjectHeader';
 import GithubLink from '../components/Github';
 import VideoCard from '../components/VideoCard';
 import ProjectFeatures from '../components/ProjectFeatures';
-import image1 from './Images/ca1.png';
-import image2 from './Images/ca2.jpg';
+import image2 from './Images/ca1.png';
+import image1 from './Images/ca2.jpg';
 import image3 from './Images/ca3.png';
 
 

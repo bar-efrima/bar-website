@@ -147,10 +147,6 @@ hr {
     .NFT-right {
         width: 100%;
     }
-    /* Center-align the header content */
-    .header-container {
-        padding-left: 7%;
-    }
 
     .text-container p {
         font-size: 1.8rem;
