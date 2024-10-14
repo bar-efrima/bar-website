@@ -1,38 +1,35 @@
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
-import ReactGA from 'react-ga';
 
-import Home from './components/Home'; // Home contains all sections
-import Kitchef from './pages/Kitchef_Page/Kitchef'; // Kitchef project page
-import Amazon from './pages/Amazon_Page/Amazon'; // Amazon project page
-import Unavigate from './pages/Unavigate_Page/Unavigate'; // Unavigate project page
-import Pokemon from './pages/Pokemon_Page/Pokemon'; // Pokemon project page
-import Highlights from './pages/GameHighlights_Page/Highlights'; // Highlights project page
-import NFT from './pages/NFT_Page/NFT'; // NFT project page
-import IoT from './pages/IoT_Page/IoT'; // IoT project page
-import Applications from './pages/Applications_Page/Applications'; // Mobile applications project page
+import Home from './components/Home';
+import Kitchef from './pages/Kitchef_Page/Kitchef';
+import Amazon from './pages/Amazon_Page/Amazon';
+import Unavigate from './pages/Unavigate_Page/Unavigate';
+import Pokemon from './pages/Pokemon_Page/Pokemon';
+import Highlights from './pages/GameHighlights_Page/Highlights';
+import NFT from './pages/NFT_Page/NFT';
+import IoT from './pages/IoT_Page/IoT';
+import Applications from './pages/Applications_Page/Applications';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-// Move the custom hook outside the App component
+// Custom hook to track page views on route changes
 function usePageTracking() {
   const location = useLocation();
 
   useEffect(() => {
-    ReactGA.pageview(location.pathname + location.search);
-  }, [location]); // Track page view whenever the location changes
+    gtag('config', 'G-RWY26598QH', {
+      page_path: location.pathname + location.search,
+    });
+  }, [location]);
 }
 
 function App() {
-  // Initialize Google Analytics once when the app starts
-  useEffect(() => {
-    ReactGA.initialize('G-RWY26598QH', { debug: true }); 
-  }, []);
+  usePageTracking(); // Use page tracking hook
 
   return (
     <Router basename="/">
       <Header />
-      <PageTrackingWrapper /> {/* Enable page tracking */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/kitchef" element={<Kitchef />} />
@@ -47,12 +44,6 @@ function App() {
       <Footer />
     </Router>
   );
-}
-
-// A wrapper component to enable page tracking on route changes
-function PageTrackingWrapper() {
-  usePageTracking();
-  return null; // This component doesn't render anything visible
 }
 
 export default App;
