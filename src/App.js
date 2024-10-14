@@ -18,9 +18,11 @@ function usePageTracking() {
   const location = useLocation();
 
   useEffect(() => {
-    gtag('config', 'G-RWY26598QH', {
-      page_path: location.pathname + location.search,
-    });
+    if (typeof window.gtag === 'function') {
+      window.gtag('config', 'G-RWY26598QH', {
+        page_path: location.pathname + location.search,
+      });
+    }
   }, [location]);
 }
 
