@@ -39,7 +39,7 @@ function Hello() {
         <div className="hidden">
           <p className="hello">Hello, World.</p>
           <p className="name">I'm Bar Efrima.</p>
-          <a href="#aboutTag">
+          <a href="#/aboutTag">
           <SpaceButton></SpaceButton>
           </a>
       <LogoContainer ></LogoContainer>
