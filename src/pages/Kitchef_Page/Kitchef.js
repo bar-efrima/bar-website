@@ -13,6 +13,7 @@ import ImageSlider from '../components/ImageSlider';
 import bannerImage from './Images/CHI2024_e.jpg';
 import Banner from '../components/Banner';
 import LinksCard from '../components/LinksCard';
+import YearCreated from '../components/YearCreated';
 
 const sliderImages = [
     require('../Kitchef_Page/Images/Slider/1.jpg'),
@@ -28,7 +29,9 @@ const sliderImages = [
     require('../Kitchef_Page/Images/Slider/11.jpg'),
     require('../Kitchef_Page/Images/Slider/12.jpg'),
   ];
-  
+
+const yearCreated = '2022';
+
 
 function Kitchef() {
 
@@ -72,6 +75,7 @@ function Kitchef() {
 <div className="kitchef">
     <ProjectHeader title={ProjectInfo.title} description={ProjectInfo.description} logo={ProjectInfo.logo} screenshot={ProjectInfo.screenshot} />
 
+
     <div className="kitchef-info">
         
         <div className="kitchef-left">
@@ -91,11 +95,8 @@ function Kitchef() {
         </div>
         
     <div className="kitchef-right">
-        <div className="about-kitchef">
-                <h3>Created</h3>
-                <hr />
-                <p>2022</p>
-            </div>
+        
+            <YearCreated year={yearCreated} />
             <div className="tech-stack">
                 <h3>Tech Used</h3>
                 <hr />

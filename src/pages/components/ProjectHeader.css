@@ -123,25 +123,38 @@ header img:hover {
 /* For screens below 600px */
 @media (max-width: 600px) {
 
+    header{
+        padding: 5px;
+    }
+
     .header-container {
         align-items: left;
         justify-content: Left;
-        padding-left: 5%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     /* Make the text smaller and adjust layout for mobile */
 
     .header-container img {
         border-radius: 1em;
-        width: 80px;
-        margin-right: 20px;
+        width: 100px;
+        margin-right: 0;
+        margin-bottom: 15px;
     }
     .header-text-container h1{
-        font-size: 1.4rem;
+        font-size: 2rem;
+        text-align: center;
+        padding:0;
+        margin: 0;
     }
     .header-text-container p {
-        font-size: 0.8rem;
+        font-size: 1rem;
+        font-weight: 500;
         width: 100%;
+        text-align: center;
     }
 
     /* Adjust the showcase image and content to take 90% of screen width */

@@ -16,7 +16,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh; /* Make the video fill the viewport height */
+  height: 100vh;
   z-index: -2;
   object-fit: cover;
   opacity: 70%;
@@ -26,61 +26,50 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  font-weight: 700;
   transform: translate(-50%, -50%);
   text-align: center;
+  font-weight: 700;
 }
 
 .hello {
-  color: rgb(255, 255, 255);
+  color: white;
   font-family: "poppins", sans-serif;
   font-size: 1.5vw;
-  line-height: 1.565;
-  margin-bottom: 0;
-  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  margin-bottom: 0;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
 }
 
 .name {
   color: white;
   font-family: "poppins", sans-serif;
-  letter-spacing: 0.1px;
-  font-style: normal;
   font-weight: 700;
-  -webkit-font-smoothing: antialiased;
-  font-variant-ligatures: common-ligatures;
-  font-size: clamp(2rem, 5vw, 7rem); /* Dynamic font-size for large screens */
+  font-size: clamp(2rem, 5vw, 7rem); /* Dynamic font-size */
+  letter-spacing: 0.1px;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  
 }
+
 .more {
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
   color: white;
-  border-color: rgba(255, 255, 255, 0.99);
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
+  font-weight: 700;
+  letter-spacing: 0.25rem;
   line-height: 3rem;
   text-transform: uppercase;
-  margin: 10px;
-  font-weight: 700;
-  font-size: clamp(0.8rem, 1vw, 1.2rem); /* Responsive font-size */
-  letter-spacing: 0.25rem;
+  margin: 10px 0;
+  border-color: rgba(255, 255, 255, 0.99);
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
   transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
-  margin-bottom: 20px;
+  white-space: nowrap;
   display: inline-block;
-  white-space: nowrap; /* Prevent text from breaking into multiple lines */
-  
 }
 
 .more.stroke {
-  background: transparent !important;
+  background: transparent;
   border: 3px solid #afafafa0;
-  transition: border-color 0.5s;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 0.7%;
-  padding-bottom: 0.7%;
-  transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+  padding: 0.7% 5%;
+  transition: border-color 0.5s, transform 0.4s ease-in-out;
 }
 
 .more:hover {
@@ -120,96 +109,54 @@
   transform: translateX(0);
 }
 
-/* Fade-in sections that appear as you scroll */
-.fade-in-section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
+/* Media Queries for Responsiveness */
 
-.fade-in-section.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-/* For screens smaller than 480px (mobile devices) */
+/* For screens smaller than 900px */
 @media (max-width: 900px) {
   .hello {
-    font-size: 4vw; 
-    width: auto;
-  }
-  .name{
-    font-size: 6vw; 
-    width:100%;
-  }
-  #myVideo {
-    display: none;
-  }
-
-}
-
-/* For screens smaller than 600px (mobile devices) */
-@media (max-width: 600px) {
-
-  .mysite-pannel {
-    margin-top: 5%;
-    height: 80vh; 
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-
-
-  .HelloWorld {
-    top: 45%; /* Adjust to center the text */
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-
-  .hello {
-    font-size: 4vw; 
-    width: auto;
+    font-size: 4vw;
   }
 
   .name {
-    font-size: 8vw; 
-      white-space: nowrap; /* Prevent text from wrapping to multiple lines */
-      overflow: hidden; 
-      padding: 0;
-    }
+    font-size: 6vw;
+  }
+
+  #myVideo {
+    display: none;
+  }
+}
+
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+  .mysite-pannel {
+    margin-top: 5%;
+    height: 80vh;
+  }
+
+  .HelloWorld {
+    top: 45%;
+    width: 100%;
+  }
+
+  .hello {
+    font-size: 4vw;
+  }
+
+  .name {
+    font-size: 8vw;
+    white-space: nowrap;
+    overflow: hidden;
+  }
 
   .more {
-    font-size: 3vw; 
-    padding-left: 3%; 
-    padding-right: 3%;
+    font-size: 3vw;
     line-height: 2rem;
+    padding: 0 3%;
     margin-bottom: 10px;
   }
 
   .more.stroke {
-    padding-left: 6%;
-    padding-right: 8%;
-    padding-top: 0.8%;
-    padding-bottom: 0.8%;
-    border: 2px solid #afafafa0; 
+    padding: 0.8% 8%;
+    border: 2px solid #afafafa0;
   }
-  
 }
-
-
-

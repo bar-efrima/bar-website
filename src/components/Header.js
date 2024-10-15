@@ -29,6 +29,10 @@ function Header() {
     setIsMenuOpen(!isMenuOpen); 
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false); 
+  };
+
   return (
     <nav id="nav-bar" className={`${isSticky ? 'sticky' : ''} ${isMenuOpen ? 'open' : ''}`}>
       <h2 className="myname" onClick={() => toggleMenu()}>Bar Efrima</h2>
@@ -41,13 +45,13 @@ function Header() {
 
       <ul id="menue">
         <li>
-          <HashLink smooth to="/#helloWorldTag">Home</HashLink>
+          <HashLink smooth to="/#helloWorldTag" onClick={closeMenu}>Home</HashLink>
         </li>
         <li>
-          <HashLink smooth to="/#aboutTag">About Me</HashLink>
+          <HashLink smooth to="/#aboutTag" onClick={closeMenu}>About Me</HashLink>
         </li>
         <li>
-          <HashLink smooth to="/#projectsTag">Projects</HashLink>
+          <HashLink smooth to="/#projectsTag"onClick={closeMenu} >Projects</HashLink>
         </li>
       </ul>
 

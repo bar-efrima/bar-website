@@ -90,7 +90,7 @@ function Unavigate() {
     <TextCard projectDescription={UnavigateDescription}> 
       <p> Unavigate is a navigation app specifically designed for Reichman University, providing accurate and
         user-friendly guidance throughout the campus. Developed with Ionic React and integrated with the Mapbox API, 
-        the app offers bilingual support in both Hebrew and English, allowing seamless switching between languages.🧭🗺️
+        the app offers bilingual support in both Hebrew and English, allowing seamless switching between languages.🧭
       </p> <br/>
       <p> 
       Unavigate features dynamic search capabilities with Hebrew recognition, accurate route visualizations, 

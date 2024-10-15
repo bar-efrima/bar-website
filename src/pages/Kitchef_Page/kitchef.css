@@ -8,13 +8,12 @@ body {
     font-weight: 700;
 }
 
-.kitchef{
-    margin-top: 60px;
-    margin-bottom: 60px;
+.kitchef {
+    margin: 60px 0;
     display: flex; 
     flex-wrap: wrap; 
     gap: 20px; 
-    transform: translateY(20px); /* a slight vertical move */
+    transform: translateY(20px); /* slight vertical move */
     animation: fadeIn 1.5s ease-in-out forwards; /* Trigger animation */
 }
 
@@ -37,16 +36,13 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: stretch; 
-    padding: 10px 0;
-    letter-spacing: 1px;
+    align-items: stretch;
+    gap: 20px;
     padding: 0;
-    gap: 20px; 
 }
 
 .kitchef-info h3 {
     color: #CECECF;
-    text-align: left;
     padding-left: 25px;
     margin-top: 15px;
     font-size: 2.3rem;
@@ -59,20 +55,16 @@ body {
     color: #CECECF;
     padding: 25px;
     font-weight: 400;
-    text-align: left;
 }
 
 .kitchef-left {
     width: 65%; 
-    padding-left: 0;
-    margin-left: 0;
-    text-align: left; 
     display: flex;
-    gap: 20px; 
     flex-direction: column;
+    gap: 20px; 
 }
 
-.about-kitchef{
+.about-kitchef {
     padding: 20px;
     background-color: #0B0B0C;
     border: 1px solid #1A1A1A;
@@ -82,9 +74,8 @@ body {
 .kitchef-right {
     width: 35%;
     display: flex;
-    gap: 20px; 
     flex-direction: column;
-    justify-content: space-between;
+    gap: 20px;
 }
 
 /* Horizontal Rule Styling */
@@ -94,36 +85,17 @@ hr {
     margin: 0 20px;
 }
 
-/* Tech Stack  card */
+/* Tech Stack card */
 .tech-stack {
-    background-color: #0B0B0C;
+    background-color: #8000ff31;
     border: 1px solid #1A1A1A;
     border-radius: 1em;
     padding: 20px;
-    height: auto;
-    margin-bottom: 0;
-}
-
-.tech-stack{
-    height: 100%;
 }
 
 .tech-stack ul {
     list-style: none;
     padding: 20px;
-}
-
-.tech-info {
-    padding-top: 20px;
-    padding: 5px;
-}
-
-.tech-info h4 {
-    margin-left: 20px;
-    padding-top: 15px;
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: #CECECF;
 }
 
 .tech-item {
@@ -137,141 +109,59 @@ hr {
     transform: scale(1.05);
 }
 
-
 .tech-item img {
     width: 50px;
     height: auto;
 }
 
-/* Image Styling */
+.tech-info h4 {
+    margin-left: 20px;
+    padding-top: 15px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #CECECF;
+}
 
-.image1 img, .image3 img {
+/* Image Styling */
+.image1 img {
     width: 100%;
     height: auto;
     border-radius: 1em;
-    margin-bottom: 0;
-} 
-
-.image1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
 }
 
-.image3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 65%;
-    margin: 0 auto;
-}
-@media (max-width: 1400px) {
-    
-    
-    .tech-stack ul {
-        padding: 5px;
-    }
-    .tech-info h4 {
-        margin-left: 12px;
-        padding-top: 15px;
-        font-size: 1rem;
-        font-weight: 500;
-        color: #CECECF;
-    }
-    
-    .tech-item {
-        display: flex;
-        align-items: center;
-        padding: 5px;
-    }
-    
-    .tech-item img {
-        width: 40px;
-        height: auto;
-    }
-
-}
 /* Responsive Styles */
 @media (max-width: 850px) {
-   
-    .kitchef-info,.image3 {
+    .kitchef-info {
         width: 90%;
     }
 
-    .image3 {
-        margin: 0 auto;
-    }
-
-    .kitchef-info p{
-        font-size: 2vw;
-        padding-top: 0;
-        padding-left: 5px;
-        padding-right: 5px;
-        padding-bottom: 10px;
-    }
-
-
-    .kitchef-info h3, .project-description h3{
+    .kitchef-info h3 {
         font-size: 3.5vw;
     }
- 
-    section p {
+
+    .kitchef-info p {
         font-size: 2vw;
     }
 
-    .tech-stack ul {
-        padding: 5px;
-    }
-    .tech-info h4 {
-        margin-left: 12px;
-        padding-top: 15px;
-        font-size: 1rem;
-        font-weight: 500;
-        color: #CECECF;
-    }
-    
-    .tech-item {
-        display: flex;
-        align-items: center;
-        padding: 5px;
-    }
-    
     .tech-item img {
         width: 40px;
-        height: auto;
     }
 
-    .about-kitchef h3{
-        padding:0;
+    .tech-info h4 {
+        font-size: 1rem;
+        margin-left: 12px;
     }
-
 }
 
 @media (max-width: 600px) {
-
-    /* Adjust the showcase image and content to take 90% of screen width */
-    .kitchef-info,
-    .image3,
-    .tech-stack,
-    .created {
-        width: 90%; 
-        padding-top: 0;
-    }
-
-    /* Stack the content below each other */
     .kitchef-info {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        width: 90%; 
+        width: 90%;
     }
 
-    /* Left and Right sides stacked vertically */
     .kitchef-left,
     .kitchef-right {
         width: 100%; 
-        margin-top: 10px;
     }
 
     .tech-stack{
@@ -283,79 +173,33 @@ hr {
         margin: 0 auto;
     }
 
-    .tech-stack ul {
-        padding: 0px;
-    }
-
     .tech-stack hr {
         width: 95%;
-    }
-
-    /* Image 3 spacing */
-    .image3 {
-        margin-top: 20px; 
-    }
-
-    .kitchef-info p,
-    .project-description p {
-        font-size: 12px;
-        padding: 0;
-    }
-
-    /* Adjust heading sizes for mobile */
-    .kitchef-info h3,
-    .project-description h3 {
-        font-size: 1.2rem;
-    }
-
-    .about h3, .project-description h3{
-        text-align:left;
-        margin-left: 0;
-    }
-
-    .tech-stack,
-    .created {
-        padding: 15px;
-        margin-bottom: 15px;
-        border-radius: 1em;
     }
 
     .tech-stack ul {
         padding: 5px;
     }
 
-    .tech-info h4 {
-        margin-left: 12px;
-        font-size: 12px;
-        font-weight: 530;
-        color: #CECECF;
-        padding-top: 15px;
+    .tech-item img {
+        width: 40px;
     }
-    
-    .tech-item {
-        display: flex;
-        align-items: center;
+
+    .tech-info h4 {
+        font-size: 15px;
+    }
+
+    .kitchef-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .kitchef-info p {
+        font-size: 12px;
         padding: 0;
     }
-    
-    .tech-item img {
-        width: 35px;
-        height: auto;
-    }
 
-    .image3 {
-        margin: 20px auto; 
+    .about-kitchef p {
+        text-align: left;
+        padding-top: 10px;
     }
-
-    .about-kitchef h3{
-        text-align: center;
-    }
-    .about-kitchef p{
-        padding-top:10px;
-        text-align: center;
-    }
-
 }
-
-
-
