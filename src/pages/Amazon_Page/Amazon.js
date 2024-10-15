@@ -65,11 +65,12 @@ function Amazon() {
   const githubLink = 'https://github.com/bar-efrima/Amazon-Product-Search';
 
   const amazonDescription ={
-    title: 'About the Project', 
+    title: 'About the Project',
+    // color: 'rgb(192, 248, 255)', 
   };
 
 
-  const videoLink = 'https://www.youtube.com/embed/kTHfsLwlMJY?si=sgDaJnytJMaJ5aoI';
+  const videoLink = 'https://www.youtube.com/embed/kTHfsLwlMJY?si=sgDaJnytJMaJ5aoI'; 
 
   return (
    
@@ -77,7 +78,7 @@ function Amazon() {
   <div className="amazon">
 
     <ProjectHeader title={ProjectInfo.title} description={ProjectInfo.description} logo={ProjectInfo.logo} screenshot={ProjectInfo.screenshot} />
-    <TextCard projectDescription={amazonDescription}> 
+    <TextCard projectDescription={amazonDescription} > 
       <p> The Amazon Scraper project is a web application designed to display item prices from various Amazon websites,
       providing users with a simple and efficient way to compare prices across regions. </p>
       <br/>

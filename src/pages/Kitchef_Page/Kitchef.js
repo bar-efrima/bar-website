@@ -80,7 +80,10 @@ function Kitchef() {
         
         <div className="kitchef-left">
             <div className ="about-kitchef">
-                <h3>About the Project</h3>
+                <h3><span className="red">About </span> 
+                    <span className="yellow">the </span> 
+                    <span className="green">project</span>
+                </h3>
                 <hr />
                 <p>Kitchef is a wearable technology, designed to create physical closeness and an emotional 
                     connection between children and their parents during a shared cooking experience. 
