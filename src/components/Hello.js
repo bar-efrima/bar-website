@@ -3,6 +3,7 @@ import './Hello.css';
 import starsVideo from '../assets/videos/stars.webm';
 import LogoContainer from './LogoContainer';
 import SpaceButton from './SpaceButton';
+import { HashLink } from 'react-router-hash-link';
 
 function Hello() {
 
@@ -39,9 +40,9 @@ function Hello() {
         <div className="hidden">
           <p className="hello">Hello, World.</p>
           <p className="name">I'm Bar Efrima.</p>
-          <a href="#/aboutTag">
-          <SpaceButton></SpaceButton>
-          </a>
+          <HashLink smooth to="/#aboutTag">
+            <SpaceButton></SpaceButton>
+          </HashLink>
       <LogoContainer ></LogoContainer>
     </div>
       </section>
