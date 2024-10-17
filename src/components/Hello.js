@@ -38,7 +38,7 @@ function Hello() {
       </video>
       <section className="HelloWorld">
         <div className="hidden">
-          <p className="hello">Hello, World.</p>
+          <p className="hello">Hello World.</p>
           <p className="name">I'm Bar Efrima.</p>
           <HashLink smooth to="/#aboutTag">
             <SpaceButton></SpaceButton>
