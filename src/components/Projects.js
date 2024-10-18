@@ -8,6 +8,7 @@ import gamehighlights from '../assets/projects/game.png';
 import royalcats from '../assets/projects/Royal-cats.jpg';
 import mobileApps from '../assets/projects/mobile.png';
 import caimbridge from '../assets/projects/pokadex.png';
+// import GraphicDesign from '../pages/GraphicDesign_Page/GraphicDesign_Page';
 import { Link } from 'react-router-dom';
 
 // Projects data array
@@ -63,7 +64,13 @@ const projects = [
     type: 'Mobile App Projects',
     description: 'Developed "Fruit Info App" for sorting fruit data and "Weather Wizard" for real-time weather with custom UI animations.',
   },
-
+  {
+    title: 'Graphic Designs',
+    image: mobileApps,
+    type: 'Graphic Design Projects',
+    description: 'Designed various graphic projects such as logos, posters, cards, and digital art.',
+  }
+  
 ];
 
 function Projects() {
@@ -132,6 +139,10 @@ function Projects() {
               </Link>
               ) : project.title === 'Mobile Apps'? (
                 <Link to="/Applications" className="project-img-link">
+                  <img src={project.image} alt={project.title} className="project-image" />
+                </Link>
+              ) : project.title === 'Graphic Designs'? (
+                <Link to="/GraphicDesign" className="project-img-link">
                   <img src={project.image} alt={project.title} className="project-image" />
                 </Link>
               ) 
