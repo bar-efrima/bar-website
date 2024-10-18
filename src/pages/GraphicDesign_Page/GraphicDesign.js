@@ -15,40 +15,45 @@ import hamalRed from './Images/hamal_red.png';
 import michshor from './Images/michshor.png';
 import royalCats from './Images/royalcats.jpg';
 import oketz from './Images/OKETZ.png';
-import oscar from './Images/oscar.png';
 import interfaces from './Images/interface.jpg';
 import logoMador from './Images/logo_mador.png';
 import himushLoop from './Images/himush_loop_LONG.gif';
+import effect from './Images/effec_nfc.jpg';
 
 function GraphicDesign() {
   const images = [
-    { src: interfaces, className: 'gallery__item--wide' },
-    { src: img3, className: 'gallery__item--square' },
-    { src: img4, className: 'gallery__item--square' },
-    { src: logoMador, className: 'gallery__item--wide' },
-    { src: himushLoop, className: 'gallery__item--wide' },
 
-    { src: royalCats, className: 'gallery__item--square' },
+    { src: himushLoop, className: 'gallery__item--wide' },
+    { src: interfaces, className: 'gallery__item--wide' },
+
     { src: card, className: 'gallery__item--square' },
     { src: celestial, className: 'gallery__item--square' },
     { src: customCard, className: 'gallery__item--square' },
+    { src: royalCats, className: 'gallery__item--square' },
+
+
+
+    { src: img3, className: 'gallery__item--square' },
+    { src: img4, className: 'gallery__item--square' },
+    { src: logoMador, className: 'gallery__item--wide' },
+ 
+
+
+
+
+    { src: oketz, className: 'gallery__item--wide' },
     { src: hamal, className: 'gallery__item--square' },
     { src: hamalRed, className: 'gallery__item--square' },
+
     { src: michshor, className: 'gallery__item--square' },
-    { src: oscar, className: 'gallery__item--wide' },
 
-
+    { src: effect, className: 'gallery__item--wide' },
     { src: img1, className: 'gallery__item--square' },
     { src: img2, className: 'gallery__item--square' },
 
 
     { src: basta, className: 'gallery__item--wide' },
     
-
-
-    
-    { src: oketz, className: 'gallery__item--wide' },
-    { src: oscar, className: 'gallery__item--wide' },
 
 
   ];
