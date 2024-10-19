@@ -20,7 +20,7 @@ import royalCats from './Images/Royalcats.jpg';
 import oketz from './Images/Oketz.png';
 import launchDisplay from './Images/Launch_Display.jpg';
 import logoMadorBlack from './Images/Logo_Mador_Black.jpg';
-import himushLoop from './Images/himush_loop.mp4';
+import himushLoop from './Images/himush_loop.mp4'; 
 
 
 function GraphicDesign() {
