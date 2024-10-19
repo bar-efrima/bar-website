@@ -1,5 +1,6 @@
 import React from 'react';
 import './GraphicDesign.css'; // Import the CSS file
+import TextCard from '../components/TextCardProject'; // AboutCard component
 
 // Import your Images
 import img1 from './Images/1.png';
@@ -21,6 +22,11 @@ import himushLoop from './Images/himush_loop_LONG.gif';
 import effect from './Images/effec_nfc.jpg';
 
 function GraphicDesign() {
+
+  const graphicTitle = {
+    title: 'Graphic Design'
+  }
+
   const images = [
 
     { src: himushLoop, className: 'gallery__item--wide' },
@@ -31,16 +37,10 @@ function GraphicDesign() {
     { src: customCard, className: 'gallery__item--square' },
     { src: royalCats, className: 'gallery__item--square' },
 
-
-
     { src: img3, className: 'gallery__item--square' },
     { src: img4, className: 'gallery__item--square' },
     { src: logoMador, className: 'gallery__item--wide' },
  
-
-
-
-
     { src: oketz, className: 'gallery__item--wide' },
     { src: hamal, className: 'gallery__item--square' },
     { src: hamalRed, className: 'gallery__item--square' },
@@ -51,14 +51,17 @@ function GraphicDesign() {
     { src: img1, className: 'gallery__item--square' },
     { src: img2, className: 'gallery__item--square' },
 
-
     { src: basta, className: 'gallery__item--wide' },
-    
-
 
   ];
 
   return (
+    <div>
+      <TextCard projectDescription={graphicTitle}> 
+      <p> I have a passion for graphic design and enjoy creating logos, business cards, and other designs. I have experience with Adobe Illustrator and Photoshop. I have created logos for various companies and organizations. I have also designed business cards, posters, and other promotional materials. I enjoy working with clients to create designs that meet their needs and exceed their expectations. I am always looking for new opportunities to expand my skills and create new and exciting designs.
+        </p> 
+        </TextCard>
+    
     <div className="container">
       <div className="gallery">
         {images.map((image, index) => (
@@ -67,6 +70,7 @@ function GraphicDesign() {
           </figure>
         ))}
       </div>
+    </div>
     </div>
   );
 }
