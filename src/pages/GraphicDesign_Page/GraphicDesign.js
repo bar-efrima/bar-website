@@ -3,7 +3,10 @@ import './GraphicDesign.css'; // Import the CSS file
 import TextCard from '../components/TextCardProject'; // AboutCard component
 
 // Import your Images
-import basta from './Images/Basta.png';
+import cat1 from './Images/Cat1.jpg';
+import cat2 from './Images/Cat2.jpg';
+import banner from './Images/ca1.gif';
+import basta from './Images/Basta.jpg';
 import nftCard from './Images/NFT_Card.jpg';
 import celestialCard from './Images/Celestial_Card.jpg';
 import customCard from './Images/Custom_Card.jpg';
@@ -19,6 +22,7 @@ import michshor from './Images/Michshor.jpg';
 import royalCats from './Images/Royalcats.jpg';
 import oketz from './Images/Oketz.png';
 import logoMador from './Images/Logo_Mador.jpg';
+import logoMador2 from './Images/Logo_Mador2.jpg';
 import launchDisplay from './Images/Launch_Display.jpg';
 import himushLoop from './Images/Himush_Loop.gif';
 import patches from './Images/Patches.jpg';
@@ -32,30 +36,36 @@ function GraphicDesign() {
 
   const images = [
 
-  { src: himushLoop, className: 'gallery__item--wide' },
-  { src: launchDisplay, className: 'gallery__item--wide' },
+    { src: himushLoop, className: 'gallery__item--wide' },
+    { src: oketz, className: 'gallery__item--wide' },
+
+
+  { src: michshor, className: 'gallery__item--square' },
+  { src: hamalGreen, className: 'gallery__item--square' },
+  { src: hamalRed, className: 'gallery__item--square' },
+  { src: logoMador, className: 'gallery__item--square' },
 
   { src: nftCard, className: 'gallery__item--square' },
   { src: celestialCard, className: 'gallery__item--square' },
   { src: customCard, className: 'gallery__item--square' },
   { src: royalCats, className: 'gallery__item--square' },
 
-  { src: michshor, className: 'gallery__item--square' },
-  {src: patches, className: 'gallery__item--wide'},
-
-  { src: logoMador, className: 'gallery__item--square' },
-
-  { src: oketz, className: 'gallery__item--wide' },
-  { src: hamalGreen, className: 'gallery__item--square' },
-  { src: hamalRed, className: 'gallery__item--square' },
-
-
-
-  { src: effecNFC, className: 'gallery__item--wide' },
-  { src: dogAbilityYellow, className: 'gallery__item--square' },
-  { src: dogAbilityRed, className: 'gallery__item--square' },
+    { src: cat1, className: 'gallery__item--square' },
+    { src: cat2, className: 'gallery__item--square' },
+  { src: banner, className: 'gallery__item--wide' },
 
   { src: basta, className: 'gallery__item--wide' },
+  { src: dogAbilityYellow, className: 'gallery__item--square' },
+
+  {src : logoMador2, className: 'gallery__item--square'},
+
+  { src: dogAbilityRed, className: 'gallery__item--square' },
+  { src: effecNFC, className: 'gallery__item--wide' },
+
+  // {src: patches, className: 'gallery__item--wide'},  
+  { src: hamalGreen, className: 'gallery__item--square' },
+  { src: launchDisplay, className: 'gallery__item--wide' },
+
 
 
   ];
