@@ -46,6 +46,10 @@ body {
     transform: translateY(20px); /* a slight vertical move */
     animation: fadeIn 1.5s ease-in-out forwards; /* Trigger animation */
 }
+.IoT-header{
+    width:100%;
+    margin-bottom: 3%;
+}
 
 /* Keyframes for fade-in effect */
 @keyframes fadeIn {

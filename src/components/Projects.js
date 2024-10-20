@@ -8,7 +8,7 @@ import gamehighlights from '../assets/projects/game.png';
 import royalcats from '../assets/projects/Royal-cats.jpg';
 import mobileApps from '../assets/projects/mobile.png';
 import caimbridge from '../assets/projects/pokadex.png';
-// import GraphicDesign from '../pages/GraphicDesign_Page/GraphicDesign_Page';
+import GraphicDesign from '../assets/projects/GraphicDesign.jpg';
 import { Link } from 'react-router-dom';
 
 // Projects data array
@@ -54,7 +54,7 @@ const projects = [
   },
   {
     title: 'IoT Inventions',
-    image: musical,
+    image: "musical",
     type: 'Arduino C++ Projects',
     description: 'Developed Arduino-based projects such as interactive sound instrument, weather-based light display and fruits as game controllers. ',
   },
@@ -66,7 +66,7 @@ const projects = [
   },
   {
     title: 'Graphic Designs',
-    image: mobileApps,
+    image: GraphicDesign,
     type: 'Graphic Design Projects',
     description: 'Designed various graphic projects such as logos, posters, cards, and digital art.',
   }

@@ -153,6 +153,7 @@ header img:hover {
     .header-text-container p {
         font-size: 1rem;
         font-weight: 500;
+        color: rgb(207, 249, 255);
         width: 100%;
         text-align: center;
     }

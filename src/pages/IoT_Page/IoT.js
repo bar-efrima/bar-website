@@ -66,9 +66,9 @@ const ProjectSkillsList = [
    
     
   <div className="IoT">
-    
+    <div className="IoT-header">
     <ProjectHeader title={ProjectInfo.title} description={ProjectInfo.description} logo={ProjectInfo.logo} screenshot={ProjectInfo.screenshot} />
-    
+    </div>
     <div class="video-co">
       <iframe src="https://www.youtube.com/embed/788kr_7DwH4?si=z-YFk66DvJd_P-QF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
