@@ -15,13 +15,13 @@ import effecNFC from './Images/Effec_NFC.jpg';
 import effectQRCastle from './Images/EffectQR_Castle.jpg';
 import hamalGreen from './Images/Hamal_Green.png';
 import hamalRed from './Images/Hamal_Red.png';
-import michshor from './Images/Michshor.png';
+import michshor from './Images/Michshor.jpg';
 import royalCats from './Images/Royalcats.jpg';
 import oketz from './Images/Oketz.png';
-
+import logoMador from './Images/Logo_Mador.jpg';
 import launchDisplay from './Images/Launch_Display.jpg';
-import logoMadorBlack from './Images/Logo_Mador_Black.jpg';
-import himushLoop from './Images/himush_loop.mp4';
+import himushLoop from './Images/Himush_Loop.gif';
+import patches from './Images/Patches.jpg';
 
 
 function GraphicDesign() {
@@ -40,15 +40,16 @@ function GraphicDesign() {
   { src: customCard, className: 'gallery__item--square' },
   { src: royalCats, className: 'gallery__item--square' },
 
-  { src: maorPatch, className: 'gallery__item--square' },
-  { src: nasaPatch, className: 'gallery__item--square' },
-  { src: logoMadorBlack, className: 'gallery__item--wide' },
+  { src: michshor, className: 'gallery__item--square' },
+  {src: patches, className: 'gallery__item--wide'},
+
+  { src: logoMador, className: 'gallery__item--square' },
 
   { src: oketz, className: 'gallery__item--wide' },
   { src: hamalGreen, className: 'gallery__item--square' },
   { src: hamalRed, className: 'gallery__item--square' },
 
-  { src: michshor, className: 'gallery__item--square' },
+
 
   { src: effecNFC, className: 'gallery__item--wide' },
   { src: dogAbilityYellow, className: 'gallery__item--square' },
