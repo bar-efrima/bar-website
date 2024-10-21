@@ -54,7 +54,7 @@ const projects = [
   },
   {
     title: 'IoT Inventions',
-    image: "musical",
+    image: musical,
     type: 'Arduino C++ Projects',
     description: 'Developed Arduino-based projects such as interactive sound instrument, weather-based light display and fruits as game controllers. ',
   },
@@ -65,10 +65,10 @@ const projects = [
     description: 'Developed "Fruit Info App" for sorting fruit data and "Weather Wizard" for real-time weather with custom UI animations.',
   },
   {
-    title: 'Graphic Designs',
+    title: 'Graphic Design & UI/UX',
     image: GraphicDesign,
     type: 'Graphic Design Projects',
-    description: 'Designed various graphic projects such as logos, posters, cards, and digital art.',
+    description: 'Designed logos, official Army branding, business cards, posters, and promotional materials using Adobe Suite, Figma, and CAD, integrating UI/UX principles.',
   }
   
 ];
@@ -141,7 +141,7 @@ function Projects() {
                 <Link to="/Applications" className="project-img-link">
                   <img src={project.image} alt={project.title} className="project-image" />
                 </Link>
-              ) : project.title === 'Graphic Designs'? (
+              ) : project.title === 'Graphic Design & UI/UX'? (
                 <Link to="/GraphicDesign" className="project-img-link">
                   <img src={project.image} alt={project.title} className="project-image" />
                 </Link>

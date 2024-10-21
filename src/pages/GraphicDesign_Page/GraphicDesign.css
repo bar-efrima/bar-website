@@ -5,6 +5,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+.graphicDesign{
+  animation: fadeIn 1.5s ease-in-out forwards; /* Trigger animation */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Slight movement */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Element in its final position */
+    }
+}
+
 .graphicText{
  padding-top: 60px;
 }
@@ -21,10 +37,9 @@ body {
   background-size: auto; /* Keeps the original size of the image */
 }
 
-.container {
-  width: 65vw; /* 65% of the screen */
+.desgin-container {
+  width: 65%; 
   margin: 2rem auto;
-  
 }
 
 .gallery {
@@ -65,9 +80,19 @@ body {
   grid-column: span 2; /* Span 2 columns */
   grid-row: span 4; /* Span 4 rows */
 }
-
+@media (max-width: 850px) {
+  .desgin-container {
+    width: 90%; 
+    
+  }
+  
+}
 /* Small screens */
 @media (max-width: 600px) {
+  .graphicText{
+    padding-top: 30px;
+   }
+
   .gallery {
     grid-template-columns: repeat(4, 1fr); /* Switch to 4 columns on small screens */
     grid-gap: 1rem;

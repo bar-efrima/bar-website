@@ -41,14 +41,13 @@ function GraphicDesign() {
     { src: oketz, className: 'gallery__item--wide' },
 
 
-  {src: pacth2, className: 'gallery__item--square'},
   { src: Logo_Mador_White, className: 'gallery__item--square' },
-  {src: pacth1, className: 'gallery__item--square'},
   { src: michshor, className: 'gallery__item--square' },
- 
-  // {src: patches, className: 'gallery__item--wide'},  
   { src: hamalGreen, className: 'gallery__item--square' },
   { src: hamalRed, className: 'gallery__item--square' },
+
+  {src: pacth1, className: 'gallery__item--square'},
+  {src: pacth2, className: 'gallery__item--square'},
   { src: launchDisplay, className: 'gallery__item--wide' },
 
   { src: nftCard, className: 'gallery__item--square' },
@@ -74,13 +73,19 @@ function GraphicDesign() {
   return (
     <div className='graphicDesign'>
       <div className='graphicText'>
-      <TextCard projectDescription={graphicTitle}> 
-      <p> I have a passion for graphic design and enjoy creating logos, business cards, and other designs. I have experience with Adobe Illustrator and Photoshop. I have created logos for various companies and organizations. I have also designed business cards, posters, and other promotional materials. I enjoy working with clients to create designs that meet their needs and exceed their expectations. I am always looking for new opportunities to expand my skills and create new and exciting designs.
-        </p> 
+      <TextCard projectDescription={graphicTitle} style={{
+    filter: `drop-shadow(0 0 20px rgba(193, 15, 158,0.3))
+    drop-shadow(0 0 30px rgba(255, 0, 242, 0.1))`
+    }}>
+      <p> I have extensive experience in graphic design, UI/UX principles, and frontend development. 
+        I am skilled with industry-standard tools such as Adobe Creative Suite (Illustrator, Photoshop, 
+        After Effects, Premiere), Figma, Adobe Firefly, as well as CAD and 3D modeling software. 
+        I have successfully created logos for various companies, including official Army logos, 
+        and designed business cards, posters, and promotional materials. </p> 
         </TextCard>
         </div>
     
-    <div className="container">
+    <div className="desgin-container">
       <div className="gallery">
         {images.map((image, index) => (
           <figure className={`gallery__item ${image.className}`} key={index}>
