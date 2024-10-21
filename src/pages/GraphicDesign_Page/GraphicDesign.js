@@ -10,7 +10,6 @@ import basta from './Images/Basta.jpg';
 import nftCard from './Images/NFT_Card.jpg';
 import celestialCard from './Images/Celestial_Card.jpg';
 import customCard from './Images/Custom_Card.jpg';
-import dogAbilityRed from './Images/Dog_Ability_Red.jpg';
 import dogAbilityYellow from './Images/Dog_Ability_Yellow.png';
 
 import effecNFC from './Images/Effec_NFC3.jpg';
@@ -61,15 +60,11 @@ function GraphicDesign() {
   { src: cat2, className: 'gallery__item--square' },
   { src: banner, className: 'gallery__item--wide' },
 
-
+  { src: basta, className: 'gallery__item--wide' },
   { src: kitchef_Logo, className: 'gallery__item--wide' },
+
   { src: dogAbilityYellow, className: 'gallery__item--square' },
   { src: effecNFC, className: 'gallery__item--square' },
-
-  { src: basta, className: 'gallery__item--wide' },
-
-
-
   { src: effectIllusion, className: 'gallery__item--square' },
   { src: effectQRCastle, className: 'gallery__item--square' },
 
@@ -77,11 +72,13 @@ function GraphicDesign() {
   ];
 
   return (
-    <div>
+    <div className='graphicDesign'>
+      <div className='graphicText'>
       <TextCard projectDescription={graphicTitle}> 
       <p> I have a passion for graphic design and enjoy creating logos, business cards, and other designs. I have experience with Adobe Illustrator and Photoshop. I have created logos for various companies and organizations. I have also designed business cards, posters, and other promotional materials. I enjoy working with clients to create designs that meet their needs and exceed their expectations. I am always looking for new opportunities to expand my skills and create new and exciting designs.
         </p> 
         </TextCard>
+        </div>
     
     <div className="container">
       <div className="gallery">
