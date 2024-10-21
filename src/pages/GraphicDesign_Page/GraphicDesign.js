@@ -5,30 +5,29 @@ import TextCard from '../components/TextCardProject'; // AboutCard component
 // Import your Images
 import cat1 from './Images/Cat1.jpg';
 import cat2 from './Images/Cat2.jpg';
-import banner from './Images/ca1.gif';
+import banner from '../NFT_Page/Images/ca1.gif'
 import basta from './Images/Basta.jpg';
 import nftCard from './Images/NFT_Card.jpg';
 import celestialCard from './Images/Celestial_Card.jpg';
 import customCard from './Images/Custom_Card.jpg';
 import dogAbilityRed from './Images/Dog_Ability_Red.jpg';
 import dogAbilityYellow from './Images/Dog_Ability_Yellow.png';
-import maorPatch from './Images/Maor_Patch_604.png';
-import nasaPatch from './Images/Nasa_Patch.png';
-import effecNFC from './Images/Effec_NFC.jpg';
+
+import effecNFC from './Images/Effec_NFC3.jpg';
 import effectQRCastle from './Images/EffectQR_Castle.jpg';
-import hamalGreen from './Images/Hamal_Green.png';
-import hamalRed from './Images/Hamal_Red.png';
+import hamalGreen from './Images/Hamal_Green.jpg';
+import hamalRed from './Images/Hamal_Red.jpg';
 import michshor from './Images/Michshor.jpg';
 import royalCats from './Images/Royalcats.jpg';
 import oketz from './Images/Oketz.png';
-import logoMador from './Images/Logo_Mador.jpg';
-import logoMador2 from './Images/Logo_Mador2.jpg';
+import Logo_Mador_White from './Images/Logo_Mador_White.jpg';
 import launchDisplay from './Images/Launch_Display.jpg';
 import himushLoop from './Images/Himush_Loop.gif';
-import patches from './Images/Patches.jpg';
 
 import pacth1 from './Images/Patch1.jpg';
 import pacth2 from './Images/Patch2.jpg';
+import effectIllusion from './Images/EffectIllusion.jpg';
+import kitchef_Logo from './Images/Kitchef_Logo.jpg';
 
 
 function GraphicDesign() {
@@ -44,10 +43,14 @@ function GraphicDesign() {
 
 
   {src: pacth2, className: 'gallery__item--square'},
-  { src: logoMador, className: 'gallery__item--square' },
+  { src: Logo_Mador_White, className: 'gallery__item--square' },
   {src: pacth1, className: 'gallery__item--square'},
   { src: michshor, className: 'gallery__item--square' },
  
+  // {src: patches, className: 'gallery__item--wide'},  
+  { src: hamalGreen, className: 'gallery__item--square' },
+  { src: hamalRed, className: 'gallery__item--square' },
+  { src: launchDisplay, className: 'gallery__item--wide' },
 
   { src: nftCard, className: 'gallery__item--square' },
   { src: celestialCard, className: 'gallery__item--square' },
@@ -58,20 +61,17 @@ function GraphicDesign() {
   { src: cat2, className: 'gallery__item--square' },
   { src: banner, className: 'gallery__item--wide' },
 
-  {src: pacth1, className: 'gallery__item--square'},
-  {src: pacth2, className: 'gallery__item--square'},
+
+  { src: kitchef_Logo, className: 'gallery__item--wide' },
   { src: dogAbilityYellow, className: 'gallery__item--square' },
-  {src : logoMador2, className: 'gallery__item--square'},
+  { src: effecNFC, className: 'gallery__item--square' },
 
   { src: basta, className: 'gallery__item--wide' },
-  { src: dogAbilityRed, className: 'gallery__item--square' },
-  { src: effecNFC, className: 'gallery__item--wide' },
 
-  // {src: patches, className: 'gallery__item--wide'},  
-  { src: hamalGreen, className: 'gallery__item--square' },
-  { src: hamalRed, className: 'gallery__item--square' },
-  { src: launchDisplay, className: 'gallery__item--wide' },
 
+
+  { src: effectIllusion, className: 'gallery__item--square' },
+  { src: effectQRCastle, className: 'gallery__item--square' },
 
 
   ];
