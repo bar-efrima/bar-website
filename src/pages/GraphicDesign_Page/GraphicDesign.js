@@ -27,6 +27,9 @@ import launchDisplay from './Images/Launch_Display.jpg';
 import himushLoop from './Images/Himush_Loop.gif';
 import patches from './Images/Patches.jpg';
 
+import pacth1 from './Images/Patch1.jpg';
+import pacth2 from './Images/Patch2.jpg';
+
 
 function GraphicDesign() {
 
@@ -40,30 +43,33 @@ function GraphicDesign() {
     { src: oketz, className: 'gallery__item--wide' },
 
 
-  { src: michshor, className: 'gallery__item--square' },
-  { src: hamalGreen, className: 'gallery__item--square' },
-  { src: hamalRed, className: 'gallery__item--square' },
+  {src: pacth2, className: 'gallery__item--square'},
   { src: logoMador, className: 'gallery__item--square' },
+  {src: pacth1, className: 'gallery__item--square'},
+  { src: michshor, className: 'gallery__item--square' },
+ 
 
   { src: nftCard, className: 'gallery__item--square' },
   { src: celestialCard, className: 'gallery__item--square' },
   { src: customCard, className: 'gallery__item--square' },
   { src: royalCats, className: 'gallery__item--square' },
 
-    { src: cat1, className: 'gallery__item--square' },
-    { src: cat2, className: 'gallery__item--square' },
+  { src: cat1, className: 'gallery__item--square' },
+  { src: cat2, className: 'gallery__item--square' },
   { src: banner, className: 'gallery__item--wide' },
 
-  { src: basta, className: 'gallery__item--wide' },
+  {src: pacth1, className: 'gallery__item--square'},
+  {src: pacth2, className: 'gallery__item--square'},
   { src: dogAbilityYellow, className: 'gallery__item--square' },
-
   {src : logoMador2, className: 'gallery__item--square'},
 
+  { src: basta, className: 'gallery__item--wide' },
   { src: dogAbilityRed, className: 'gallery__item--square' },
   { src: effecNFC, className: 'gallery__item--wide' },
 
   // {src: patches, className: 'gallery__item--wide'},  
   { src: hamalGreen, className: 'gallery__item--square' },
+  { src: hamalRed, className: 'gallery__item--square' },
   { src: launchDisplay, className: 'gallery__item--wide' },
 
 
