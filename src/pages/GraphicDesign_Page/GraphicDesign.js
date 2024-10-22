@@ -1,11 +1,10 @@
-import React from 'react';
-import './GraphicDesign.css'; // Import the CSS file
-import TextCard from '../components/TextCardProject'; // AboutCard component
+import React, { useEffect, useRef } from 'react';
+import './GraphicDesign.css';
+import TextCard from '../components/TextCardProject';
 
-// Import your Images
 import cat1 from './Images/Cat1.jpg';
 import cat2 from './Images/Cat2.jpg';
-import banner from '../NFT_Page/Images/ca1.gif'
+import banner from '../NFT_Page/Images/ca1.gif';
 import basta from './Images/Basta.jpg';
 import nftCard from './Images/NFT_Card.jpg';
 import celestialCard from './Images/Celestial_Card.jpg';
@@ -28,72 +27,93 @@ import pacth2 from './Images/Patch2.jpg';
 import effectIllusion from './Images/EffectIllusion.jpg';
 import kitchef_Logo from './Images/Kitchef_Logo.jpg';
 
-
 function GraphicDesign() {
+  const imageRefs = useRef([]);
+
+  // Scroll to the top when the component is mounted
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant',
+    });
+  }, []);
+
+  // Set up the IntersectionObserver
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Stop observing once visible
+        }
+      });
+    });
+
+    imageRefs.current.forEach((image) => { // Observe each image
+      if (image) observer.observe(image); // Check if the image exists
+    });
+
+    return () => {
+      imageRefs.current.forEach((image) => { // Clean up by unobserving each image
+        if (image) observer.unobserve(image); 
+      });
+    };
+  }, []);
 
   const graphicTitle = {
-    title: 'Graphic Design'
-  }
+    title: 'Graphic Design',
+  };
 
   const images = [
-
     { src: himushLoop, className: 'gallery__item--wide' },
     { src: oketz, className: 'gallery__item--wide' },
 
+    { src: Logo_Mador_White, className: 'gallery__item--square' },
+    { src: michshor, className: 'gallery__item--square' },
+    { src: hamalGreen, className: 'gallery__item--square' },
+    { src: hamalRed, className: 'gallery__item--square' },
 
-  { src: Logo_Mador_White, className: 'gallery__item--square' },
-  { src: michshor, className: 'gallery__item--square' },
-  { src: hamalGreen, className: 'gallery__item--square' },
-  { src: hamalRed, className: 'gallery__item--square' },
+    { src: pacth1, className: 'gallery__item--square' },
+    { src: pacth2, className: 'gallery__item--square' },
+    { src: launchDisplay, className: 'gallery__item--wide' },
 
-  {src: pacth1, className: 'gallery__item--square'},
-  {src: pacth2, className: 'gallery__item--square'},
-  { src: launchDisplay, className: 'gallery__item--wide' },
+    { src: nftCard, className: 'gallery__item--square' },
+    { src: celestialCard, className: 'gallery__item--square' },
+    { src: customCard, className: 'gallery__item--square' },
+    { src: royalCats, className: 'gallery__item--square' },
 
-  { src: nftCard, className: 'gallery__item--square' },
-  { src: celestialCard, className: 'gallery__item--square' },
-  { src: customCard, className: 'gallery__item--square' },
-  { src: royalCats, className: 'gallery__item--square' },
+    { src: cat1, className: 'gallery__item--square' },
+    { src: cat2, className: 'gallery__item--square' },
+    { src: banner, className: 'gallery__item--wide' },
 
-  { src: cat1, className: 'gallery__item--square' },
-  { src: cat2, className: 'gallery__item--square' },
-  { src: banner, className: 'gallery__item--wide' },
+    { src: basta, className: 'gallery__item--wide' },
+    { src: kitchef_Logo, className: 'gallery__item--wide' },
 
-  { src: basta, className: 'gallery__item--wide' },
-  { src: kitchef_Logo, className: 'gallery__item--wide' },
-
-  { src: dogAbilityYellow, className: 'gallery__item--square' },
-  { src: effecNFC, className: 'gallery__item--square' },
-  { src: effectIllusion, className: 'gallery__item--square' },
-  { src: effectQRCastle, className: 'gallery__item--square' },
-
-
+    { src: dogAbilityYellow, className: 'gallery__item--square' },
+    { src: effecNFC, className: 'gallery__item--square' },
+    { src: effectIllusion, className: 'gallery__item--square' },
+    { src: effectQRCastle, className: 'gallery__item--square' },
   ];
 
   return (
     <div className='graphicDesign'>
       <div className='graphicText'>
-      <TextCard projectDescription={graphicTitle} style={{
-    filter: `drop-shadow(0 0 20px rgba(193, 15, 158,0.3))
-    drop-shadow(0 0 30px rgba(255, 0, 242, 0.1))`
-    }}>
-      <p> I have extensive experience in graphic design, UI/UX principles, and frontend development. 
-        I am skilled with industry-standard tools such as Adobe Creative Suite (Illustrator, Photoshop, 
-        After Effects, Premiere), Figma, Adobe Firefly, as well as CAD and 3D modeling software. 
-        I have successfully created logos for various companies, including official Army logos, 
-        and designed business cards, posters, and promotional materials. </p> 
+        <TextCard projectDescription={graphicTitle} style={{
+          filter: `drop-shadow(0 0 20px rgba(193, 15, 158,0.3))
+          drop-shadow(0 0 30px rgba(255, 0, 242, 0.1))`,
+        }}>
+          <p>
+            I have extensive experience in graphic design, UI/UX principles, and frontend development.
+            I am skilled with industry-standard tools such as Adobe Creative Suite (Illustrator, Photoshop,
+            After Effects, Premiere), Figma, Adobe Firefly, as well as CAD and 3D modeling software.
+            I have successfully created logos for various companies, including official Army logos,
+            and designed business cards, posters, and promotional materials.
+          </p>
         </TextCard>
-        </div>
-    
-    <div className="desgin-container">
-      <div className="gallery">
-        {images.map((image, index) => (
-          <figure className={`gallery__item ${image.className}`} key={index}>
-            <img src={image.src} alt={`Gallery item ${index + 1}`} className="gallery__img" />
-          </figure>
-        ))}
       </div>
-    </div>
+
+      
     </div>
   );
 }
