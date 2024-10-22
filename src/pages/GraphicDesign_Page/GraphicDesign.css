@@ -5,6 +5,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+.graphicDesign{
+  animation: fadeIn 1.5s ease-in-out forwards; /* Trigger animation */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Slight movement */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Element in its final position */
+    }
+}
 
 .graphicText{
  padding-top: 60px;
