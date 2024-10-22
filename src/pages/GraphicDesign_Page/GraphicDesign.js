@@ -113,7 +113,15 @@ function GraphicDesign() {
         </TextCard>
       </div>
 
-      
+      <div className="desgin-container">
+        <div className="gallery">
+          {images.map((image, index) => (
+            <figure className={`gallery__item ${image.className}`} key={index} ref={(el) => (imageRefs.current[index] = el)}>
+              <img src={image.src} alt={`Gallery item ${index + 1}`} className="gallery__img" />
+            </figure>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
