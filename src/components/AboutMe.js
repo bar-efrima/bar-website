@@ -33,12 +33,12 @@ function AboutMe() {
           <h2>About Me</h2>
           <h1 className="letMe">Let me introduce myself.</h1>
           <p className={isVisible ? 'fade-in' : ''}>
-            Bar Efrima, a 25-year-old BSc. Computer Science student,
+            Bar Efrima, a BSc. Computer Science student with one year until graduation.
             passionate about innovation, AI, and problem-solving. 
             With programming and graphic design expertise, I bring a unique
             blend of creativity and technical skills.
             I research computer-human interaction at Milab lab, Blockchain at Cambridge University and have a
-            keen interest in mobile and web development.
+            keen interest in frontend development.
             My goal is to push technology's boundaries through new
             challenges.
           </p>
