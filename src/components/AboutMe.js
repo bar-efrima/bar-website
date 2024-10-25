@@ -33,7 +33,7 @@ function AboutMe() {
           <h2>About Me</h2>
           <h1 className="letMe">Let me introduce myself.</h1>
           <p className={isVisible ? 'fade-in' : ''}>
-            Bar Efrima, a BSc. Computer Science student with one year until graduation.
+           I'm Bar , a Computer Science student with one year until graduation.
             passionate about innovation, AI, and problem-solving. 
             With programming and graphic design expertise, I bring a unique
             blend of creativity and technical skills.
@@ -49,3 +49,4 @@ function AboutMe() {
 }
 
 export default AboutMe;
+ 
