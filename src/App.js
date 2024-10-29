@@ -19,14 +19,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/kitchef" element={<Kitchef />} />
-        <Route path="/Amazon" element={<Amazon />} />
-        <Route path="/Unavigate" element={<Unavigate />} />
-        <Route path="/Pokemon" element={<Pokemon />} />
-        <Route path="/Highlights" element={<Highlights />} />
-        <Route path="/NFT" element={<NFT />} />
-        <Route path="/IoT" element={<IoT />} />
-        <Route path="/Applications" element={<Applications />} />
-        <Route path="/GraphicDesign" element={<GraphicDesign />} />
+        <Route path="/AmazonScraper" element={<Amazon />} />
+        <Route path="/NavigationApp" element={<Unavigate />} />
+        <Route path="/PokémonPokédex" element={<Pokemon />} />
+        <Route path="/Highlights Creator" element={<Highlights />} />
+        <Route path="/RoyalCatsNFT" element={<NFT />} />
+        <Route path="/IoTInventions" element={<IoT />} />
+        <Route path="/MobileApps" element={<Applications />} />
+        <Route path="/GraphicDesign&UI/UX" element={<GraphicDesign />} />
       </Routes>
       <Footer />
     </Router>

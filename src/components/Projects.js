@@ -105,44 +105,46 @@ function Projects() {
       <h2>MY PROJECTS</h2>
       <div className="projects-grid" ref={projectsRef}>
         {projects.map((project, index) => (
-          <div className="project-item amazon-item" key={index}>
+          <div className="project-item" key={index}>
             <div className="project-content">
               <div className="project-image-wrapper">
                 {project.title === 'Kitchef' ? (
                   <Link to="/Kitchef" className="project-img-link">
                     <img src={project.image} alt={project.title} className="project-image" />
+                    
+                    
                   </Link>
                 ) : project.title === 'Amazon Scraper' ? (
-                  <Link to="/amazon" className="project-img-link">
+                  <Link to="/AmazonScraper" className="project-img-link">
                     <img src={project.image} alt={project.title} className="project-image" />
                   </Link>
                 ) : project.title === 'Navigation App'? (
-                  <Link to="/Unavigate" className="project-img-link">
+                  <Link to="/NavigationApp" className="project-img-link">
                     <img src={project.image} alt={project.title} className="project-image" />
                   </Link>
                 ) : project.title === 'Pokémon Pokédex'? (
-                <Link to="/Pokemon" className="project-img-link">
+                <Link to="/PokémonPokédex" className="project-img-link">
                   <img src={project.image} alt={project.title} className="project-image" />
                 </Link>
               ) 
                : project.title === 'Highlights Creator'? (
-                <Link to="/Highlights" className="project-img-link">
+                <Link to="/HighlightsCreator" className="project-img-link">
                   <img src={project.image} alt={project.title} className="project-image" />
                 </Link>
               ) : project.title === 'Royal Cats NFT'? (
-                <Link to="/NFT" className="project-img-link">
+                <Link to="/RoyalCatsNFT" className="project-img-link">
                   <img src={project.image} alt={project.title} className="project-image" />
                 </Link>
               ) : project.title === 'IoT Inventions'? (
-              <Link to="/IoT" className="project-img-link">
+              <Link to="/IoTInventions" className="project-img-link">
                 <img src={project.image} alt={project.title} className="project-image" />
               </Link>
               ) : project.title === 'Mobile Apps'? (
-                <Link to="/Applications" className="project-img-link">
+                <Link to="/MobileApps" className="project-img-link">
                   <img src={project.image} alt={project.title} className="project-image" />
                 </Link>
               ) : project.title === 'Graphic Design & UI/UX'? (
-                <Link to="/GraphicDesign" className="project-img-link">
+                <Link to="/GraphicDesign&UI/UX" className="project-img-link">
                   <img src={project.image} alt={project.title} className="project-image" />
                 </Link>
               ) 
@@ -150,12 +152,14 @@ function Projects() {
                   <img src={project.image} alt={project.title} className="project-image" />
                 )}
               </div>
+              <Link to={`/${project.title.replace(/\s+/g, '')}`} className="project-title-link">
               <div className="project-title-box">
                 <h5 className="project-type">{project.type}</h5>
                 <hr />
                 <h3 className="project-title">{project.title}</h3>
                 <h6 className="project-desc">{project.description}</h6>
               </div>
+              </Link>
             </div>
           </div>
         ))}
