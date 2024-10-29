@@ -108,49 +108,9 @@ function Projects() {
           <div className="project-item" key={index}>
             <div className="project-content">
               <div className="project-image-wrapper">
-                {project.title === 'Kitchef' ? (
-                  <Link to="/Kitchef" className="project-img-link">
-                    <img src={project.image} alt={project.title} className="project-image" />
-                    
-                    
-                  </Link>
-                ) : project.title === 'Amazon Scraper' ? (
-                  <Link to="/AmazonScraper" className="project-img-link">
-                    <img src={project.image} alt={project.title} className="project-image" />
-                  </Link>
-                ) : project.title === 'Navigation App'? (
-                  <Link to="/NavigationApp" className="project-img-link">
-                    <img src={project.image} alt={project.title} className="project-image" />
-                  </Link>
-                ) : project.title === 'Pokémon Pokédex'? (
-                <Link to="/PokémonPokédex" className="project-img-link">
-                  <img src={project.image} alt={project.title} className="project-image" />
-                </Link>
-              ) 
-               : project.title === 'Highlights Creator'? (
-                <Link to="/HighlightsCreator" className="project-img-link">
-                  <img src={project.image} alt={project.title} className="project-image" />
-                </Link>
-              ) : project.title === 'Royal Cats NFT'? (
-                <Link to="/RoyalCatsNFT" className="project-img-link">
-                  <img src={project.image} alt={project.title} className="project-image" />
-                </Link>
-              ) : project.title === 'IoT Inventions'? (
-              <Link to="/IoTInventions" className="project-img-link">
-                <img src={project.image} alt={project.title} className="project-image" />
-              </Link>
-              ) : project.title === 'Mobile Apps'? (
-                <Link to="/MobileApps" className="project-img-link">
-                  <img src={project.image} alt={project.title} className="project-image" />
-                </Link>
-              ) : project.title === 'Graphic Design & UI/UX'? (
-                <Link to="/GraphicDesign&UI/UX" className="project-img-link">
-                  <img src={project.image} alt={project.title} className="project-image" />
-                </Link>
-              ) 
-               : (
-                  <img src={project.image} alt={project.title} className="project-image" />
-                )}
+              <Link to={`/${project.title.replace(/\s+/g, '')}`} className="project-img-link"> 
+          <img src={project.image} alt={project.title} className="project-image" loading="lazy"/>
+            </Link>
               </div>
               <Link to={`/${project.title.replace(/\s+/g, '')}`} className="project-title-link">
               <div className="project-title-box">

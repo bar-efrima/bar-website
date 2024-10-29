@@ -57,10 +57,10 @@ function Header() {
 
       <div className="nav-logos">
         <a href="mailto:bar2798@gmail.com" target="_blank" rel="noopener noreferrer">
-          <img src={mailLogo} id="mail-logo" alt="Mail" />
+          <img src={mailLogo} id="mail-logo" alt="Mail" loading="lazy"/>
         </a>
         <a href="https://wa.me/972542653012" target="_blank" rel="noopener noreferrer">
-          <img src={whatsappLogo} id="whatsapp-logo" alt="WhatsApp" />
+          <img src={whatsappLogo} id="whatsapp-logo" alt="WhatsApp" loading="lazy"/>
         </a>
       </div>
     </nav>

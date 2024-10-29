@@ -28,7 +28,7 @@ function AboutMe() {
   return (
     <section className="about-me" id="aboutTag"> 
       <div className="main-about-me">
-        <img src={myPhoto} alt="Bar Efrima" />
+        <img src={myPhoto} alt="Bar Efrima" loading="lazy"/>
         <div className="about-me-text">
           <h2>About Me</h2>
           <h1 className="letMe">Let me introduce myself.</h1>

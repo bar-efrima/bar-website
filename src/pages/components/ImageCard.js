@@ -4,7 +4,7 @@ import './ImageCard.css';
 function ImageCard({ image }) {
   return (
     <div class="image">
-        <img src={image} alt="image"/>
+        <img src={image} alt="image" loading="lazy"/>
     
     </div>
   );
