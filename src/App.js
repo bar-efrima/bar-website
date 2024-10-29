@@ -22,7 +22,7 @@ function App() {
         <Route path="/AmazonScraper" element={<Amazon />} />
         <Route path="/NavigationApp" element={<Unavigate />} />
         <Route path="/PokémonPokédex" element={<Pokemon />} />
-        <Route path="/Highlights Creator" element={<Highlights />} />
+        <Route path="/HighlightsCreator" element={<Highlights />} />
         <Route path="/RoyalCatsNFT" element={<NFT />} />
         <Route path="/IoTInventions" element={<IoT />} />
         <Route path="/MobileApps" element={<Applications />} />

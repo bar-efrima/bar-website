@@ -7,7 +7,7 @@ function ProjectHeader({ title, description, logo, screenshot }) {
       {/* Header Section */}
       <header>
         <div className="header-container">
-          <img src={logo} alt="Project Logo"/>
+          <img src={logo} alt="Project Logo" loading="lazy"/>
           <div className="header-text-container">
             <h1>{title}</h1>
             <p>{description}</p>
@@ -17,7 +17,7 @@ function ProjectHeader({ title, description, logo, screenshot }) {
 
       {/* Project Showcase Section */}
       <div className="project-showcase">
-        <img src={screenshot} alt="Project Showcase" />
+        <img src={screenshot} alt="Project Showcase" loading="lazy"/>
       </div>
     </div>
   );

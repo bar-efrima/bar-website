@@ -21,7 +21,7 @@ function ImageSlider({ images }) {
       <Slider {...sliderSettings}>
         {images.map((image, index) => (
           <div key={index}>
-            <img src={image} alt={`Slide ${index + 1}`} className="slider-image" />
+            <img src={image} alt={`Slide ${index + 1}`} className="slider-image" loading="lazy"/>
           </div>
         ))}
       </Slider>

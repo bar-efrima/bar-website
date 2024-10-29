@@ -98,9 +98,12 @@ const ProjectSkillsList = [
       <div className="IoT-right">
         <YearCreated year={yearCreated} />
         <div class="links">
-                <p><a href="https://github.com/bar-efrima/The-Musical-Spray"> Musical Spray <span><img src={linkIcon} alt="Link Icon"  id="video" /></span></a></p>
-                <p><a href="https://github.com/bar-efrima/The-Weather-Box">Weather Box <span><img src={linkIcon} alt="Link Icon"  id="video" /></span></a></p>
-                <p><a href="https://github.com/bar-efrima/Emulating-Bubble-Trouble-With-Fruits">Fruits Emulator <span><img src={linkIcon} alt={"Link Icon"}  id="video"/></span></a></p>
+                <p><a href="https://github.com/bar-efrima/The-Musical-Spray"> Musical Spray 
+                <span><img src={linkIcon} alt="Link Icon"  id="video" loading="lazy"/></span></a></p>
+                <p><a href="https://github.com/bar-efrima/The-Weather-Box">Weather Box 
+                <span><img src={linkIcon} alt="Link Icon"  id="video" loading="lazy"/></span></a></p>
+                <p><a href="https://github.com/bar-efrima/Emulating-Bubble-Trouble-With-Fruits">Fruits Emulator 
+                <span><img src={linkIcon} alt={"Link Icon"}  id="video" loading="lazy"/></span></a></p>
             </div>
       </div>
 

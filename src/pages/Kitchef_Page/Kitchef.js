@@ -93,7 +93,7 @@ function Kitchef() {
                     the parent and child in the cooking process.</p>
                 </div>
             <div className="image1">
-                <img src={momChildkit} alt="Mother & Child"/>
+                <img src={momChildkit} alt="Mother & Child" loading="lazy"/>
             </div>
         </div>
         
@@ -105,19 +105,19 @@ function Kitchef() {
                 <hr />
                 <ul>
                     <div className="tech-item">
-                        <img src={arduinoLogo} alt="Arduino Logo" />
+                        <img src={arduinoLogo} alt="Arduino Logo" loading="lazy"/>
                         <div className="tech-info">
                             <h4>Arduino</h4>
                         </div>
                     </div>
                     <div className="tech-item">
-                        <img src={cppLogo} alt="C++ Logo" />
+                        <img src={cppLogo} alt="C++ Logo" loading="lazy"/>
                         <div className="tech-info">
                             <h4>C++</h4>
                         </div>
                     </div>
                     <div className="tech-item">
-                        <img src={adobeLogo} alt="C++ Logo" />
+                        <img src={adobeLogo} alt="Adobe Logo" loading="lazy"/>
                         <div className="tech-info">
                             <h4>Adobe Suit</h4>
                     </div>

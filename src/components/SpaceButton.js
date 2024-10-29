@@ -7,7 +7,7 @@ function SpaceButton() {
     <button type="button" className="space-btn">
       <div className="more-container">
         <strong>MORE ABOUT ME</strong>
-        <img src={arrow} alt="arrow" className="arrow-icon" />
+        <img src={arrow} alt="arrow" className="arrow-icon" loading="lazy"/>
       </div>
 
       <div id="container-stars">

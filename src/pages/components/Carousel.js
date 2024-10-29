@@ -17,7 +17,7 @@ function PhotoCarousel({ images }) {
       >
         {images.map((image, index) => (
           <div key={index}>
-            <img src={image} alt={`Slide ${index + 1}`} />
+            <img src={image} alt={`Slide ${index + 1}`} loading="lazy"/>
           </div>
         ))}
       </Carousel>

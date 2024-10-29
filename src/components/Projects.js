@@ -109,8 +109,8 @@ function Projects() {
             <div className="project-content">
               <div className="project-image-wrapper">
               <Link to={`/${project.title.replace(/\s+/g, '')}`} className="project-img-link"> 
-          <img src={project.image} alt={project.title} className="project-image" loading="lazy"/>
-            </Link>
+                <img src={project.image} alt={project.title} className="project-image" loading="lazy"/>
+              </Link>
               </div>
               <Link to={`/${project.title.replace(/\s+/g, '')}`} className="project-title-link">
               <div className="project-title-box">

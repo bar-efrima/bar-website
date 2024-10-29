@@ -8,7 +8,7 @@ function projectLinks({ projectLinks}) {
       {Object.entries(projectLinks).map(([linkUrl, linkText], index) => (
         <p key={index}>
           <a href={linkUrl} target="_blank" rel="noopener noreferrer">
-            {linkText} <span><img src={linkIcon} alt="Link Icon" /></span>
+            {linkText} <span><img src={linkIcon} alt="Link Icon" loading="lazy"/></span>
           </a>
         </p>
       ))}
