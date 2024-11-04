@@ -1,7 +1,7 @@
 /* Footer styles */
 .footer {
   width: 100vw;
-  height: 10vh; /* Adjust the height as necessary */
+  height: 10vh; 
   display: flex;
   justify-content: center;
   align-items: center;
