@@ -33,14 +33,12 @@ function AboutMe() {
           <h2>About Me</h2>
           <h1 className="letMe">Let me introduce myself.</h1>
           <p className={isVisible ? 'fade-in' : ''}>
-           I'm Bar , a Computer Science student with one year until graduation.
-            passionate about innovation, AI, and problem-solving. 
-            With programming and graphic design expertise, I bring a unique
-            blend of creativity and technical skills.
-            I research computer-human interaction at Milab lab, Blockchain at Cambridge University and have a
-            keen interest in frontend development.
-            My goal is to push technology's boundaries through new
-            challenges.
+           I am passionate about innovation, AI, and problem-solving, 
+           with expertise in programming, design, and full-stack development. 
+           My experience includes building prototypes and working on diverse research projects in 
+           areas such as computer-human interaction and blockchain. I am particularly interested in blockchain,
+            IoT, full-stack development, and product development, especially on the frontend side. 
+            I am seeking a role where I can apply my skills and continue to grow through new challenges.
           </p>
         </div>
       </div>
