@@ -1,5 +1,5 @@
 import { HashRouter as Router, Route, Routes } from 'react-router-dom'; // Use HashRouter
-import Home from './components/Home'; // Home contains all sections
+import Home from './components/Home'; // Home which contains all sections
 import Kitchef from './pages/Kitchef_Page/Kitchef'; // Kitchef project page
 import Amazon from './pages/Amazon_Page/Amazon'; // Amazon project page
 import Unavigate from './pages/Unavigate_Page/Unavigate'; // Unavigate project page

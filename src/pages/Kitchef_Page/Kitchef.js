@@ -1,5 +1,5 @@
 import {useEffect, React, Children} from 'react';
-import './kitchef.css'; // Import the CSS file
+import './kitchef.css'; 
 import projectLogo from './Images/milab_logo.jpg';
 import projectScreenshot from './Images/projectScreenshot.jpg';
 import momChildkit from './Images/image1.jpg';
@@ -40,7 +40,7 @@ function Kitchef() {
         window.scrollTo({
           top: 0,
           left: 0,
-          behavior: 'instant' // Make sure the scroll happens instantly
+          behavior: 'instant' // To maake sure the scroll happens instantly
         });
       }, []); 
 
@@ -170,7 +170,6 @@ function Kitchef() {
     <p>🔸 Participated in IsraHCI 2024 Research Conference</p>
     <p>🔸 Featured in an article on Tech12</p>
 </Projectcard>
-
 
     <VideoCard videoLink={kitchefVideoLink} />
     
