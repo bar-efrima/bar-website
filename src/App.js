@@ -9,6 +9,7 @@ import NFT from './pages/NFT_Page/NFT'; // NFT project page
 import IoT from './pages/IoT_Page/IoT'; // IoT project page
 import Applications from './pages/Applications_Page/Applications'; // Mobile applications project page
 import GraphicDesign from './pages/GraphicDesign_Page/GraphicDesign';
+import UnrealEngine from './pages/UnrealEngine_Page/UnrealEngine';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/IoTInventions" element={<IoT />} />
         <Route path="/MobileApps" element={<Applications />} />
         <Route path="/GraphicDesign&UI/UX" element={<GraphicDesign />} />
+        <Route path="/UnrealEngineSimulation" element={<UnrealEngine />} />
       </Routes>
       <Footer />
     </Router>

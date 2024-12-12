@@ -1,6 +1,6 @@
 import {useEffect, React} from 'react';
-import './Pokemon.css'; // CSS file for styling
-import project_logo from './Images/pokemon_logo.jpg'; // Pokemon logo
+import './UnrealEngine.css'; // CSS file for styling
+import project_logo from './Images/UnrealEngine_logo.jpg'; // UnrealEngine logo
 import projectScreenshot from './Images/projectScreenshot.jpg'; // Screenshot of the project
 import SkillCard from '../components/Skills'; // SkillCard component
 import TextCard from '../components/TextCardProject'; // AboutCard component
@@ -13,11 +13,9 @@ import ProjectFeatures from '../components/ProjectFeatures';
 import image1 from './Images/ca2.png';
 import image2 from './Images/ca1.png';
 import image3 from './Images/ca3.png';
-import Banner from '../components/Banner';
-import bannerImage from './Images/banner_Image.png';
 
 
-function Pokemon() {
+function UnrealEngine() {
 
    // Use useEffect to pop to the top when the component is mounted
   useEffect(() => {
@@ -73,7 +71,7 @@ function Pokemon() {
 
   const githubLink = 'https://github.com/bar-efrima/fe-task';
 
-  const PokemonDescription ={
+  const UnrealEngineDescription ={
     title: 'About the Project', 
   };
 
@@ -81,11 +79,11 @@ function Pokemon() {
   return (
    
     
-  <div className="Pokemon">
+  <div className="UnrealEngine">
     
     <ProjectHeader title={ProjectInfo.title} description={ProjectInfo.description} logo={ProjectInfo.logo} screenshot={ProjectInfo.screenshot} />
 
-    <TextCard projectDescription={PokemonDescription}> 
+    <TextCard projectDescription={UnrealEngineDescription}> 
       <p> This Pokédex web application, built using React and the Pokémon API, allows users to explore a 
         list of all Pokémon, view detailed information, and attempt to catch and save their favorite Pokémon.
         With an intuitive interface and engaging features like a daily catch limit and a sidebar showing caught Pokémon,
@@ -93,20 +91,18 @@ function Pokemon() {
         </p> 
     </TextCard>
    
-    <div className="Pokemon-info">
+    <div className="UnrealEngine-info">
 
-      <div className="Pokemon-left">
+      <div className="UnrealEngine-left">
         <SkillCard skills={ProjectSkills} skillsList={ProjectSkillsList} />
       </div>
 
-      <div className="Pokemon-right">
+      <div className="UnrealEngine-right">
         <YearCreated year={yearCreated} />
         <GithubLink link={githubLink} linkIcon={linkIcon}/>
       </div>
 
     </div>
-
-    <Banner image={bannerImage} />
 
     <ProjectFeatures features={featuresList} />
 
@@ -116,4 +112,4 @@ function Pokemon() {
   );
 }
 
-export default Pokemon;
+export default UnrealEngine;
