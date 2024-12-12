@@ -9,7 +9,9 @@ import royalcats from '../assets/projects/Royal-cats.jpg';
 import mobileApps from '../assets/projects/mobile.png';
 import caimbridge from '../assets/projects/pokadex.png';
 import GraphicDesign from '../assets/projects/GraphicDesign.jpg';
+import UnrealEngine from '../assets/projects/unreal.png';
 import { Link } from 'react-router-dom';
+import { unhover } from '@testing-library/user-event/dist/cjs/convenience/hover.js';
 
 // Projects data array
 
@@ -69,6 +71,12 @@ const projects = [
     image: GraphicDesign,
     type: 'Graphic Design Projects',
     description: 'Designed logos, official Army branding, business cards, posters, and promotional materials using Adobe Suite, Figma, and CAD, integrating UI/UX principles.',
+  },
+  {
+    title: 'Unreal Engine Simulation',
+    image: UnrealEngine,
+    type: 'Unreal Engine Project',
+    description: 'A visual representation of time through 24 hot air balloons, each symbolizing an hour. Balloons fill and ascend hourly, with dynamic lighting changes in real-time.',
   }
   
 ];
