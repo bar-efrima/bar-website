@@ -61,6 +61,12 @@ const projects = [
     description: 'Developed Arduino-based projects such as interactive sound instrument, weather-based light display and fruits as game controllers. ',
   },
   {
+    title: 'Unreal Engine Simulation',
+    image: UnrealEngine,
+    type: 'Unreal Engine Project',
+    description: 'A visual representation of time through 24 hot air balloons, each symbolizing an hour. Balloons fill and ascend hourly, with dynamic lighting changes in real-time.',
+  },
+  {
     title: 'Mobile Apps',
     image: mobileApps,
     type: 'Mobile App Projects',
@@ -71,12 +77,6 @@ const projects = [
     image: GraphicDesign,
     type: 'Graphic Design Projects',
     description: 'Designed logos, official Army branding, business cards, posters, and promotional materials using Adobe Suite, Figma, and CAD, integrating UI/UX principles.',
-  },
-  {
-    title: 'Unreal Engine Simulation',
-    image: UnrealEngine,
-    type: 'Unreal Engine Project',
-    description: 'A visual representation of time through 24 hot air balloons, each symbolizing an hour. Balloons fill and ascend hourly, with dynamic lighting changes in real-time.',
   }
   
 ];

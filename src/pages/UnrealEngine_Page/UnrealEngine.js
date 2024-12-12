@@ -13,6 +13,7 @@ import ProjectFeatures from '../components/ProjectFeatures';
 import image1 from './Images/ca2.png';
 import image2 from './Images/ca1.png';
 import image3 from './Images/ca3.png';
+import VideoCard from '../components/VideoCard';
 
 
 function UnrealEngine() {
@@ -33,47 +34,43 @@ function UnrealEngine() {
   ];
 
   const ProjectInfo = {
-    title: 'Pokémon Pokédex',
-    description: 'A React Pokédex app to explore, catch, and save Pokémons',
+    title: 'Time-Balloon Visualization',
+    description: 'A dynamic visualization of time using synchronized hot air balloons',
     logo: project_logo,
     screenshot: projectScreenshot,
   }
 
   const ProjectSkills = [
-    { name: 'JavaScript', percent: 69 },
-    { name: 'CSS', percent: 29.6 },
-    { name: 'HTML', percent: 1.4 },
-    
+    { name: 'Unreal Engine Blueprints', percent: 100 },
   ];
   
   const ProjectSkillsList = [
-    { name: 'Local Storage' },
-    { name: 'Pokémon API' },
-    { name: 'Vite' },
-    { name: 'React' },
-    { name: 'Axios' },
+    { name: 'Quixel Megascans Library' },
+    { name: '3D Assets Integration' },
+    { name: '3D Character Scanning' },
+    { name: 'Dynamic Lighting' },
+    { name: '3D Modeling' },
+    { name: 'Animation and Rigging' },
+    { name: 'Interactive Simulation Design' },
   ];
   
 
   const featuresList = [
-    { description: 'Displays a list of Pokémon in a card format with images and basic information.' },
-    { description: 'Clicking on a Pokémon card shows detailed information about the selected Pokémon.' },
-    { description: 'Interactive "Catch" button with a random chance mechanism to catch Pokémon.' },
-    { description: 'Stores caught Pokémon in devTools local storage for easy access and display in the sidebar.' },
-    { description: 'Limits users to 10 catch attempts per day, with an alert if the limit is exceeded.' },
-    { description: 'Supports pagination for navigating through the Pokémon list.' },
-    { description: 'Animated catching process to enhance user experience.' },
-    { description: 'Allows users to remove Pokémon from the caught list.' },
-    { description: 'Client-side filtering to search caught Pokémon by name.' }
+    { description: '24 hot air balloons represent the 24 hours of a day.' },
+    { description: 'Every minute, one of the 59 people boards a balloon until it takes off after 60 minutes.' },
+    { description: 'Each balloon ascends to mark the end of an hour, and the process repeats for all 24 balloons.' },
+    { description: 'Dynamic sun position and lighting changes synchronize with the current hour.' },
   ];  
   
   const yearCreated =  '2024' ;
 
-  const githubLink = 'https://github.com/bar-efrima/fe-task';
+  const githubLink = '';
 
   const UnrealEngineDescription ={
     title: 'About the Project', 
   };
+
+  const youtubeLink = 'https://www.youtube.com/embed/ZzYvz5mrImY?si=OzXyHuzdZ58x5NAj';
 
 
   return (
@@ -84,10 +81,11 @@ function UnrealEngine() {
     <ProjectHeader title={ProjectInfo.title} description={ProjectInfo.description} logo={ProjectInfo.logo} screenshot={ProjectInfo.screenshot} />
 
     <TextCard projectDescription={UnrealEngineDescription}> 
-      <p> This Pokédex web application, built using React and the Pokémon API, allows users to explore a 
-        list of all Pokémon, view detailed information, and attempt to catch and save their favorite Pokémon.
-        With an intuitive interface and engaging features like a daily catch limit and a sidebar showing caught Pokémon,
-        the app offers a fun and interactive experience for Pokémon enthusiasts.
+      <p> This project visually represents a 24-hour day using 24 hot air balloons. Each balloon corresponds
+          to an hour, and every minute is represented by a person boarding the balloon. After 60 minutes, the balloon
+          ascends, marking the end of the hour. The process continues for all 24 balloons to simulate a full day. The
+          simulation also includes dynamic sun position and lighting changes synchronized with the time, along with
+          real-time displays of calculus theorems every second.
         </p> 
     </TextCard>
    
@@ -107,7 +105,7 @@ function UnrealEngine() {
     <ProjectFeatures features={featuresList} />
 
     <Carousel images={carouselImages} />
-
+    <VideoCard videoLink={youtubeLink} />
   </div>
   );
 }
