@@ -33,12 +33,11 @@ function AboutMe() {
           <h2>About Me</h2>
           <h1 className="letMe">Let me introduce myself.</h1>
           <p className={isVisible ? 'fade-in' : ''}>
-           I am passionate about innovation, AI, and problem-solving, 
-           with expertise in programming, design, and full-stack development. 
-           My experience includes building prototypes and working on diverse research projects in 
-           areas such as computer-human interaction and blockchain. I am particularly interested in blockchain,
-            IoT, full-stack development, and product development, especially on the frontend side. 
-            I am seeking a role where I can apply my skills and continue to grow through new challenges.
+          A versatile and motivated Computer Science student with experience in full-stack development, 
+          research, and diverse projects. I am passionate about innovation and 
+          problem-solving and eager to learn and grow in cutting-edge fields.
+           I thrive in dynamic, fast-paced environments and enjoy collaborating 
+           with others to create impactful solutions.
           </p>
         </div>
       </div>
