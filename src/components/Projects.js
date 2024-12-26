@@ -23,6 +23,8 @@ const projects = [
     type: 'FastAPI Web App',
     description: 'A FastAPI web app that scrapes and displays item prices from multiple Amazon websites.',
   },
+  ,
+
   {
     title: 'Navigation App',
     image: navigation,
@@ -40,6 +42,12 @@ const projects = [
     image: caimbridge,
     type: 'React Web App',
     description: 'An Pokédex web app using the Pokémon API, displaying a list of all Pokémon with options to view details, catch, and save them.',
+  },
+  {
+    title: 'Docs AI Chat',
+    image: DocksAIChat,
+    type: 'Graphic Design Projects',
+    description: 'A full-stack web app for uploading, processing, and analyzing documents with intelligent chat interactions, leveraging React, Node.js, TypeScript, and OpenAI APIs.',
   },
   {
     title: 'Highlights Creator',
@@ -78,12 +86,6 @@ const projects = [
     image: GraphicDesign,
     type: 'Graphic Design Projects',
     description: 'Designed logos, official Army branding, business cards, posters, and promotional materials using Adobe Suite, Figma, and CAD, integrating UI/UX principles.',
-  },
-  {
-    title: 'Docs AI Chat',
-    image: DocksAIChat,
-    type: 'Graphic Design Projects',
-    description: 'A full-stack web app for uploading, processing, and analyzing documents with intelligent chat interactions, leveraging React, Node.js, TypeScript, and OpenAI APIs.',
   }
   
 ];

@@ -42,15 +42,13 @@ function DocsAIChat() {
   const ProjectSkills = [
     { name: 'HTML', percent: 16.2},
     { name: 'TypeScript', percent: 53.5 },
-    { name: 'CSS Design', percent: 40.3 },
+    { name: 'CSS', percent: 40.3 },
   ];
   
   const ProjectSkillsList = [
     { name: 'React.js' },
     { name: 'Node.js' },
     { name: 'Express.js' },
-    { name: 'Frontend' },
-    { name: 'Backend' },
     { name: 'GenAI' },
     { name: 'openAI API' },
     { name: 'File Parsing' },
@@ -69,7 +67,7 @@ function DocsAIChat() {
   
   const yearCreated =  '2024' ;
 
-  const githubLink = '';
+  const githubLink = 'https://github.com/bar-efrima/IntelliChat-File-Assistant';
 
   const DocsAIChatDescription ={
     title: 'About the Project', 
@@ -87,8 +85,8 @@ function DocsAIChat() {
     <TextCard projectDescription={DocsAIChatDescription}> 
       <p> This project is a Full Stack application built with React, Node.js, and TypeScript, 
         leveraging OpenAI's 'text-embedding-ada-002 model' for AI-driven document interaction. 
-        Users can upload PDF or Word files, which are parsed using libraries like pdf-parse
-         and mammoth to extract content and split it into semantically meaningful chunks. 
+        Users can upload PDF or Word files, which are parsed using libraries like 'pdf-parse'
+         and 'mammoth' to extract content and split it into semantically meaningful chunks. 
          The data is indexed using embeddings, enabling efficient semantic search. An interactive
           chat interface, styled with CSS, allows users to query the indexed content and retrieve 
           precise AI-powered responses. 
