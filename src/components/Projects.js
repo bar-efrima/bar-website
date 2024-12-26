@@ -10,6 +10,7 @@ import mobileApps from '../assets/projects/mobile.png';
 import caimbridge from '../assets/projects/pokadex.png';
 import GraphicDesign from '../assets/projects/GraphicDesign.jpg';
 import UnrealEngine from '../assets/projects/unreal.png';
+import DocksAIChat from '../assets/projects/DocsAIChat.png';
 import { Link } from 'react-router-dom';
 import { unhover } from '@testing-library/user-event/dist/cjs/convenience/hover.js';
 
@@ -77,6 +78,12 @@ const projects = [
     image: GraphicDesign,
     type: 'Graphic Design Projects',
     description: 'Designed logos, official Army branding, business cards, posters, and promotional materials using Adobe Suite, Figma, and CAD, integrating UI/UX principles.',
+  },
+  {
+    title: 'Docs AI Chat',
+    image: DocksAIChat,
+    type: 'Graphic Design Projects',
+    description: 'A full-stack web app for uploading, processing, and analyzing documents with intelligent chat interactions, leveraging React, Node.js, TypeScript, and OpenAI APIs.',
   }
   
 ];

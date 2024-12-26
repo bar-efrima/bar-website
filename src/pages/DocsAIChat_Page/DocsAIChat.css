@@ -7,21 +7,21 @@ body {
     color: #333;
     font-weight: 700;
 }
-/* Default state for each component inside the .UnrealEngine container */
-.UnrealEngine .UnrealEngine-item {
+/* Default state for each component inside the .DocsAIChat container */
+.DocsAIChat .DocsAIChat-item {
     opacity: 0;
     transform: translateY(20px); /* Slight movement */
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 /* When the item is in view, apply the fade-in effect */
-.UnrealEngine .UnrealEngine-item.visible {
+.DocsAIChat .DocsAIChat-item.visible {
     opacity: 1;
     transform: translateY(0); /* Return to normal position */
 }
 
 
-.UnrealEngine{
+.DocsAIChat{
     margin-top: 60px;
     margin-bottom: 60px;
     display: flex; 
@@ -45,7 +45,7 @@ body {
 }
  
 /* Content Container */
-.UnrealEngine-info {
+.DocsAIChat-info {
     display: flex;
     justify-content: space-between;
     width: 65%; 
@@ -55,7 +55,7 @@ body {
 }
 
 /* Left side (Skills) */
-.UnrealEngine-left {
+.DocsAIChat-left {
     width: 70%; 
     padding-left: 0;
     margin-left: 0;
@@ -65,7 +65,7 @@ body {
 }
 
 /* Right side (Created and Links) */
-.UnrealEngine-right {
+.DocsAIChat-right {
     width: 30%;
     display: flex;
     gap: 20px; 
@@ -97,12 +97,12 @@ hr {
 /* Responsive Styles */
 @media (max-width: 850px) {
 
-    .UnrealEngine-info {
+    .DocsAIChat-info {
         width: 90%; 
         gap: 10px; 
     }
 
-    .UnrealEngine-right {
+    .DocsAIChat-right {
         padding-left: 0;
         margin-left: 0;
         text-align: left; 
@@ -110,7 +110,7 @@ hr {
         gap: 10px; 
         flex-direction: column;
     }
-    .UnrealEngine-left {
+    .DocsAIChat-left {
         padding-bottom: 0;
     }
     
@@ -148,18 +148,18 @@ hr {
         width: 100%;
     }
 
-    .UnrealEngine-info {
+    .DocsAIChat-info {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 90%; 
     }
 
-    .UnrealEngine-right , .UnrealEngine-left {
+    .DocsAIChat-right , .DocsAIChat-left {
         width: 100%;
     }
 
-    .UnrealEngine{
+    .DocsAIChat{
         margin-bottom: 10px;
     }
 

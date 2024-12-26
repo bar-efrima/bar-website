@@ -1,6 +1,6 @@
 import {useEffect, React} from 'react';
-import './DocsAIChate.css'; // CSS file for styling
-import project_logo from './Images/UnrealEngine_logo.jpg'; // UnrealEngine logo
+import './DocsAIChat.css'; // CSS file for styling
+import project_logo from './Images/DocsAIChat_logo.jpg'; // DocsAIChat logo
 import projectScreenshot from './Images/projectScreenshot.jpg'; // Screenshot of the project
 import SkillCard from '../components/Skills'; // SkillCard component
 import TextCard from '../components/TextCardProject'; // AboutCard component
@@ -13,10 +13,9 @@ import ProjectFeatures from '../components/ProjectFeatures';
 import image1 from './Images/ca2.png';
 import image2 from './Images/ca1.png';
 import image3 from './Images/ca3.png';
-import VideoCard from '../components/VideoCard';
 
 
-function UnrealEngine() {
+function DocsAIChat() {
 
    // Use useEffect to pop to the top when the component is mounted
   useEffect(() => {
@@ -35,65 +34,74 @@ function UnrealEngine() {
 
   const ProjectInfo = {
     title: 'Documents AI Chat',
-    description: 'A dynamic visualization of time using synchronized hot air balloons',
-    logo: project_logo,
-    screenshot: projectScreenshot,
-  }
+    description: 'An AI app using OpenAI for document analysis and interactions',
+    logo: project_logo, 
+    screenshot: projectScreenshot, 
+  };
 
   const ProjectSkills = [
-    { name: 'Unreal Engine Blueprints', percent: 100 },
+    { name: 'HTML', percent: 16.2},
+    { name: 'TypeScript', percent: 53.5 },
+    { name: 'CSS Design', percent: 40.3 },
   ];
   
   const ProjectSkillsList = [
-    { name: 'Quixel Megascans Library' },
-    { name: '3D Assets Integration' },
-    { name: '3D Character Scanning' },
-    { name: 'Dynamic Lighting' },
-    { name: '3D Modeling' },
-    { name: 'Animation and Rigging' },
-    { name: 'Interactive Simulation Design' },
+    { name: 'React.js' },
+    { name: 'Node.js' },
+    { name: 'Express.js' },
+    { name: 'Frontend' },
+    { name: 'Backend' },
+    { name: 'GenAI' },
+    { name: 'openAI API' },
+    { name: 'File Parsing' },
+    { name: 'OpenAI Embedding' },
+    { name: 'Interactive Chat' },
   ];
-  
 
   const featuresList = [
-    { description: '24 hot air balloons represent the 24 hours of a day.' },
-    { description: 'Every minute, one of the 59 people boards a balloon until it takes off after 60 minutes.' },
-    { description: 'Each balloon ascends to mark the end of an hour, and the process repeats for all 24 balloons.' },
-    { description: 'Dynamic sun position and lighting changes synchronize with the current hour.' },
-  ];  
+    { description: 'Upload and process PDF or Word documents effortlessly.' },
+    { description: 'Parse document content into semantically meaningful chunks.' },
+    { description: 'Index the parsed content using OpenAI embeddings for efficient querying.' },
+    { description: 'Interactive chat interface for asking questions based on document content.' },
+    { description: 'Modern, responsive UI designed for seamless user experience.' },
+  ];
+  
   
   const yearCreated =  '2024' ;
 
   const githubLink = '';
 
-  const UnrealEngineDescription ={
+  const DocsAIChatDescription ={
     title: 'About the Project', 
   };
 
-  const youtubeLink = 'https://www.youtube.com/embed/ZzYvz5mrImY?si=OzXyHuzdZ58x5NAj';
 
 
   return (
    
     
-  <div className="UnrealEngine">
+  <div className="DocsAIChat">
     
     <ProjectHeader title={ProjectInfo.title} description={ProjectInfo.description} logo={ProjectInfo.logo} screenshot={ProjectInfo.screenshot} />
 
-    <TextCard projectDescription={UnrealEngineDescription}> 
-      <p> This project is a Full Stack GenAI-powered application for uploading, 
-        processing, and interacting with file content. Users can upload files, 
-        parse their content into chunks, index them using embeddings, and ask questions via an interactive chat interface.
+    <TextCard projectDescription={DocsAIChatDescription}> 
+      <p> This project is a Full Stack application built with React, Node.js, and TypeScript, 
+        leveraging OpenAI's 'text-embedding-ada-002 model' for AI-driven document interaction. 
+        Users can upload PDF or Word files, which are parsed using libraries like pdf-parse
+         and mammoth to extract content and split it into semantically meaningful chunks. 
+         The data is indexed using embeddings, enabling efficient semantic search. An interactive
+          chat interface, styled with CSS, allows users to query the indexed content and retrieve 
+          precise AI-powered responses. 
         </p> 
     </TextCard>
    
-    <div className="UnrealEngine-info">
+    <div className="DocsAIChat-info">
 
-      <div className="UnrealEngine-left">
+      <div className="DocsAIChat-left">
         <SkillCard skills={ProjectSkills} skillsList={ProjectSkillsList} />
       </div>
 
-      <div className="UnrealEngine-right">
+      <div className="DocsAIChat-right">
         <YearCreated year={yearCreated} />
         <GithubLink link={githubLink} linkIcon={linkIcon}/>
       </div>
@@ -103,9 +111,8 @@ function UnrealEngine() {
     <ProjectFeatures features={featuresList} />
 
     <Carousel images={carouselImages} />
-    <VideoCard videoLink={youtubeLink} />
   </div>
   );
 }
 
-export default UnrealEngine;
+export default DocsAIChat;

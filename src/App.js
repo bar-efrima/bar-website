@@ -10,8 +10,10 @@ import IoT from './pages/IoT_Page/IoT'; // IoT project page
 import Applications from './pages/Applications_Page/Applications'; // Mobile applications project page
 import GraphicDesign from './pages/GraphicDesign_Page/GraphicDesign';
 import UnrealEngine from './pages/UnrealEngine_Page/UnrealEngine';
+import DocksAIChat from './pages/DocsAIChat_Page/DocsAIChat';
 import Header from './components/Header';
 import Footer from './components/Footer';
+
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
         <Route path="/MobileApps" element={<Applications />} />
         <Route path="/GraphicDesign&UI/UX" element={<GraphicDesign />} />
         <Route path="/UnrealEngineSimulation" element={<UnrealEngine />} />
+        <Route path="/DocsAIChat" element={<DocksAIChat />} />
       </Routes>
       <Footer />
     </Router>
