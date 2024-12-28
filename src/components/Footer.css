@@ -11,6 +11,7 @@
   overflow: hidden;
   color: white;
   font-family: 'Poppins', sans-serif;
+  margin-top: 150px;
 }
 
 /* Gradient animation for the footer */
@@ -39,4 +40,12 @@
   position: relative;
   text-align: center;
   font-size: 1.2rem; 
+}
+
+
+@media (max-width: 600px) {
+  .footer {
+    margin-top: 0;
+  }
+  
 }

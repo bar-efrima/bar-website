@@ -348,20 +348,9 @@ hr {
   
   
 }
-@media (max-width: 600px) {
-  .project-image {
-    filter: none;
-  }
-  
-  /* Hover effect using drop-shadow for PNG transparency */
-  .project-image:hover {
-    filter: none;
-  }
 
-
-}
 /* For screens smaller than 480px (mobile devices) */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
 
   /* Project container */
   .projects {

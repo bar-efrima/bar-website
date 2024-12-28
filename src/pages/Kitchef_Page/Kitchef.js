@@ -167,7 +167,7 @@ function Kitchef() {
     }}>
     <p>🔸 Published an Academic Paper</p>
     <p>🔸 Presented at CHI 2024 Hawaii Conference</p>
-    <p>🔸 Participated in IsraHCI 2024 Research Conference</p>
+    <p>🔸 3rd place in IsraHCI 2024 Research Conference</p>
     <p>🔸 Featured in an article on Tech12</p>
 </Projectcard>
 

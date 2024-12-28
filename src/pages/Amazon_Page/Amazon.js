@@ -48,6 +48,7 @@ function Amazon() {
     { name: 'SQLite3' },
     { name: 'BeautifulSoup' },
     { name: 'FastApi' },
+    { name: 'Midjourney' },
     { name: 'Photoshop' },
   ];
 
