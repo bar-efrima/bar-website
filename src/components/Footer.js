@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="footer gradient">
       <div className="footer-content">
-        <p>&copy; 2024 Bar Efrima. All rights reserved.</p>
+      <p>&copy; {new Date().getFullYear()} Bar Efrima. All rights reserved.</p>
       </div>
     </footer>
   );
