@@ -11,6 +11,7 @@ import caimbridge from '../assets/projects/pokadex.png';
 import GraphicDesign from '../assets/projects/GraphicDesign.jpg';
 import UnrealEngine from '../assets/projects/unreal.png';
 import DocsAIChat from '../assets/projects/DocsAIChat.png';
+import VirtualTryOn from '../assets/projects/VirtualTryOn.png';
 import { Link } from 'react-router-dom';
 import { unhover } from '@testing-library/user-event/dist/cjs/convenience/hover.js';
 
@@ -48,6 +49,12 @@ const projects = [
     image: DocsAIChat,
     type: 'Document Processing Web App',
     description: 'A full-stack web app for document processing and analysis with intelligent chat, built using React, Node.js, TypeScript, and OpenAI APIs',
+  },
+  {
+    title: 'Virtual Try-On Studio',
+    image: VirtualTryOn,
+    type: 'AI Fashion Tech Web App',
+    description: 'An AI-powered app using Google Nano Banana model to visualize clothing on models with bilingual support (English/Hebrew) and photorealistic try-on generation.',
   },
   {
     title: 'Highlights Creator',

@@ -33,11 +33,14 @@ function AboutMe() {
           <h2>About Me</h2>
           <h1 className="letMe">Let me introduce myself.</h1>
           <p className={isVisible ? 'fade-in' : ''}>
-          A versatile and motivated Computer Science student with experience in full-stack development, 
-          research, and diverse projects. I am passionate about innovation and 
-          problem-solving and eager to learn and grow in cutting-edge fields.
-           I thrive in dynamic, fast-paced environments and enjoy collaborating 
-           with others to create impactful solutions.
+            Computer Science graduate from Reichman University with two years of 
+            full-stack development and product-oriented research experience.
+            I specialize in designing frontend architecture, building scalable 
+            backend systems, and implementing secure authentication and authorization flows.
+            My background includes extensive hands-on work with Generative AI and
+            agentic workflows, as well as research in blockchain and IoT ecosystems.
+            I enjoy solving complex system-level problems and creating practical, 
+            user-centered solutions.
           </p>
         </div>
       </div>

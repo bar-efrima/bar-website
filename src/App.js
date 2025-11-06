@@ -11,6 +11,7 @@ import Applications from './pages/Applications_Page/Applications'; // Mobile app
 import GraphicDesign from './pages/GraphicDesign_Page/GraphicDesign';
 import UnrealEngine from './pages/UnrealEngine_Page/UnrealEngine';
 import DocksAIChat from './pages/DocsAIChat_Page/DocsAIChat';
+import TryOnStudio from './pages/TryOnStudio_Page/TryOnStudio';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/GraphicDesign&UI/UX" element={<GraphicDesign />} />
         <Route path="/UnrealEngineSimulation" element={<UnrealEngine />} />
         <Route path="/DocsAIChat" element={<DocksAIChat />} />
+        <Route path="/VirtualTry-OnStudio" element={<TryOnStudio />} />
       </Routes>
       <Footer />
     </Router>
