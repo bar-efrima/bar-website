@@ -1,162 +1,181 @@
-/* Panel containing video background and content */
+/* HERO */
 .mysite-pannel {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
-  height: 100vh;
-  z-index: 1;
+  height: calc(100vh - 62px);
+  min-height: 640px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
   background-image: url('../assets/images/pink_blue_background.jpg');
   background-size: cover;
   background-position: center;
-  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
+  opacity: 0.7;
+  z-index: -2;
 }
-
 #myVideo {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  z-index: -2;
+  height: 100%;
+  z-index: -1;
   object-fit: cover;
-  opacity: 70%;
+  opacity: 0.45;
+}
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 0%, rgba(7,7,16,0.45) 60%, rgba(7,7,16,0.9) 100%);
 }
 
 .HelloWorld {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
-  font-weight: 700;
+  padding: 0 20px;
 }
-
 .hello {
   color: white;
-  font-family: "poppins", sans-serif;
-  font-size: 1.5vw;
+  font-size: clamp(14px, 1.2vw, 18px);
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  margin-bottom: 0;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.35rem;
+  margin-bottom: 12px;
+  opacity: 0.85;
+  text-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
-
 .name {
   color: white;
-  font-family: "poppins", sans-serif;
   font-weight: 700;
-  font-size: clamp(2rem, 5vw, 7rem); /* Dynamic font-size */
-  letter-spacing: 0.1px;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  font-size: clamp(2.5rem, 7vw, 6.5rem);
+  letter-spacing: -0.01em;
+  text-shadow: 0 0 40px rgba(0,0,0,0.5);
+  background: linear-gradient(180deg, #fff 0%, #d9d9f5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 40px;
+}
+.hero-role {
+  color: var(--ink-dim);
+  font-size: clamp(13px, 1.1vw, 16px);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  margin: -20px 0 40px;
+  opacity: 0.85;
+}
+.hero-role .sep {
+  color: var(--primary);
+  margin: 0 10px;
+  opacity: 0.6;
 }
 
-.more {
-  color: white;
-  font-size: clamp(0.8rem, 1vw, 1.2rem);
-  font-weight: 700;
-  letter-spacing: 0.25rem;
-  line-height: 3rem;
+.hero-ctas {
+  display: inline-flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  margin: 10px 0;
-  border-color: rgba(255, 255, 255, 0.99);
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
-  transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
-  white-space: nowrap;
-  display: inline-block;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 100px;
+  transition: all 0.4s cubic-bezier(.2,.7,.2,1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+.hero-btn.primary {
+  background: linear-gradient(135deg, var(--primary), #8a2f72);
+  border: 1px solid transparent;
+  box-shadow: 0 8px 24px var(--pink-soft), inset 0 1px 0 rgba(255,255,255,0.2);
+}
+.hero-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px var(--pink-glow), inset 0 1px 0 rgba(255,255,255,0.3);
+}
+.hero-btn.ghost {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.18);
+}
+.hero-btn.ghost:hover {
+  border-color: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.06);
+  transform: translateY(-2px);
+}
+.hero-btn .ic {
+  width: 14px;
+  height: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-btn .ic svg {
+  width: 100%;
+  height: 100%;
 }
 
-.more.stroke {
-  background: transparent;
-  border: 3px solid #afafafa0;
-  padding: 0.7% 5%;
-  transition: border-color 0.5s, transform 0.4s ease-in-out;
+.scroll-cue {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink-muted);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.65;
+  transition: opacity 0.3s;
 }
-
-.more:hover {
-  border-color: #00d1ff;
-  transform: scale(1.05);
+.scroll-cue:hover { opacity: 1; }
+.scroll-cue .mouse {
+  width: 22px;
+  height: 36px;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  border-radius: 12px;
+  position: relative;
 }
-
-.more::after {
+.scroll-cue .mouse::after {
   content: "";
-  display: inline-block;
-  width: 12px;
-  height: 11px;
-  background: url('../assets/logos/smallArrow.png') no-repeat;
-  background-size: contain;
-  margin-left: 8px;
-  animation: arrow-bob 2s infinite;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 6px;
+  background: #fff;
+  border-radius: 1px;
+  animation: scrolldot 1.8s ease-in-out infinite;
+}
+@keyframes scrolldot {
+  0% { opacity: 0; transform: translate(-50%, 0); }
+  30% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, 12px); }
 }
 
-/* Animation for arrow */
-@keyframes arrow-bob {
-  50% {
-    transform: translateY(5px);
-  }
-}
-
-/* Hidden elements for slide-in animation */
-.hidden {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateX(-100%);
-  transition: all 1s;
-}
-
-.show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-}
-
-/* Media Queries for Responsiveness */
-
-/* For screens smaller than 900px */
-@media (max-width: 900px) {
-  .hello {
-    font-size: 4vw;
-  }
-
-  .name {
-    font-size: 6vw;
+@media (max-width: 600px) {
+  .mysite-pannel {
+    height: 85vh;
   }
 
   #myVideo {
-    display: none;
-  }
-}
-
-/* For screens smaller than 600px */
-@media (max-width: 600px) {
-  .mysite-pannel {
-    margin-top: 5%;
-    height: 80vh;
-  }
-
-  .HelloWorld {
-    top: 45%;
-    width: 100%;
-  }
-
-  .hello {
-    font-size: 4vw;
-  }
-
-  .name {
-    font-size: 8vw;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-
-  .more {
-    font-size: 3vw;
-    line-height: 2rem;
-    padding: 0 3%;
-    margin-bottom: 10px;
-  }
-
-  .more.stroke {
-    padding: 0.8% 8%;
-    border: 2px solid #afafafa0;
+    opacity: 0.35;
   }
 }

@@ -4,111 +4,82 @@
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  max-height: 100vh; /* Set a maximum height */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; /* Center the content */
-  padding: 5% 0; /* Adjust padding for better control of section height */
-  margin-top: 50px;;
+  padding: 120px 5% 100px;
+  position: relative;
 }
-
-.main-about-me{
-  margin-top:10%;
+.about-me::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7,7,16,0.5) 0%, transparent 30%, transparent 70%, rgba(7,7,16,0.5) 100%);
+  pointer-events: none;
 }
-
-.about-me img {
-  width: 15%;
-  z-index: 1;
-  margin-bottom: 2%;
-  border-radius: 50%; /* Ensure the container is circular */
-  transition: filter 0.4s ease-in-out, transform 0.4s ease-in-out;
-}
-
 .main-about-me {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
 }
-
+.reveal-up {
+  opacity: 0;
+  transform: translateY(38px);
+  filter: blur(3px);
+  transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+}
+.reveal-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+.about-me img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 32px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.15);
+  transition: all 0.5s;
+  filter: drop-shadow(0 0 24px rgba(0,209,255,0.3));
+}
 .about-me img:hover {
-  filter: drop-shadow(0 0 40px rgba(0, 200, 255, 0.674)) /* Pinkish glow */
-          drop-shadow(0 0 60px rgba(255, 255, 255, 0.348)); /* Light blue glow */
+  filter: drop-shadow(0 0 60px var(--blue-glow)) drop-shadow(0 0 100px rgba(255,255,255,0.25));
+  transform: scale(1.03);
 }
-
 .about-me-text {
-  width: 60%;
-  margin: 0 40px;
-  
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
 }
-
 .about-me-text h2 {
-  color: #c84a97;
-  font-family: "Poppins", sans-serif;
-  font-size: 2.5vw;
-  line-height: 1.565;
-  margin-bottom: 0;
+  color: var(--primary);
+  font-size: clamp(22px, 2.2vw, 30px);
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
-
 .letMe {
   color: white;
-  font-family: "Poppins", sans-serif;
-  font-size: 1.5vw;
-  line-height: 1.565;
-  margin-bottom: 0;
+  font-size: clamp(20px, 1.8vw, 26px);
+  letter-spacing: 0.18rem;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  font-weight: 500;
+  margin-bottom: 28px;
 }
-
 .about-me-text p {
-  color: rgb(193, 193, 193);
-  letter-spacing: 1px;
-  line-height: 1.6vw;
-  font-family: "Poppins", sans-serif;
+  color: rgba(255,255,255,0.78);
+  letter-spacing: 0.02em;
+  line-height: 1.8;
   font-weight: 300;
-  font-size: 1.1vw;
-  padding-top: 20px;
-  padding-bottom: 15%;
+  font-size: clamp(14px, 1.05vw, 16px);
+  text-wrap: pretty;
 }
 
 @media (max-width: 768px) {
-
-  .about-me {
-    height: auto; 
-    padding: 2% 0; /* Less padding for smaller screens */
-  }
-
   .about-me img {
-    width: 120px; /* Reduce the image size */
-  }
-
-  .about-me-text {
-    width: 90%;
-    text-align: center; /* Center the text for better layout */
-  }
-
-  .about-me-text h2 {
-    font-size: 1.5rem;
-  }
-
-  .letMe {
-    font-size: 1.2rem;  
-  }
-
-  .about-me-text p {
-    font-size: 14px; 
-    line-height: 24px; 
-    text-align: center; /* Center the text for readability on tablets */
-  }
-}
-
-
-@media (max-width: 400px) {
-  .letMe {
-    font-size: 1rem;  
+    width: 130px;
+    height: 130px;
   }
 }

@@ -1,38 +1,41 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './AboutMe.css';
 import myPhoto from '../assets/images/my_photo.png';
 
 function AboutMe() {
   const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const aboutSection = document.getElementById('aboutTag');
-      if (aboutSection) {
-        const sectionPosition = aboutSection.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.1; // the ratio to control when fade-in triggers
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.18 }
+    );
 
-        if (sectionPosition < screenPosition) {
-          setIsVisible(true);
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
     };
   }, []);
 
   return (
     <section className="about-me" id="aboutTag"> 
-      <div className="main-about-me">
+      <div ref={sectionRef} className={`main-about-me reveal-up ${isVisible ? 'is-visible' : ''}`}>
         <img src={myPhoto} alt="Bar Efrima" loading="lazy"/>
         <div className="about-me-text">
           <h2>About Me</h2>
           <h1 className="letMe">Let me introduce myself.</h1>
-          <p className={isVisible ? 'fade-in' : ''}>
+          <p>
             Computer Science graduate from Reichman University with two years of 
             full-stack development and product-oriented research experience.
             I specialize in designing frontend architecture, building scalable 

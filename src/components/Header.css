@@ -1,60 +1,43 @@
-/* General styles for nav */
-nav {
-  z-index: 2;
+/* NAV */
+#nav-bar {
+  z-index: 50;
   position: sticky;
   top: 0;
   display: flex;
   align-items: center;
   background: rgba(0, 0, 0, 0.9);
   justify-content: space-between;
-  padding: 7px 5%;
+  padding: 10px 5%;
 }
-
 .myname {
   color: white;
   font-size: 33px;
   cursor: pointer;
   letter-spacing: 1px;
-  font-family: "Poppins", sans-serif;
   font-weight: 550;
-  padding-top: 26px;
-  transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+  padding-top: 20px;
+  transition: color 0.4s ease;
 }
-
 .myname:hover {
-  filter: brightness(0) saturate(100%) invert(58%) sepia(44%) saturate(5402%) hue-rotate(294deg) brightness(96%) contrast(87%);
+  color: var(--primary);
 }
-
-
 #menue {
   display: flex;
   list-style: none;
+  gap: 4px;
 }
-
 #menue li {
-  font-size: 19px;
   list-style-type: none;
-  display: inline-block;
-  padding: 10px 15px;
-  padding-top: 40px;
-  padding-bottom: 10px;
 }
-
 #menue li a {
   color: white;
-  text-decoration: none;
   font-weight: 500;
   font-size: 20px;
-  transition: color 0.5s, transform 0.5s;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 8px 16px;
   position: relative;
+  display: inline-block;
+  transition: color 0.5s, transform 0.5s;
 }
-
-#menue li a:hover {
-  color: #c84a97;
-}
-
 #menue li a::after {
   content: "";
   position: absolute;
@@ -62,29 +45,43 @@ nav {
   height: 2px;
   background: white;
   left: 0;
-  bottom: -12px; 
+  bottom: -12px;
   transform: scaleX(0);
   transition: .5s;
 }
-
+#menue li a:hover {
+  color: #c84a97;
+}
 #menue li a:hover::after {
   transform: scaleX(1);
-    background: #c84a97;
+  background: #c84a97;
 }
-
+#menue li a.nav-new::before {
+  content: "new";
+  position: absolute;
+  top: -2px;
+  right: 2px;
+  font-size: 8px;
+  background: var(--secondary);
+  color: #002029;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
 .nav-logos {
   display: flex;
   align-items: center;
-  margin-top: 30px;
+  gap: 22px;
+  margin-top: 24px;
 }
-
 .nav-logos img {
   width: 25px;
   height: 25px;
-  margin-right: 35px;
+  opacity: 0.95;
   transition: transform 0.5s ease, filter 0.5s ease-in-out;
 }
-
 .nav-logos img:hover {
   transform: scale(1.2);
   filter: brightness(0) saturate(100%) invert(58%) sepia(44%) saturate(5402%) hue-rotate(294deg) brightness(96%) contrast(87%);
@@ -96,13 +93,13 @@ nav {
   cursor: pointer;
   flex-direction: column;
   justify-content: space-between;
-  height: 35px;
+  height: 28px;
   position: absolute;
-  top: 25px;
-  right: 30px;
-  background-color: rgba(28, 28, 28, 0.8);
-  padding: 10px;
-  border-radius: 5px;
+  top: 18px;
+  right: 24px;
+  background-color: rgba(28, 28, 28, 0.7);
+  padding: 8px;
+  border-radius: 6px;
   transition: all 0.3s ease;
 }
 
@@ -128,14 +125,14 @@ nav {
 
 /* Media queries for mobile responsiveness */
 @media (max-width: 850px) {
-  nav {
+  #nav-bar {
     flex-direction: column;
     align-items: flex-start;
   }
 
   .myname {
     font-size: 28px;
-    padding-top: 15px;
+    padding-top: 10px;
   }
 
   #menue {
@@ -147,7 +144,7 @@ nav {
 
   #menue li {
     display: block;
-    padding: 10px 15px;
+    padding: 8px 12px;
     text-align: left;
   }
 
@@ -155,12 +152,11 @@ nav {
     display: flex;
   }
 
-  nav.open #menue {
+  #nav-bar.open #menue {
     display: flex;
   }
 
-  /* Place the logos inside the menu for small screens */
-  nav.open .nav-logos {
+  #nav-bar.open .nav-logos {
     display: flex;
     justify-content: center;
     margin-top: 10px;
@@ -171,13 +167,9 @@ nav {
     display: none;
   }
 
-  nav.open .nav-logos {
+  #nav-bar.open .nav-logos {
     display: flex;
     margin-top: 20px;
-  }
-
-  .nav-logos img {
-    margin: 10px;
   }
 }
 
@@ -185,21 +177,20 @@ nav {
 @media (max-width: 480px) {
   .myname {
     font-size: 24px;
+    padding-top: 8px;
   }
 
   .nav-logos img {
     width: 20px;
     height: 20px;
-    margin-right: 20px;
   }
 
-  #menue li {
-    font-size: 16px;
-    padding: 8px 10px;
+  #menue li a {
+    font-size: 14px;
   }
 
   .hamburger div {
-    width: 25px;
+    width: 22px;
     height: 2px;
   }
 }

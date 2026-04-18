@@ -1,450 +1,140 @@
+/* PROJECTS */
 .projects {
-  margin: 5%;
-  margin-left: 20%;
-  margin-right: 20%;
-  padding-top: 0;
-  padding-top: 5%;
+  margin: 0 auto;
+  padding: 56px 15% 100px;
+  max-width: 1600px;
 }
-
 .projects h2 {
-  color: #c84a97;
-  font-family: "Poppins", sans-serif;
-  font-size: 2.5vw;
-  line-height: 1.565;
-  margin-bottom: 60px;
-  margin-top: 60px;
+  color: var(--primary);
+  font-size: clamp(22px, 2.5vw, 36px);
   text-transform: uppercase;
-  align-items: center;
   text-align: center;
   letter-spacing: 0.2rem;
+  margin-bottom: 60px;
   transition: transform 0.3s ease;
 }
-
 .projects h2:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
-
-/* Grid layout */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns layout for larger screens */
-  gap: 3%;
-  row-gap: 1%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 30px;
+  align-items: start;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
-
+.projects-grid.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 .project-item {
-  position: relative;
-  background-color: transparent;
+  background: transparent;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: 10%;
+  align-items: stretch;
+  cursor: pointer;
 }
-
 .project-content {
-  position: relative;
-  transition: filter 0.4s ease-in-out, transform 0.4s ease-in-out;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.4s ease-in-out;
 }
-
 .project-content:hover {
   transform: scale(1.02);
 }
 
-.project-img-link{
-  margin-right: 0;
-  align-items: center;
-  width: 100%; 
-  display: flex; 
-  justify-content: center; 
+.project-img-link,
+.project-title-link {
+  display: block;
 }
 
 .project-image-wrapper {
   width: 100%;
   height: 18vw;
+  min-height: 210px;
+  max-height: 330px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 0;
+  margin-bottom: -10px;
 }
-
 .project-image {
   width: 90%;
-  padding-top: 0;
-  border-radius: 1em;
+  border-radius: 14px;
   transition: filter 0.4s ease-in-out, transform 0.4s ease-in-out;
-  filter: none;
-  filter: drop-shadow(0 0 40px rgba(197, 211, 42, 0.1)) /* Pinkish glow */
-    drop-shadow(0 0 50px rgba(255, 255, 255, 0.2)); /* Light blue glow */
+  filter: drop-shadow(0 0 40px rgba(197, 211, 42, 0.1)) drop-shadow(0 0 50px rgba(255, 255, 255, 0.2));
 }
-
-/* Hover effect using drop-shadow for PNG transparency */
 .project-image:hover {
-  filter: drop-shadow(0 0 80px rgba(214, 2, 108, 0.674)) 
-    drop-shadow(0 0 100px rgba(255, 255, 255, 0.348));
+  filter: drop-shadow(0 0 80px rgba(214, 2, 108, 0.674)) drop-shadow(0 0 100px rgba(255, 255, 255, 0.348));
 }
-
-/* Project titlebox */
 .project-title-box {
   width: 100%;
   height: 12vw;
-  z-index: 1;
-  box-sizing: border-box;
-  background-color: rgba(22, 22, 22, 0.6);
-  border: 1px solid #1A1A1A;
-  border-radius: 1em;
+  min-height: 190px;
+  max-height: 260px;
+  background: rgba(22, 22, 22, 0.6);
+  border: 1px solid #1a1a1a;
+  border-radius: 14px;
   text-align: left;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 18px 22px;
+  margin-top: 20px;
 }
-
 .project-type {
-  text-align: left;
   color: #fff;
   font-weight: 400;
-  margin-bottom: 10px;
-  font-size: 0.8vw;
-  padding-top: 10px;
+  font-size: 12px;
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
 }
-
-hr {
+.project-title-box hr {
   border: 0;
   border-top: 1px solid #1a1a1a;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 8px 0;
 }
-
 .project-title {
-  font-family: "Poppins", sans-serif;
   color: #fff;
-  text-align: left;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  margin-left: 0;
-  font-size: 1vw;
-  margin-top: 10px;
+  font-size: 15px;
+  margin: 10px 0 8px;
+  font-weight: 600;
 }
-
-.project-desc{
-  padding-bottom: 10px;
-  text-align: left;
+.project-desc {
+  color: rgba(255,255,255,0.75);
+  font-size: 12.5px;
   font-weight: 300;
-  color: #fff;
-  font-size: 0.8vw;
-}
-/* Initial state for the projects-grid */
-.projects-grid {
-  opacity: 0;
-  transform: translateY(30px); /* Initially move down slightly */
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  line-height: 1.55;
 }
 
-/* Visible state when scrolled into view */
-.projects-grid.visible {
-  opacity: 1;
-  transform: translateY(0); /* Reset to original position */
-}
-
-
-/* Media queries for responsiveness */
-@media (max-width: 1000px) {
-
-  /* Project container */
+@media (max-width: 1100px) {
   .projects {
-    margin: 0 auto;
-    margin-bottom: 100px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding-top: 10%;
+    padding: 48px 8% 80px;
   }
 
-  .projects h2 {
-    font-size: 1.5rem;
-  }
-
-  /* Grid layout */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
-    gap: 3%;
-    width: 100%;
-    padding: 0;
-    justify-items: center; 
-    row-gap: 1%;
-  }
-
-  .project-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 5%; 
-    width: 90%; 
-  }
-
-  .projects-grid.visible {
-    margin-top: 0;
-  }
-
-  /* Image wrapper */
   .project-image-wrapper {
-    width: 100%; 
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 26vw;
+    min-height: 180px;
   }
 
-  /* Image */
-  .project-image {
-    width: 100%; 
-    max-width: 100%; 
-    border-radius: 1em;
-  }
-
-  /* Title box */
   .project-title-box {
-    width: 100%; 
-    height: 15vh; 
-    background-color: rgba(22, 22, 22, 0.6);
-    border: 1px solid #1A1A1A;
-    border-radius: 1em;
-    text-align: left;
-    padding: 10px; 
-    padding-right: 5px;
-    margin-top: 10px;
-  }
-
-  /* Title and description text */
-  .project-type,
-  .project-title,
-  .project-desc {
-    margin: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  
-  .project-type{
-    font-size: 10px;
-  }
-
-  /* Adjust hr for mobile */
-  hr {
-    border: 0;
-    border-top: 1px solid #1a1a1a;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .project-title{
-    margin-top: 5px;
-    font-size: 12px;
-  }
-
-
-  .project-desc{
-    margin-top: 5px;
-    font-size: 10px;
-    padding-bottom: 10px;
+    height: 22vw;
+    min-height: 170px;
   }
 }
-/* For screens smaller than 768px (tablets) */
 @media (max-width: 768px) {
-
-  /* Project container */
-  .projects {
-    margin: 0 auto;
-    margin-bottom: 100px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding-top: 10%;
-  }
-
-  /* Grid layout */
   .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
-    gap: 3%;
-    width: 100%;
-    padding: 0;
-    justify-items: center; 
-    row-gap: 1%;
+    grid-template-columns: 1fr;
   }
 
-  .project-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 5%; 
-    width: 90%; 
-  }
-
-  /* Image wrapper */
-  .project-image-wrapper {
-    width: 100%; 
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* Image */
-  .project-image {
-    width: 100%; 
-    max-width: 100%; 
-    border-radius: 1em;
-  }
-
-  /* Title box */
+  .project-image-wrapper,
   .project-title-box {
-    width: 100%; 
-    height: 15vh; 
-    background-color: rgba(22, 22, 22, 0.6);
-    border: 1px solid #1A1A1A;
-    border-radius: 1em;
-    text-align: left;
-    padding: 10px;
-    margin-top: 10px;
-  }
-
-  /* Title and description text */
-  .project-type,
-  .project-title,
-  .project-desc {
-    margin: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  
-  .project-type{
-    font-size: 10px;
-  }
-
-  /* Adjust hr for mobile */
-  hr {
-    border: 0;
-    border-top: 1px solid #1a1a1a;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .project-title{
-    margin-top: 5px;
-    font-size: 12px;
-  }
-
-
-  .project-desc{
-    margin-top: 5px;
-    font-size: 10px;
-    padding-bottom: 10px;
-  }
-  
-  
-}
-
-/* For screens smaller than 480px (mobile devices) */
-@media (max-width: 600px) {
-
-  /* Project container */
-  .projects {
-    margin: 0; 
-    padding: 0;
-    display: flex;
-    justify-content: center; 
-    flex-direction: column;
-    align-items: center; 
-    width: 100%; 
-    padding-top: 10%;
-  }
-
-  /* Grid layout */
-  .projects-grid {
-    margin-top: 20%;
-    display: flex;
-    flex-direction: column; /* Make sure each project is on a new line */
-    gap: 10px; /* Small gap between the projects */
-    width: 100%; 
-    align-items: center; 
-    justify-content: center; 
-    padding: 0; 
-  }
-
-  .project-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10%; 
-    width: 90%; 
-  }
-
-  
-
-  /* Image wrapper */
-  .project-image-wrapper {
-    width: 100%; 
     height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 0;
+    max-height: none;
   }
-
-  /* Image */
-  .project-image {
-    width: 100%; 
-    max-width: 100%; 
-    border-radius: 1em;
-  }
-
-  /* Title box */
-  .project-title-box {
-    width: 100%; 
-    height: auto; 
-    background-color: rgba(22, 22, 22, 0.6);
-    border: 1px solid #1A1A1A;
-    border-radius: 1em;
-    text-align: left;
-    padding: 10px;
-    margin-top: 10px; 
-  }
-
-  /* Title and description text */
-  .project-type,
-  .project-title,
-  .project-desc {
-    font-size: 3vw;
-    margin: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .project-type{
-    padding-bottom: 6px;
-  }
-  
-
-  /* Adjust hr for mobile */
-  hr {
-    border: 0;
-    border-top: 1px solid #1a1a1a;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .project-title{
-    margin-top: 5px;
-  }
-
-
-  .project-desc{
-    margin-top: 5px;
-    padding-bottom: 10px;
-  }
-  
 }
 

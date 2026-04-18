@@ -1,40 +1,43 @@
-import { HashRouter as Router, Route, Routes } from 'react-router-dom'; // Use HashRouter
-import Home from './components/Home'; // Home which contains all sections
-import Kitchef from './pages/Kitchef_Page/Kitchef'; // Kitchef project page
-import Amazon from './pages/Amazon_Page/Amazon'; // Amazon project page
-import Unavigate from './pages/Unavigate_Page/Unavigate'; // Unavigate project page
-import Pokemon from './pages/Pokemon_Page/Pokemon'; // Pokemon project page
-import Highlights from './pages/GameHighlights_Page/Highlights'; // Highlights project page
-import NFT from './pages/NFT_Page/NFT'; // NFT project page
-import IoT from './pages/IoT_Page/IoT'; // IoT project page
-import Applications from './pages/Applications_Page/Applications'; // Mobile applications project page
-import GraphicDesign from './pages/GraphicDesign_Page/GraphicDesign';
-import UnrealEngine from './pages/UnrealEngine_Page/UnrealEngine';
-import DocksAIChat from './pages/DocsAIChat_Page/DocsAIChat';
-import TryOnStudio from './pages/TryOnStudio_Page/TryOnStudio';
+import React, { Suspense, lazy } from 'react';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
+const Home = lazy(() => import('./components/Home'));
+const Kitchef = lazy(() => import('./pages/Kitchef_Page/Kitchef'));
+const Amazon = lazy(() => import('./pages/Amazon_Page/Amazon'));
+const Unavigate = lazy(() => import('./pages/Unavigate_Page/Unavigate'));
+const Pokemon = lazy(() => import('./pages/Pokemon_Page/Pokemon'));
+const Highlights = lazy(() => import('./pages/GameHighlights_Page/Highlights'));
+const NFT = lazy(() => import('./pages/NFT_Page/NFT'));
+const IoT = lazy(() => import('./pages/IoT_Page/IoT'));
+const Applications = lazy(() => import('./pages/Applications_Page/Applications'));
+const GraphicDesign = lazy(() => import('./pages/GraphicDesign_Page/GraphicDesign'));
+const UnrealEngine = lazy(() => import('./pages/UnrealEngine_Page/UnrealEngine'));
+const DocksAIChat = lazy(() => import('./pages/DocsAIChat_Page/DocsAIChat'));
+const TryOnStudio = lazy(() => import('./pages/TryOnStudio_Page/TryOnStudio'));
 
 function App() {
   return (
-    <Router> 
+    <Router>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/kitchef" element={<Kitchef />} />
-        <Route path="/AmazonScraper" element={<Amazon />} />
-        <Route path="/NavigationApp" element={<Unavigate />} />
-        <Route path="/PokémonPokédex" element={<Pokemon />} />
-        <Route path="/HighlightsCreator" element={<Highlights />} />
-        <Route path="/RoyalCatsNFT" element={<NFT />} />
-        <Route path="/IoTInventions" element={<IoT />} />
-        <Route path="/MobileApps" element={<Applications />} />
-        <Route path="/GraphicDesign&UI/UX" element={<GraphicDesign />} />
-        <Route path="/UnrealEngineSimulation" element={<UnrealEngine />} />
-        <Route path="/DocsAIChat" element={<DocksAIChat />} />
-        <Route path="/VirtualTry-OnStudio" element={<TryOnStudio />} />
-      </Routes>
+      <Suspense fallback={<div style={{ minHeight: '60vh' }} />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/kitchef" element={<Kitchef />} />
+          <Route path="/AmazonScraper" element={<Amazon />} />
+          <Route path="/NavigationApp" element={<Unavigate />} />
+          <Route path="/PokémonPokédex" element={<Pokemon />} />
+          <Route path="/HighlightsCreator" element={<Highlights />} />
+          <Route path="/RoyalCatsNFT" element={<NFT />} />
+          <Route path="/IoTInventions" element={<IoT />} />
+          <Route path="/MobileApps" element={<Applications />} />
+          <Route path="/GraphicDesign&UI/UX" element={<GraphicDesign />} />
+          <Route path="/UnrealEngineSimulation" element={<UnrealEngine />} />
+          <Route path="/DocsAIChat" element={<DocksAIChat />} />
+          <Route path="/VirtualTry-OnStudio" element={<TryOnStudio />} />
+        </Routes>
+      </Suspense>
       <Footer />
     </Router>
   );

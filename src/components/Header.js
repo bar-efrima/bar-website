@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Header.css'; 
-import mailLogo from '../assets/logos/mail.png';
+import linkedinLogo from '../assets/logos/linkedin.png';
+import githubLogo from '../assets/logos/github.png';
 import whatsappLogo from '../assets/logos/whatsapp.png';
 import { HashLink } from 'react-router-hash-link';
 
@@ -51,15 +52,21 @@ function Header() {
           <HashLink smooth to="/#aboutTag" onClick={closeMenu}>About Me</HashLink>
         </li>
         <li>
+          <HashLink smooth to="/#experienceTag" onClick={closeMenu}>Experience</HashLink>
+        </li>
+        <li>
           <HashLink smooth to="/#projectsTag"onClick={closeMenu} >Projects</HashLink>
         </li>
       </ul>
 
       <div className="nav-logos">
-        <a href="mailto:bar2798@gmail.com" target="_blank" rel="noopener noreferrer">
-          <img src={mailLogo} id="mail-logo" alt="Mail" loading="lazy"/>
+        <a href="https://www.linkedin.com/in/bar-efrima/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile">
+          <img src={linkedinLogo} id="linkedin-logo" alt="LinkedIn" loading="lazy"/>
         </a>
-        <a href="https://wa.me/972542653012" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/bar-efrima/" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile">
+          <img src={githubLogo} id="github-logo" alt="GitHub" loading="lazy"/>
+        </a>
+        <a href="https://wa.me/972542653012" target="_blank" rel="noopener noreferrer" aria-label="Open WhatsApp chat">
           <img src={whatsappLogo} id="whatsapp-logo" alt="WhatsApp" loading="lazy"/>
         </a>
       </div>
