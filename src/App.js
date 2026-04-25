@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -17,11 +17,26 @@ const UnrealEngine = lazy(() => import('./pages/UnrealEngine_Page/UnrealEngine')
 const DocksAIChat = lazy(() => import('./pages/DocsAIChat_Page/DocsAIChat'));
 const TryOnStudio = lazy(() => import('./pages/TryOnStudio_Page/TryOnStudio'));
 
+const PageLoader = () => (
+  <div className="page-loader-fallback">
+    <div className="page-loader-ring" />
+  </div>
+);
+
 function App() {
+  useEffect(() => {
+    const loader = document.getElementById('site-loader');
+    if (loader) {
+      loader.classList.add('fade-out');
+      const timer = setTimeout(() => loader.remove(), 400);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   return (
     <Router>
       <Header />
-      <Suspense fallback={<div style={{ minHeight: '60vh' }} />}>
+      <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/kitchef" element={<Kitchef />} />

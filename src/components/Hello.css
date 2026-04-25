@@ -12,21 +12,52 @@
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('../assets/images/pink_blue_background.jpg');
+  background-image: url('../assets/images/pink_blue_bg.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.7;
   z-index: -2;
 }
-#myVideo {
+
+.hero-3d {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.hero-3d canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 12% 18%, #fff, transparent 50%),
+    radial-gradient(1.5px 1.5px at 34% 42%, rgba(255, 255, 255, 0.9), transparent 50%),
+    radial-gradient(1px 1px at 61% 22%, rgba(255, 255, 255, 0.7), transparent 50%),
+    radial-gradient(1px 1px at 76% 78%, rgba(0, 209, 255, 0.9), transparent 50%),
+    radial-gradient(1.5px 1.5px at 88% 34%, #fff, transparent 50%),
+    radial-gradient(1px 1px at 22% 74%, rgba(200, 74, 151, 0.8), transparent 50%),
+    radial-gradient(1px 1px at 48% 88%, rgba(255, 255, 255, 0.6), transparent 50%),
+    radial-gradient(1px 1px at 5% 52%, rgba(255, 255, 255, 0.7), transparent 50%);
+  animation: twinkle 4s ease-in-out infinite alternate;
   z-index: -1;
-  object-fit: cover;
-  opacity: 0.45;
+  transition: opacity 0.25s ease;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 .hero-bg::after {
   content: "";
@@ -36,6 +67,8 @@
 }
 
 .HelloWorld {
+  position: relative;
+  z-index: 2;
   text-align: center;
   padding: 0 20px;
 }
@@ -173,9 +206,24 @@
 @media (max-width: 600px) {
   .mysite-pannel {
     height: 85vh;
+    min-height: 520px;
   }
 
-  #myVideo {
-    opacity: 0.35;
+  .hero-btn {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 10px 18px;
+    gap: 8px;
+  }
+
+  .hero-btn .ic {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-bg {
+    opacity: 0.82;
   }
 }

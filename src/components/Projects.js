@@ -13,7 +13,6 @@ import UnrealEngine from '../assets/projects/unreal.png';
 import DocsAIChat from '../assets/projects/DocsAIChat.png';
 import VirtualTryOn from '../assets/projects/VirtualTryOn.png';
 import { Link } from 'react-router-dom';
-import { unhover } from '@testing-library/user-event/dist/cjs/convenience/hover.js';
 
 // Projects data array
 

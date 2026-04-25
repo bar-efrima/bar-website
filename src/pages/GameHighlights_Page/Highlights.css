@@ -1,12 +1,3 @@
-/* General Body Styling */
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    font-weight: 700;
-}
 /* Default state for each component inside the .Highlights container */
 .Highlights .Highlights-item {
     opacity: 0;

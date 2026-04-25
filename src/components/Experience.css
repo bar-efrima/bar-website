@@ -302,7 +302,7 @@
 .exp-extras {
   margin-top: 80px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 24px;
   max-width: 1200px;
   margin-left: auto;
@@ -329,6 +329,7 @@
   text-transform: uppercase;
   color: var(--primary);
   margin-bottom: 18px;
+  text-align: center;
 }
 .exp-block {
   margin-bottom: 14px;
@@ -376,59 +377,69 @@
 }
 
 .edu-item {
-  margin-bottom: 18px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--border);
-}
-.edu-item:last-child {
   margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: none;
 }
 .edu-head {
   display: flex;
-  gap: 12px;
-  align-items: flex-start;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 18px;
 }
 .edu-logo {
-  width: 36px;
-  height: 36px;
+  width: 52px;
+  height: 52px;
   flex-shrink: 0;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
 }
 .edu-logo svg {
   width: 100%;
   height: 100%;
 }
+.edu-info {
+  flex: 1;
+  min-width: 0;
+}
 .edu-item .school {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: #fff;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
   line-height: 1.3;
 }
 .edu-item .degree {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--ink-dim);
   line-height: 1.5;
+  margin-bottom: 4px;
 }
 .edu-item .years {
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px;
   color: var(--primary);
   letter-spacing: 0.05em;
+}
+.edu-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   margin-top: 4px;
 }
-.edu-item .edu-notes {
-  font-size: 11.5px;
-  color: var(--ink-muted);
-  line-height: 1.55;
-  margin-top: 10px;
-  padding-left: 48px;
+.edu-clubs {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
 }
-.edu-muted {
+.edu-label {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   color: var(--ink-muted);
+  margin-bottom: 8px;
 }
 
 .ach-item {
@@ -498,7 +509,7 @@
   }
 
   .scrub-node .role {
-    font-size: 8.5px;
+    font-size: 7.5px;
     letter-spacing: 0.03em;
     line-height: 1.2;
     max-width: calc(var(--node-width) + 6px);
@@ -507,7 +518,7 @@
   }
 
   .scrub-node .year {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .scrub-card {
@@ -553,11 +564,11 @@
   }
 
   .scrub-node .year {
-    font-size: 9px;
+    font-size: 8.5px;
   }
 
   .scrub-node .role {
-    font-size: 8px;
+    font-size: 7px;
     min-height: 22px;
   }
 }

@@ -1,7 +1,7 @@
 /* PROJECTS */
 .projects {
   margin: 0 auto;
-  padding: 56px 15% 100px;
+  padding: 135px 15% 100px;
   max-width: 1600px;
 }
 .projects h2 {
@@ -112,7 +112,7 @@
 
 @media (max-width: 1100px) {
   .projects {
-    padding: 48px 8% 80px;
+    padding: 135px 8% 80px;
   }
 
   .project-image-wrapper {
@@ -126,6 +126,10 @@
   }
 }
 @media (max-width: 768px) {
+  .projects {
+    padding: 105px 8% 80px;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
   }

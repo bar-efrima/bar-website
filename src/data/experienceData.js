@@ -41,7 +41,7 @@ const EXPERIENCE = [
       'Technical leadership: mentoring, onboarding, engineering best practices',
       'Partner with Product and Design on roadmap and UX decisions',
     ],
-    chips: ['React', 'Node.js', 'TypeScript', 'AI Agents', 'OAuth', 'Microsoft Graph', 'Leadership'],
+    chips: ['React', 'Node.js', 'Nest', 'TypeScript', 'AI Agents', 'OAuth', 'Microsoft Graph', 'Leadership'],
   },
   {
     id: 'cambridge',
@@ -164,12 +164,6 @@ const EDUCATION = [
     years: '2021 - 2025',
     notes: 'AI App Dev, Computer Graphics, ML, Blockchain, Unreal Engine, Algorithms',
     clubs: 'Tech-Talk, Product-Hub, Israel Space Community',
-  },
-  {
-    logo: 'highschool',
-    school: 'Hayovel High School',
-    degree: 'Expansion: Chemistry, Arabic, Mathematics, English',
-    years: '2013 - 2016',
   },
 ];
 

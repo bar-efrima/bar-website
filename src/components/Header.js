@@ -36,7 +36,7 @@ function Header() {
 
   return (
     <nav id="nav-bar" className={`${isSticky ? 'sticky' : ''} ${isMenuOpen ? 'open' : ''}`}>
-      <h2 className="myname" onClick={() => toggleMenu()}>Bar Efrima</h2>
+      <HashLink smooth to="/#helloWorldTag" className="myname" onClick={closeMenu}>Bar Efrima</HashLink>
       
       <div className={`hamburger ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <div></div>
