@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import './Experience.css';
 import {
-  EDUCATION,
   EXPERIENCE,
   LOGOS,
 } from '../data/experienceData';
@@ -125,42 +124,6 @@ function Experience() {
         </div>
       </div>
 
-      <div className={`exp-extras reveal-up reveal-delay ${isVisible ? 'is-visible' : ''}`}>
-        <div className="exp-card">
-          <h3>Education</h3>
-          {EDUCATION.map((edu) => (
-            <div key={edu.school} className="edu-item">
-              <div className="edu-head">
-                <div className="edu-logo" aria-hidden="true">
-                  {renderLogo(edu, `${edu.school} logo`)}
-                </div>
-                <div className="edu-info">
-                  <div className="school">{edu.school}</div>
-                  <div className="degree">{edu.degree}</div>
-                  <div className="years">{edu.years}</div>
-                </div>
-              </div>
-              {edu.notes ? (
-                <div className="edu-chips">
-                  {edu.notes.split(',').map((n) => (
-                    <span key={n} className="chip">{n.trim()}</span>
-                  ))}
-                </div>
-              ) : null}
-              {edu.clubs ? (
-                <div className="edu-clubs">
-                  <span className="edu-label">Clubs</span>
-                  <div className="edu-chips">
-                    {edu.clubs.split(',').map((c) => (
-                      <span key={c} className="chip">{c.trim()}</span>
-                    ))}
-                  </div>
-                </div>
-              ) : null}
-            </div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 }

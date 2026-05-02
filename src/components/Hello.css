@@ -2,7 +2,8 @@
 .mysite-pannel {
   position: relative;
   width: 100%;
-  height: calc(100vh - 62px);
+  height: calc(100vh - var(--nav-h, 62px));
+  height: calc(100svh - var(--nav-h, 62px));
   min-height: 640px;
   overflow: hidden;
   display: flex;
@@ -205,7 +206,8 @@
 
 @media (max-width: 600px) {
   .mysite-pannel {
-    height: 85vh;
+    height: calc(100vh - var(--nav-h, 62px));
+    height: calc(100svh - var(--nav-h, 62px));
     min-height: 520px;
   }
 

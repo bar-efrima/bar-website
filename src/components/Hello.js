@@ -208,13 +208,7 @@ function Hello() {
     const email = 'bar2798@gmail.com';
     const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
 
-    window.location.href = `mailto:${email}`;
-
-    window.setTimeout(() => {
-      if (document.visibilityState === 'visible') {
-        window.open(gmailComposeUrl, '_blank', 'noopener,noreferrer');
-      }
-    }, 450);
+    window.open(gmailComposeUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -244,8 +238,8 @@ function Hello() {
                 </svg>
               </span>
             </HashLink>
-            <a
-              href="mailto:bar2798@gmail.com"
+            <button
+              type="button"
               className="hero-btn ghost"
               onClick={handleMailClick}
               aria-label="Send email to Bar Efrima"
@@ -262,7 +256,7 @@ function Hello() {
                   />
                 </svg>
               </span>
-            </a>
+            </button>
           </div>
         </div>
       </section>

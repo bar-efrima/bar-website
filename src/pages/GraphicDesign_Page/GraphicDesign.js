@@ -97,7 +97,13 @@ function GraphicDesign() {
       <div className="gallery">
         {images.map((image, index) => (
           <figure className={`gallery__item ${image.className}`} key={index}>
-            <img src={image.src} alt={`Gallery item ${index + 1}`} className="gallery__img" loading="lazy"/>
+            <img
+              src={image.src}
+              alt={`Gallery item ${index + 1}`}
+              className="gallery__img"
+              loading={index < 6 ? 'eager' : 'lazy'}
+              decoding="async"
+            />
           </figure>
         ))}
       </div>

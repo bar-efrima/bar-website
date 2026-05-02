@@ -57,9 +57,12 @@
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  touch-action: pan-x;
   gap: 28px;
   padding: 56px 20px 40px;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x proximity;
   scrollbar-width: thin;
   scrollbar-color: rgba(200, 74, 151, 0.45) transparent;
   background: transparent;

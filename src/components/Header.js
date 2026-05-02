@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Header.css'; 
 import linkedinLogo from '../assets/logos/linkedin.png';
 import githubLogo from '../assets/logos/github.png';
@@ -6,6 +6,7 @@ import whatsappLogo from '../assets/logos/whatsapp.png';
 import { HashLink } from 'react-router-hash-link';
 
 function Header() {
+  const navRef = useRef(null);
   const [isSticky, setIsSticky] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
@@ -26,6 +27,29 @@ function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    const nav = navRef.current;
+    if (!nav) return undefined;
+
+    const setNavHeightVar = () => {
+      document.documentElement.style.setProperty('--nav-h', `${nav.offsetHeight}px`);
+    };
+
+    setNavHeightVar();
+    window.addEventListener('resize', setNavHeightVar);
+
+    let ro;
+    if (typeof ResizeObserver !== 'undefined') {
+      ro = new ResizeObserver(() => setNavHeightVar());
+      ro.observe(nav);
+    }
+
+    return () => {
+      window.removeEventListener('resize', setNavHeightVar);
+      if (ro) ro.disconnect();
+    };
+  }, [isMenuOpen]);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen); 
   };
@@ -35,7 +59,7 @@ function Header() {
   };
 
   return (
-    <nav id="nav-bar" className={`${isSticky ? 'sticky' : ''} ${isMenuOpen ? 'open' : ''}`}>
+    <nav ref={navRef} id="nav-bar" className={`${isSticky ? 'sticky' : ''} ${isMenuOpen ? 'open' : ''}`}>
       <HashLink smooth to="/#helloWorldTag" className="myname" onClick={closeMenu}>Bar Efrima</HashLink>
       
       <div className={`hamburger ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
@@ -61,13 +85,13 @@ function Header() {
 
       <div className="nav-logos">
         <a href="https://www.linkedin.com/in/bar-efrima/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile">
-          <img src={linkedinLogo} id="linkedin-logo" alt="LinkedIn" loading="lazy"/>
+          <img src={linkedinLogo} id="linkedin-logo" alt="LinkedIn" loading="eager" decoding="async" width="25" height="25" />
         </a>
         <a href="https://github.com/bar-efrima/" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile">
-          <img src={githubLogo} id="github-logo" alt="GitHub" loading="lazy"/>
+          <img src={githubLogo} id="github-logo" alt="GitHub" loading="eager" decoding="async" width="25" height="25" />
         </a>
         <a href="https://wa.me/972542653012" target="_blank" rel="noopener noreferrer" aria-label="Open WhatsApp chat">
-          <img src={whatsappLogo} id="whatsapp-logo" alt="WhatsApp" loading="lazy"/>
+          <img src={whatsappLogo} id="whatsapp-logo" alt="WhatsApp" loading="eager" decoding="async" width="25" height="25" />
         </a>
       </div>
     </nav>

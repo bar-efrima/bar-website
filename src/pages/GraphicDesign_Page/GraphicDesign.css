@@ -90,7 +90,7 @@
   .gallery {
     grid-template-columns: repeat(4, 1fr); /* Switch to 4 columns on small screens */
     grid-gap: 1rem;
-    width: 90vw; /* Make it 90% of screen width on smaller devices */
+    width: 100%;
   }
 
   .gallery__item--square {
