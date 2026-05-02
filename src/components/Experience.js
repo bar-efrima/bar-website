@@ -59,7 +59,6 @@ function Experience() {
     <section className="experience" id="experienceTag">
       <div className="exp-header">
         <h2>Experience</h2>
-       
       </div>
 
       <div ref={sectionRef} className={`scrub-wrap reveal-up ${isVisible ? 'is-visible' : ''}`}>

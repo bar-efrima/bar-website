@@ -17,3 +17,14 @@
   color: var(--ink-muted);
   font-size: 13px;
 }
+
+.footer-contact {
+  color: var(--ink-muted);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.footer-contact:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}

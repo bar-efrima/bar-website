@@ -5,7 +5,8 @@ function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-inner">
-        <p>&copy; {new Date().getFullYear()} Bar Efrima. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Bar Efrima.</p>
+        <a className="footer-contact" href="mailto:bar2798@gmail.com">bar2798@gmail.com</a>
       </div>
     </footer>
   );

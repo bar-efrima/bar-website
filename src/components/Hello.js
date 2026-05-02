@@ -220,9 +220,6 @@ function Hello() {
         <div className="show">
           <p className="hello">Hello World.</p>
           <p className="name">I'm Bar Efrima.</p>
-          <p className="hero-role">
-            Full Stack Developer<span className="sep">-</span>AI and Systems
-          </p>
           <div className="hero-ctas">
             <HashLink smooth to="/#experienceTag" className="hero-btn primary">
               View My Work

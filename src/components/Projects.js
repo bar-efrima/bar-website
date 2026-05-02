@@ -124,7 +124,11 @@ function Projects() {
   return (
     <section className="projects" id = "projectsTag">
 
-      <h2>MY PROJECTS</h2>
+      <div className="projects-header">
+        <div className="projects-eyebrow">— Projects</div>
+        <h2 className="projects-title">Selected Work</h2>
+        <p className="projects-sub">A selection of things I’ve built.</p>
+      </div>
       <div className="projects-grid" ref={projectsRef}>
         {projects.map((project, index) => (
           <div className="project-item" key={index}>
